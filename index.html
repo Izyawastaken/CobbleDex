@@ -6,207 +6,129 @@
   <title>CobbleDex</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
-  
+
     :root {
       --bg-light: #f9f9fb;
       --bg-dark: #1a1c1f;
-      --card-light: rgba(255, 255, 255, 0.85);
-      --card-dark: rgba(30, 30, 30, 0.9);
+      --card-light: rgba(255,255,255,0.85);
+      --card-dark: rgba(30,30,30,0.9);
       --accent: #e3350d;
       --radius: 14px;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      --shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-  
+
     body {
       font-family: 'Fredoka', sans-serif;
       background: var(--bg-light);
-      padding: 2rem;
-      text-align: center;
-      transition: background 0.3s ease, color 0.3s ease;
+      color: #333;
+      margin: 0; padding: 2rem; text-align: center;
+      transition: background 0.3s, color 0.3s;
     }
     body.dark {
       background: var(--bg-dark);
-      color: #f0f0f0;
+      color: #eee;
     }
-  
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--accent);
-    }
-  
+
+    h1 { font-size: 3rem; color: var(--accent); margin-bottom:1rem; }
+    h3 { margin-top:1rem; margin-bottom:0.5rem; }
+
     button {
-      background: var(--accent);
-      color: white;
-      padding: 10px 20px;
-      margin: 0.5rem;
-      border: none;
-      border-radius: var(--radius);
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, box-shadow 0.3s;
+      background: var(--accent); color: white;
+      border: none; border-radius: var(--radius);
+      padding: 0.5rem 1rem; margin:0.5rem;
+      box-shadow: var(--shadow); cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px var(--accent);
-    }
-  
+    button:hover { transform: scale(1.05); box-shadow:0 0 12px var(--accent); }
+
     .pokedex {
-      background: var(--card-light);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin: 1rem auto;
-      box-shadow: var(--shadow);
-      max-width: 900px;
-      width: 100%;
-      transition: background 0.3s ease;
-      backdrop-filter: blur(8px);
+      background: var(--card-light); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:2rem; margin:1rem auto;
+      max-width:900px; width:100%; backdrop-filter:blur(8px);
+      transition: background 0.3s;
     }
-    .dark .pokedex {
-      background: var(--card-dark);
+    body.dark .pokedex { background: var(--card-dark); }
+
+    img { width:160px; border-radius:var(--radius);
+      transition: transform 0.2s; margin:1rem auto;
     }
-  
-    img {
-      width: 160px;
-      margin: 1rem;
-      border-radius: var(--radius);
-      transition: transform 0.2s;
-    }
-    img:hover {
-      transform: scale(1.08);
-      cursor: pointer;
-    }
-  
+    img:hover { transform: scale(1.08); cursor:pointer; }
+
     input, select {
-      padding: 12px;
-      width: 250px;
-      margin: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: var(--radius);
-      transition: border 0.2s;
+      padding:0.5rem; border:1px solid #ccc; border-radius:var(--radius);
+      transition:border 0.2s; width:200px;
     }
-    input:focus, select:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-  
+    input:focus, select:focus { outline:none; border-color:var(--accent); }
+
     .autocomplete {
-      position: absolute;
-      background: white;
-      border: 1px solid #ccc;
-      max-height: 200px;
-      overflow-y: auto;
-      z-index: 1000;
-      width: 100%;
-      border-radius: var(--radius);
+      position:absolute; top:100%; left:0; right:0;
+      background:white; border:1px solid #ccc;
+      max-height:200px; overflow-y:auto; z-index:1000;
+      border-radius:var(--radius);
     }
-    .dark .autocomplete { background: #2a2a2a; color: white; }
-    .autocomplete div { padding: 10px; cursor: pointer; }
-    .autocomplete div:hover { background: #f0f0f0; }
-    .dark .autocomplete div:hover { background: #3a3a3a; }
-    .autocomplete-item.selected { background-color: #ddd; }
-    .dark .autocomplete-item.selected { background-color: #444; }
-  
-    /* Base styling for type badges */
+    .autocomplete div { padding:0.5rem; cursor:pointer; }
+    .autocomplete div:hover { background:#f0f0f0; }
+    .autocomplete-item.selected { background:#ddd; }
+    body.dark .autocomplete { background:#2a2a2a; color:white; }
+    body.dark .autocomplete div:hover { background:#3a3a3a; }
+    body.dark .autocomplete-item.selected { background:#444; }
+
     .types span {
-      margin: 0 5px;
-      padding: 6px 10px;
-      border-radius: 20px;
-      font-weight: bold;
-      display: inline-block;
-      color: white;
+      margin:0 5px; padding:6px 10px;
+      border-radius:20px; font-weight:bold; color:white; display:inline-block;
     }
-  
-    /* Color overrides for each Pokémon type */
-    .types.type-fire     { background: #F08030; }
-    .types.type-water    { background: #6890F0; }
-    .types.type-grass    { background: #78C850; }
-    .types.type-electric { background: #F8D030; color: black; }
-    .types.type-ice      { background: #98D8D8; color: black; }
-    .types.type-fighting { background: #C03028; }
-    .types.type-poison   { background: #A040A0; }
-    .types.type-ground   { background: #E0C068; color: black; }
-    .types.type-flying   { background: #A890F0; }
-    .types.type-psychic  { background: #F85888; }
-    .types.type-bug      { background: #A8B820; }
-    .types.type-rock     { background: #B8A038; }
-    .types.type-ghost    { background: #705898; }
-    .types.type-dragon   { background: #7038F8; }
-    .types.type-dark     { background: #705848; }
-    .types.type-steel    { background: #B8B8D0; color: black; }
-    .types.type-fairy    { background: #EE99AC; color: black; }
-    .types.type-normal   { background: #A8A878; }
-  
-    .tab {
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
+    /* each type’s background */
+    .types.type-fire     { background:#F08030; }
+    .types.type-water    { background:#6890F0; }
+    .types.type-grass    { background:#78C850; }
+    .types.type-electric { background:#F8D030; color:black; }
+    .types.type-ice      { background:#98D8D8; color:black; }
+    .types.type-fighting { background:#C03028; }
+    .types.type-poison   { background:#A040A0; }
+    .types.type-ground   { background:#E0C068; color:black; }
+    .types.type-flying   { background:#A890F0; }
+    .types.type-psychic  { background:#F85888; }
+    .types.type-bug      { background:#A8B820; }
+    .types.type-rock     { background:#B8A038; }
+    .types.type-ghost    { background:#705898; }
+    .types.type-dragon   { background:#7038F8; }
+    .types.type-dark     { background:#705848; }
+    .types.type-steel    { background:#B8B8D0; color:black; }
+    .types.type-fairy    { background:#EE99AC; color:black; }
+    .types.type-normal   { background:#A8A878; }
+
+    .tab { margin-top:1rem; display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; }
+    .tab button { background:#eee; color:#333; }
+    body.dark .tab button { background:#333; color:#eee; }
+
+    .tab-content { display:none; margin-top:1rem; text-align:left; }
+    .tab-content.active { display:block; }
+
+    /* —— stats table —— */
+    .stats-table {
+      width:100%; border-collapse:collapse; margin:0.5rem 0 1rem;
     }
-    .tab button {
-      background: #eee;
-      color: #333;
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      border: none;
-      transition: 0.2s ease;
-      font-weight: 600;
+    .stats-table th, .stats-table td {
+      padding:0.5rem; vertical-align:middle;
     }
-    .dark .tab button {
-      background: #333;
-      color: white;
+    .stats-table th {
+      text-align:left; color:var(--accent);
+      font-weight:600;
     }
-  
-    .tab-content {
-      display: none;
-      margin-top: 1rem;
-      text-align: left;
-      padding: 1rem;
-      border-top: 1px solid #ccc;
-      animation: fadeIn 0.3s ease;
+    .stats-table th:nth-child(1) { width:30%; }
+    .stats-table th:nth-child(2) { width:10%; text-align:right; }
+    .stats-table th:nth-child(3) { width:60%; }
+    .stats-bar {
+      display:inline-block; height:8px; border-radius:4px;
+      vertical-align:middle;
     }
-    .tab-content.active {
-      display: block;
-    }
-  
-    ul { list-style: none; padding: 0; }
-    ul li { margin-bottom: 6px; }
-  
-    #pokemonAbilities a,
-    #pokemonMoves a,
-    #evolutionChain a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    #pokemonAbilities a:hover,
-    #pokemonMoves a:hover,
-    #evolutionChain a:hover {
-      text-decoration: underline;
-      color: #c00;
-    }
-  
-    #flavorText {
-      font-style: italic;
-      opacity: 0.9;
-      padding: 0.5rem 0;
-    }
-  
-    footer {
-      font-size: 0.9rem;
-      margin-top: 2rem;
-      opacity: 0.6;
-    }
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-  
-    @keyframes fadeIn {
-      from { opacity: 0; } to { opacity: 1; }
-    }
+    .stats-bar.low  { background:#f5dc40; }
+    .stats-bar.high { background:#8cdf56; }
+
+    footer { margin-top:2rem; font-size:0.9rem; opacity:0.6; }
+    footer a { color:var(--accent); }
+
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
   </style>
 </head>
 <body>
@@ -214,24 +136,22 @@
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">⬅ Go Back</button>
 
-  <div style="display:flex;justify-content:center;gap:8px;margin-top:1rem;">
+  <div style="position:relative; display:inline-block; margin-top:1rem;">
     <select id="searchType">
       <option value="pokemon">Pokémon</option>
       <option value="item">Item</option>
       <option value="ability">Ability</option>
       <option value="move">Move</option>
     </select>
-    <div style="position:relative;">
-      <input type="text" id="pokemonInput" placeholder="Enter name or ID" oninput="autocomplete()"/>
-      <div id="autocomplete-list" class="autocomplete"></div>
-    </div>
-    <button onclick="searchEntity()">Search</button>
+    <input type="text" id="pokemonInput" placeholder="Enter name or ID" oninput="autocomplete()" style="margin-left:0.5rem;" />
+    <div id="autocomplete-list" class="autocomplete"></div>
+    <button onclick="searchEntity()" style="margin-left:0.5rem;">Search</button>
   </div>
 
-  <div class="pokedex" id="pokedex" style="display:none;margin-top:2rem;">
+  <div class="pokedex" id="pokedex" style="display:none;">
     <audio id="cryAudio"></audio>
     <h2 id="pokemonName"></h2>
-    <img id="pokemonImg" src="" alt="Pokemon Sprite" onclick="playCry()" title="Click to hear cry"/>
+    <img id="pokemonImg" src="" alt="Sprite" onclick="playCry()" title="Click to hear cry">
 
     <div class="tab">
       <button onclick="showTab('info')">Info</button>
@@ -239,48 +159,48 @@
       <button onclick="showTab('damage')">Type Matchups</button>
       <button onclick="showTab('strategy')">Strategy</button>
       <button onclick="showTab('stats')">Stats</button>
-      <button onclick="showTab('Calculator')">Calculator</button>
+      <button onclick="openCalculator()">Calculator</button>
+      <button onclick="openShowdown()">Showdown</button>
     </div>
 
+    <!-- Info Tab -->
     <div id="info" class="tab-content active">
-      <p><strong>Types:</strong> 
-        <span class="types" id="pokemonTypes"></span>
-      </p>
-      <p><strong>Abilities:</strong> 
-        <span id="pokemonAbilities"></span>
-      </p>
-      <p><strong>Base Stats:</strong></p>
-      <ul id="pokemonStats"></ul>
+      <p><strong>Types:</strong> <span class="types" id="pokemonTypes"></span></p>
+      <p><strong>Abilities:</strong> <span id="pokemonAbilities"></span></p>
+
+      <h3>Base Stats:</h3>
+      <div id="statsChart"></div>
+
       <p><strong>Flavor Text:</strong></p>
       <p id="flavorText"></p>
     </div>
 
+    <!-- Moves -->
     <div id="moves" class="tab-content">
       <p><strong>Moves:</strong></p>
       <ul id="pokemonMoves"></ul>
     </div>
 
+    <!-- Evolution -->
     <div id="evolution" class="tab-content">
       <p><strong>Evolution Chain:</strong></p>
       <ul id="evolutionChain"></ul>
     </div>
 
+    <!-- Damage Relations -->
     <div id="damage" class="tab-content">
       <p><strong>Type Damage Relations:</strong></p>
       <ul id="damageRelations"></ul>
     </div>
 
+    <!-- Strategy -->
     <div id="strategy" class="tab-content">
       <p><strong>Strategy Tips:</strong></p>
-      <p id="strategyText">Loading strategy data...</p>
-    </div>
-
-    <div id="extraButtons" style="margin-top:1rem;">
-      <button onclick="openCalculator()">Calculator</button>
-      <button onclick="openShowdown()">Showdown</button>
+      <p id="strategyText">Loading…</p>
     </div>
   </div>
 
+  <!-- InfoBox for Moves/Abilities/Items -->
   <div class="pokedex" id="infoBox" style="display:none;">
     <h2 id="infoTitle"></h2>
     <p id="infoDescription"></p>
@@ -292,136 +212,114 @@
   </footer>
 
   <script>
-    // ----- Data & History -----
     const cache = localStorage;
-    let allData = { pokemon: [], item: [], ability: [], move: [] };
+    let allData = { pokemon:[], item:[], ability:[], move:[] };
     const historyStack = [];
 
-    // ----- Fetch All Names for Autocomplete -----
-    async function fetchAllNames(){
-      for (let type of ['pokemon','item','ability','move']){
-        let key = `names_${type}`;
-        let cached = cache.getItem(key);
-        if (cached){
-          allData[type] = JSON.parse(cached);
-        } else {
-          let res = await fetch(`https://pokeapi.co/api/v2/${type}?limit=10000`);
-          let data = await res.json();
-          allData[type] = data.results.map(x=>x.name);
-          cache.setItem(key, JSON.stringify(allData[type]));
+    // fetch autocomplete lists
+    async function fetchAllNames() {
+      for (let t of ['pokemon','item','ability','move']) {
+        let key = `names_${t}`, c = cache.getItem(key);
+        if (c) allData[t] = JSON.parse(c);
+        else {
+          let r = await fetch(`https://pokeapi.co/api/v2/${t}?limit=10000`);
+          let j = await r.json();
+          allData[t] = j.results.map(x=>x.name);
+          cache.setItem(key, JSON.stringify(allData[t]));
         }
       }
     }
 
-    // ----- Dark Mode Toggle -----
-    function toggleDarkMode(){
+    function toggleDarkMode() {
       document.body.classList.toggle('dark');
     }
+    function playCry() {
+      document.getElementById('cryAudio').play();
+    }
 
-    // ----- History -----
-    function pushHistory(name){
-      let curr = document.getElementById('pokemonName').textContent.toLowerCase();
-      if(curr && curr!==name) historyStack.push(curr);
+    function pushHistory(name) {
+      let cur = document.getElementById('pokemonName').textContent.toLowerCase();
+      if (cur && cur!==name) historyStack.push(cur);
     }
-    function goBack(){
-      if(historyStack.length){
-        let prev = historyStack.pop();
-        document.getElementById('pokemonInput').value = prev;
-        getPokemon();
-      }
+    function goBack() {
+      if (!historyStack.length) return;
+      let prev = historyStack.pop();
+      document.getElementById('pokemonInput').value = prev;
+      getPokemon();
     }
+
     function showTab(id) {
-      const name = document.getElementById("pokemonName").textContent.toLowerCase();
-  
-      if (id === "strategy") {
-        window.open(`https://www.smogon.com/dex/sv/pokemon/${name}/`, "_blank");
+      const name = document.getElementById('pokemonName').textContent.toLowerCase();
+      if (id==='strategy') return window.open(`https://www.smogon.com/dex/sv/pokemon/${name}/`,'_blank');
+      if (id==='damage') {
+        let types = Array.from(document.getElementById('pokemonTypes').children)
+                         .map(s=>s.textContent.toLowerCase()).join('+');
+        if (types) window.open(`https://www.pkmn.help/defense/?types=${types}&ability=none&tera_type=none`,'_blank');
         return;
       }
-      if (id === "damage") {
-        const types = Array.from(document.getElementById("pokemonTypes").children)
-          .map(span => span.textContent.toLowerCase())
-          .join("+");
-        if (types) window.open(`https://www.pkmn.help/defense/?types=${types}&ability=none&tera_type=none`, "_blank");
-        return;
-      }
-      if (id === "moves") {
-        window.open(`https://pokemondb.net/pokedex/${name}#dex-moves`, "_blank");
-        return;
-      }
-      if (id === "stats") {
-        window.open(`https://pokemondb.net/pokedex/${name}#dex-stats`, "_blank");
-        return;
-      }
-  
-      document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
+      if (id==='stats')   return window.open(`https://pokemondb.net/pokedex/${name}#dex-stats`,'_blank');
+      if (id==='moves')   return window.open(`https://pokemondb.net/pokedex/${name}#dex-moves`,'_blank');
+      document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
 
-    // ----- Autocomplete -----
-    function setupAutocomplete(){
-      const input = document.getElementById('pokemonInput');
-      const list = document.getElementById('autocomplete-list');
-      let idx=-1, suggestions=[];
-
-      input.addEventListener('input', ()=>{
-        let val=input.value.toLowerCase();
-        let type=document.getElementById('searchType').value;
-        list.innerHTML=''; suggestions=[]; idx=-1;
-        if(!val) return;
-        suggestions = allData[type]
-          .filter(n=>n.includes(val))
-          .slice(0,10);
-        suggestions.forEach((n,i)=>{
-          let div=document.createElement('div');
-          div.textContent=n; div.className='autocomplete-item';
-          div.dataset.index=i;
-          div.onclick=()=>{ input.value=n; list.innerHTML=''; searchEntity(); };
-          list.appendChild(div);
+    function setupAutocomplete() {
+      const inp = document.getElementById('pokemonInput');
+      const list= document.getElementById('autocomplete-list');
+      let idx=-1, sug=[];
+      inp.addEventListener('input', ()=>{
+        let v=inp.value.toLowerCase(), t=document.getElementById('searchType').value;
+        list.innerHTML=''; sug=[]; idx=-1;
+        if (!v) return;
+        sug = allData[t].filter(n=>n.includes(v)).slice(0,10);
+        sug.forEach((n,i)=>{
+          let d=document.createElement('div');
+          d.textContent=n; d.className='autocomplete-item'; d.dataset.idx=i;
+          d.onclick=()=>{ inp.value=n; list.innerHTML=''; searchEntity(); };
+          list.appendChild(d);
         });
       });
-
-      input.addEventListener('keydown', e=>{
+      inp.addEventListener('keydown', e=>{
         let items=list.querySelectorAll('.autocomplete-item');
-        if(e.key==='ArrowDown'){ idx=(idx+1)%items.length; updateSel(items,idx); e.preventDefault(); }
-        if(e.key==='ArrowUp'){ idx=(idx-1+items.length)%items.length; updateSel(items,idx); e.preventDefault(); }
-        if(e.key==='Enter'){
+        if (e.key==='ArrowDown') { idx=(idx+1)%items.length; updateSel(items,idx); e.preventDefault(); }
+        if (e.key==='ArrowUp')   { idx=(idx-1+items.length)%items.length; updateSel(items,idx); e.preventDefault(); }
+        if (e.key==='Enter')     {
           e.preventDefault();
-          if(idx>=0 && items[idx]) items[idx].click();
+          if (idx>=0 && items[idx]) items[idx].click();
           else searchEntity();
         }
       });
     }
-    function updateSel(items, idx){
-      items.forEach(i=>i.classList.remove('selected'));
-      if(idx>=0) items[idx].classList.add('selected');
+    function updateSel(it,i) {
+      it.forEach(x=>x.classList.remove('selected'));
+      if (i>=0) it[i].classList.add('selected');
     }
 
-    // ----- Search Entity -----
-    async function searchEntity(){
-      let q=document.getElementById('pokemonInput').value.trim().toLowerCase();
-      let t=document.getElementById('searchType').value;
+    async function searchEntity() {
+      let q=document.getElementById('pokemonInput').value.trim().toLowerCase(),
+          t=document.getElementById('searchType').value;
       document.getElementById('pokedex').style.display='none';
       document.getElementById('infoBox').style.display='none';
-      if(!q) return;
-      if(t==='pokemon') return getPokemon();
+      if (!q) return;
+      if (t==='pokemon') return getPokemon();
       try {
         let r=await fetch(`https://pokeapi.co/api/v2/${t}/${q}`);
-        if(!r.ok) return alert(`${t} not found.`);
+        if (!r.ok) return alert(`${t} not found.`);
         let d=await r.json();
         let box=document.getElementById('infoBox');
         box.style.display='block';
         document.getElementById('infoTitle').textContent=d.name.toUpperCase();
         document.getElementById('infoDetails').innerHTML='';
         let desc=document.getElementById('infoDescription');
-        if(t==='item'){
+        if (t==='item') {
           desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No description';
           document.getElementById('infoDetails').innerHTML=`<li><strong>Category:</strong> ${d.category.name}</li>`;
         }
-        else if(t==='ability'){
+        else if (t==='ability') {
           desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
           document.getElementById('infoDetails').innerHTML=`<li><strong>Generation:</strong> ${d.generation.name}</li>`;
         }
-        else if(t==='move'){
+        else if (t==='move') {
           desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
           document.getElementById('infoDetails').innerHTML=`
             <li><strong>Type:</strong> ${d.type.name}</li>
@@ -429,82 +327,113 @@
             <li><strong>PP:</strong> ${d.pp}</li>
             <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>`;
         }
-      } catch {
+      }
+      catch {
         alert('Error fetching data.');
       }
     }
 
-    // ----- Get Pokémon -----
-    async function getPokemon(override=null){
-      let name=override||document.getElementById('pokemonInput').value.trim().toLowerCase();
-      let res=await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-      if(!res.ok) return alert('Pokémon not found.');
-      let d=await res.json();
-      pushHistory(name);
+    async function getPokemon(ov=null) {
+      let n=ov||document.getElementById('pokemonInput').value.trim().toLowerCase();
+      let r=await fetch(`https://pokeapi.co/api/v2/pokemon/${n}`);
+      if(!r.ok) return alert('Pokémon not found.');
+      let d=await r.json();
+      pushHistory(n);
       document.getElementById('pokedex').style.display='block';
       document.getElementById('pokemonName').textContent=d.name.toUpperCase();
       document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
       document.getElementById('cryAudio').src=`https://play.pokemonshowdown.com/audio/cries/${d.name}.ogg`;
 
-      // ←── COLOR-CODED TYPES HERE ──→
+      // types
       document.getElementById('pokemonTypes').innerHTML =
         d.types.map(t=>{
           let tn=t.type.name.toLowerCase();
-          return `<span class="types type-${tn}">${
-            tn.charAt(0).toUpperCase()+tn.slice(1)
-          }</span>`;
+          return `<span class="types type-${tn}">${tn[0].toUpperCase()+tn.slice(1)}</span>`;
         }).join('');
 
-      // Abilities, Stats, Moves, Evolution, Damage...
+      // abilities
       document.getElementById('pokemonAbilities').innerHTML =
         d.abilities.map(a=>
           `<a href="#" onclick="showAbility('${a.ability.name}')">${a.ability.name}</a>`
         ).join(', ');
 
-      document.getElementById('pokemonStats').innerHTML =
-        d.stats.map(s=>`<li>${s.stat.name}: ${s.base_stat}</li>`).join('');
+      // —— base stats chart —— 
+      (()=>{
+        let stats = d.stats.map(s=>({n:s.stat.name, v:s.base_stat}));
+        let maxV = Math.max(200, ...stats.map(x=>x.v));
+        let html=`
+          <table class="stats-table">
+            <thead><tr>
+              <th>Stat</th>
+              <th>Base</th>
+              <th></th>
+            </tr></thead>
+            <tbody>`;
+        stats.forEach(s=>{
+          let pct = (s.v/maxV*100).toFixed(1),
+              cls = s.v>=100? 'high':'low';
+          html += `
+            <tr>
+              <td>${s.n.toUpperCase()}</td>
+              <td>${s.v}</td>
+              <td>
+                <span class="stats-bar ${cls}" style="width:${pct}%;"></span>
+              </td>
+            </tr>`;
+        });
+        let tot = stats.reduce((a,b)=>a+b.v,0);
+        html+=`<tr>
+                <td><strong>Total</strong></td>
+                <td><strong>${tot}</strong></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>`;
+        document.getElementById('statsChart').innerHTML = html;
+      })();
 
-      let mList=document.getElementById('pokemonMoves');
-      mList.innerHTML='Loading moves…';
-      let moves=await Promise.all(
-        d.moves.slice(0,10).map(async m=>{
-          let md=await (await fetch(m.move.url)).json();
-          let lvl=m.version_group_details[0]?.level_learned_at||'-';
-          return `<li><a href="#" onclick="showMove('${md.name}')">${md.name}</a>
-            <span class="move-details">(Type: ${md.type.name}, Power: ${md.power||'N/A'}, Lv: ${lvl})</span></li>`;
-        })
-      );
-      mList.innerHTML=moves.join('');
+      // moves
+      let ml=document.getElementById('pokemonMoves');
+      ml.innerHTML='Loading…';
+      let mv=await Promise.all(d.moves.slice(0,10).map(async m=>{
+        let md=await (await fetch(m.move.url)).json(),
+            lvl=m.version_group_details[0]?.level_learned_at||'-';
+        return `<li>
+          <a href="#" onclick="showMove('${md.name}')">${md.name}</a>
+          <span class="move-details">
+            (Type:${md.type.name}, Power:${md.power||'N/A'}, Lv:${lvl})
+          </span>
+        </li>`;
+      }));
+      ml.innerHTML = mv.join('');
 
-      // Flavor text
+      // flavor text
       let sp=await (await fetch(d.species.url)).json();
-      let text=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
-        .replace(/\n|\f/g,' ')||'No entry';
-      document.getElementById('flavorText').textContent=text;
+      let txt=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
+                .replace(/\n|\f/g,' ')||'No entry';
+      document.getElementById('flavorText').textContent = txt;
 
-      // Evolution chain
-      let evc=await (await fetch(sp.evolution_chain.url)).json();
-      let evoArr=[]; for(let e=evc.chain;e;e=e.evolves_to[0]) evoArr.push(e.species.name);
+      // evolution
+      let ec=await (await fetch(sp.evolution_chain.url)).json();
+      let chain=[], c=ec.chain;
+      do { chain.push(c.species.name); c=c.evolves_to[0]; } while(c);
       document.getElementById('evolutionChain').innerHTML =
-        evoArr.map(p=>
-          `<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`
-        ).join('');
+        chain.map(p=>`<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`).join('');
 
-      // Damage relations
-      let typeDatas=await Promise.all(d.types.map(t=>fetch(t.type.url).then(r=>r.json())));
+      // damage relations
+      let tds=await Promise.all(d.types.map(t=>fetch(t.type.url).then(r=>r.json())));
       let rel=new Set();
-      typeDatas.forEach(td=>{
-        td.damage_relations.double_damage_from.forEach(d=>rel.add(`2× from ${d.name}`));
-        td.damage_relations.half_damage_from.forEach(d=>rel.add(`0.5× from ${d.name}`));
-        td.damage_relations.no_damage_from.forEach(d=>rel.add(`Immune to ${d.name}`));
+      tds.forEach(td=>{
+        td.damage_relations.double_damage_from.forEach(x=>rel.add(`2× from ${x.name}`));
+        td.damage_relations.half_damage_from.forEach(x=>rel.add(`0.5× from ${x.name}`));
+        td.damage_relations.no_damage_from.forEach(x=>rel.add(`Immune to ${x.name}`));
       });
       document.getElementById('damageRelations').innerHTML =
         [...rel].map(r=>`<li>${r}</li>`).join('');
     }
 
-    // ----- Abilities & Moves Info Boxes -----
-    async function showAbility(name){
-      let r=await fetch(`https://pokeapi.co/api/v2/ability/${name}`);
+    async function showAbility(n){
+      let r=await fetch(`https://pokeapi.co/api/v2/ability/${n}`);
       if(!r.ok) return alert('Ability not found.');
       let d=await r.json();
       document.getElementById('infoBox').style.display='block';
@@ -514,8 +443,9 @@
       document.getElementById('infoDetails').innerHTML=
         `<li><strong>Generation:</strong> ${d.generation.name}</li>`;
     }
-    async function showMove(name){
-      let r=await fetch(`https://pokeapi.co/api/v2/move/${name}`); if(!r.ok) return alert('Move not found.');
+    async function showMove(n){
+      let r=await fetch(`https://pokeapi.co/api/v2/move/${n}`);
+      if(!r.ok) return alert('Move not found.');
       let d=await r.json();
       document.getElementById('infoBox').style.display='block';
       document.getElementById('infoTitle').textContent=d.name.toUpperCase();
@@ -529,7 +459,6 @@
         <li><strong>Category:</strong> ${d.damage_class.name}</li>`;
     }
 
-    // ----- External Links -----
     function openCalculator(){
       let n=document.getElementById('pokemonName').textContent.toLowerCase();
       if(n) window.open(`https://calc.pokemonshowdown.com/?p1=${n}`,'_blank');
@@ -543,11 +472,11 @@
       } else alert('No Pokémon selected.');
     }
 
-    // ----- Init -----
+    // init
     document.addEventListener('DOMContentLoaded', async ()=>{
       await fetchAllNames();
       setupAutocomplete();
-      toggleDarkMode(); // start in dark
+      toggleDarkMode(); // start dark
     });
   </script>
 </body>
