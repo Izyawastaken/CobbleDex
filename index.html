@@ -619,7 +619,17 @@
       document.getElementById('pokedex').style.display='block';
       document.getElementById('pokemonName').textContent=d.name.toUpperCase();
       document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
-      document.getElementById('cryAudio').src=`https://play.pokemonshowdown.com/audio/cries/${d.name}.ogg`;
+     // ── inside your getPokemon(d) after fetching d ──
+const cryAudio = document.getElementById('cryAudio');
+const base = d.name.toLowerCase();
+// If .ogg fails, try .mp3 once
+cryAudio.onerror = function() {
+  this.onerror = null;
+  this.src = `https://play.pokemonshowdown.com/audio/cries/${base}.mp3`;
+};
+// Now kick off the request for .ogg
+cryAudio.src = `https://play.pokemonshowdown.com/audio/cries/${base}.ogg`;
+
 
       // types
       document.getElementById('pokemonTypes').innerHTML =
