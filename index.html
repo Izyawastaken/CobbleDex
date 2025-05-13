@@ -24,7 +24,6 @@
       text-align: center;
       transition: background 0.3s ease, color 0.3s ease;
     }
-  
     body.dark {
       background: var(--bg-dark);
       color: #f0f0f0;
@@ -47,7 +46,6 @@
       box-shadow: var(--shadow);
       transition: transform 0.2s, box-shadow 0.3s;
     }
-  
     button:hover {
       transform: scale(1.05);
       box-shadow: 0 0 12px var(--accent);
@@ -64,7 +62,6 @@
       transition: background 0.3s ease;
       backdrop-filter: blur(8px);
     }
-  
     .dark .pokedex {
       background: var(--card-dark);
     }
@@ -75,7 +72,6 @@
       border-radius: var(--radius);
       transition: transform 0.2s;
     }
-  
     img:hover {
       transform: scale(1.08);
       cursor: pointer;
@@ -89,7 +85,6 @@
       border-radius: var(--radius);
       transition: border 0.2s;
     }
-  
     input:focus, select:focus {
       outline: none;
       border-color: var(--accent);
@@ -105,47 +100,42 @@
       width: 100%;
       border-radius: var(--radius);
     }
+    .dark .autocomplete { background: #2a2a2a; color: white; }
+    .autocomplete div { padding: 10px; cursor: pointer; }
+    .autocomplete div:hover { background: #f0f0f0; }
+    .dark .autocomplete div:hover { background: #3a3a3a; }
+    .autocomplete-item.selected { background-color: #ddd; }
+    .dark .autocomplete-item.selected { background-color: #444; }
   
-    .dark .autocomplete {
-      background: #2a2a2a;
-      color: white;
-    }
-  
-    .autocomplete div {
-      padding: 10px;
-      cursor: pointer;
-    }
-  
-    .autocomplete div:hover {
-      background: #f0f0f0;
-    }
-  
-    .dark .autocomplete div:hover {
-      background: #3a3a3a;
-    }
-  
-    .autocomplete-item.selected {
-      background-color: #ddd;
-    }
-  
-    .dark .autocomplete-item.selected {
-      background-color: #444;
-    }
-  
+    /* Base styling for type badges */
     .types span {
       margin: 0 5px;
       padding: 6px 10px;
       border-radius: 20px;
       font-weight: bold;
       display: inline-block;
-      background: linear-gradient(45deg, #f6d365 0%, #fda085 100%);
-      color: #222;
-    }
-  
-    .dark .types span {
-      background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
       color: white;
     }
+  
+    /* Color overrides for each Pokémon type */
+    .types.type-fire     { background: #F08030; }
+    .types.type-water    { background: #6890F0; }
+    .types.type-grass    { background: #78C850; }
+    .types.type-electric { background: #F8D030; color: black; }
+    .types.type-ice      { background: #98D8D8; color: black; }
+    .types.type-fighting { background: #C03028; }
+    .types.type-poison   { background: #A040A0; }
+    .types.type-ground   { background: #E0C068; color: black; }
+    .types.type-flying   { background: #A890F0; }
+    .types.type-psychic  { background: #F85888; }
+    .types.type-bug      { background: #A8B820; }
+    .types.type-rock     { background: #B8A038; }
+    .types.type-ghost    { background: #705898; }
+    .types.type-dragon   { background: #7038F8; }
+    .types.type-dark     { background: #705848; }
+    .types.type-steel    { background: #B8B8D0; color: black; }
+    .types.type-fairy    { background: #EE99AC; color: black; }
+    .types.type-normal   { background: #A8A878; }
   
     .tab {
       margin-top: 1.5rem;
@@ -154,7 +144,6 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-  
     .tab button {
       background: #eee;
       color: #333;
@@ -164,7 +153,6 @@
       transition: 0.2s ease;
       font-weight: 600;
     }
-  
     .dark .tab button {
       background: #333;
       color: white;
@@ -178,19 +166,12 @@
       border-top: 1px solid #ccc;
       animation: fadeIn 0.3s ease;
     }
-  
     .tab-content.active {
       display: block;
     }
   
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-  
-    ul li {
-      margin-bottom: 6px;
-    }
+    ul { list-style: none; padding: 0; }
+    ul li { margin-bottom: 6px; }
   
     #pokemonAbilities a,
     #pokemonMoves a,
@@ -200,7 +181,6 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-  
     #pokemonAbilities a:hover,
     #pokemonMoves a:hover,
     #evolutionChain a:hover {
@@ -219,55 +199,56 @@
       margin-top: 2rem;
       opacity: 0.6;
     }
-  
     footer a {
       color: var(--accent);
       text-decoration: none;
     }
   
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; } to { opacity: 1; }
     }
   </style>
-  
 </head>
 <body>
   <h1>CobbleDex</h1>
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">⬅ Go Back</button>
 
-  <div style="display: flex; justify-content: center; gap: 8px; margin-top: 1rem;">
+  <div style="display:flex;justify-content:center;gap:8px;margin-top:1rem;">
     <select id="searchType">
       <option value="pokemon">Pokémon</option>
       <option value="item">Item</option>
       <option value="ability">Ability</option>
       <option value="move">Move</option>
     </select>
-    <div style="position: relative;">
-      <input type="text" id="pokemonInput" placeholder="Enter name or ID" oninput="autocomplete()" />
+    <div style="position:relative;">
+      <input type="text" id="pokemonInput" placeholder="Enter name or ID" oninput="autocomplete()"/>
       <div id="autocomplete-list" class="autocomplete"></div>
     </div>
     <button onclick="searchEntity()">Search</button>
   </div>
 
-  <div class="pokedex" id="pokedex" style="display: none; margin-top: 2rem;">
+  <div class="pokedex" id="pokedex" style="display:none;margin-top:2rem;">
     <audio id="cryAudio"></audio>
     <h2 id="pokemonName"></h2>
-    <img id="pokemonImg" src="" alt="Pokemon Sprite" onclick="playCry()" title="Click to hear cry" />
+    <img id="pokemonImg" src="" alt="Pokemon Sprite" onclick="playCry()" title="Click to hear cry"/>
 
     <div class="tab">
       <button onclick="showTab('info')">Info</button>
       <button onclick="showTab('moves')">Moves</button>
       <button onclick="showTab('damage')">Type Matchups</button>
       <button onclick="showTab('strategy')">Strategy</button>
-      <button onclick="showTab('stats')">Stats</button>  
+      <button onclick="showTab('stats')">Stats</button>
       <button onclick="showTab('Calculator')">Calculator</button>
     </div>
 
     <div id="info" class="tab-content active">
-      <p><strong>Types:</strong> <span class="types" id="pokemonTypes"></span></p>
-      <p><strong>Abilities:</strong> <span id="pokemonAbilities"></span></p>
+      <p><strong>Types:</strong> 
+        <span class="types" id="pokemonTypes"></span>
+      </p>
+      <p><strong>Abilities:</strong> 
+        <span id="pokemonAbilities"></span>
+      </p>
       <p><strong>Base Stats:</strong></p>
       <ul id="pokemonStats"></ul>
       <p><strong>Flavor Text:</strong></p>
@@ -294,66 +275,61 @@
       <p id="strategyText">Loading strategy data...</p>
     </div>
 
-    <div id="extraButtons" style="margin-top: 1rem;">
+    <div id="extraButtons" style="margin-top:1rem;">
       <button onclick="openCalculator()">Calculator</button>
       <button onclick="openShowdown()">Showdown</button>
     </div>
-    
   </div>
 
-  <div class="pokedex" id="infoBox" style="display: none;">
+  <div class="pokedex" id="infoBox" style="display:none;">
     <h2 id="infoTitle"></h2>
     <p id="infoDescription"></p>
     <ul id="infoDetails"></ul>
   </div>
 
+  <footer>
+    <p>Made with ❤️ by Izya. Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.</p>
+  </footer>
+
   <script>
+    // ----- Data & History -----
     const cache = localStorage;
-    let allData = {
-      pokemon: [],
-      item: [],
-      ability: [],
-      move: []
-    };
-  
+    let allData = { pokemon: [], item: [], ability: [], move: [] };
     const historyStack = [];
-  
-    async function fetchAllNames() {
-      const endpoints = ['pokemon', 'item', 'ability', 'move'];
-      for (const type of endpoints) {
-        const cached = cache.getItem(`names_${type}`);
-        if (cached) {
+
+    // ----- Fetch All Names for Autocomplete -----
+    async function fetchAllNames(){
+      for (let type of ['pokemon','item','ability','move']){
+        let key = `names_${type}`;
+        let cached = cache.getItem(key);
+        if (cached){
           allData[type] = JSON.parse(cached);
-          continue;
+        } else {
+          let res = await fetch(`https://pokeapi.co/api/v2/${type}?limit=10000`);
+          let data = await res.json();
+          allData[type] = data.results.map(x=>x.name);
+          cache.setItem(key, JSON.stringify(allData[type]));
         }
-        const res = await fetch(`https://pokeapi.co/api/v2/${type}?limit=10000`);
-        const data = await res.json();
-        const names = data.results.map(x => x.name);
-        allData[type] = names;
-        cache.setItem(`names_${type}`, JSON.stringify(names));
       }
     }
-  
-    function toggleDarkMode(force = false) {
-      document.body.classList.toggle("dark");
+
+    // ----- Dark Mode Toggle -----
+    function toggleDarkMode(){
+      document.body.classList.toggle('dark');
     }
-  
-    function playCry() {
-      document.getElementById("cryAudio").play();
+
+    // ----- History -----
+    function pushHistory(name){
+      let curr = document.getElementById('pokemonName').textContent.toLowerCase();
+      if(curr && curr!==name) historyStack.push(curr);
     }
-  
-    function pushHistory(name) {
-      const current = document.getElementById("pokemonName").textContent.toLowerCase();
-      if (current && current !== name) historyStack.push(current);
+    function goBack(){
+      if(historyStack.length){
+        let prev = historyStack.pop();
+        document.getElementById('pokemonInput').value = prev;
+        getPokemon();
+      }
     }
-  
-    function goBack() {
-      if (historyStack.length === 0) return;
-      const prev = historyStack.pop();
-      document.getElementById("pokemonInput").value = prev;
-      getPokemon();
-    }
-  
     function showTab(id) {
       const name = document.getElementById("pokemonName").textContent.toLowerCase();
   
@@ -380,229 +356,199 @@
       document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
       document.getElementById(id).classList.add("active");
     }
-  
-    function updateSelection(items, selectedIndex) {
-      items.forEach(i => i.classList.remove("selected"));
-      if (selectedIndex >= 0) {
-        items[selectedIndex].classList.add("selected");
-        items[selectedIndex].scrollIntoView({ block: "nearest" });
-      }
-    }
-  
-    function setupAutocomplete() {
-      const input = document.getElementById("pokemonInput");
-      const list = document.getElementById("autocomplete-list");
-      let selectedIndex = -1;
-      let suggestions = [];
-  
-      input.addEventListener("input", () => {
-        const val = input.value.toLowerCase();
-        const type = document.getElementById("searchType").value;
-        list.innerHTML = "";
-        suggestions = [];
-  
-        if (!val) return;
-  
-        suggestions = allData[type].filter(name => name.includes(val)).slice(0, 10);
-        suggestions.forEach((name, index) => {
-          const item = document.createElement("div");
-          item.textContent = name;
-          item.className = "autocomplete-item";
-          item.dataset.index = index;
-          item.onclick = () => {
-            input.value = name;
-            list.innerHTML = "";
-            searchEntity();
-          };
-          list.appendChild(item);
+
+    // ----- Autocomplete -----
+    function setupAutocomplete(){
+      const input = document.getElementById('pokemonInput');
+      const list = document.getElementById('autocomplete-list');
+      let idx=-1, suggestions=[];
+
+      input.addEventListener('input', ()=>{
+        let val=input.value.toLowerCase();
+        let type=document.getElementById('searchType').value;
+        list.innerHTML=''; suggestions=[]; idx=-1;
+        if(!val) return;
+        suggestions = allData[type]
+          .filter(n=>n.includes(val))
+          .slice(0,10);
+        suggestions.forEach((n,i)=>{
+          let div=document.createElement('div');
+          div.textContent=n; div.className='autocomplete-item';
+          div.dataset.index=i;
+          div.onclick=()=>{ input.value=n; list.innerHTML=''; searchEntity(); };
+          list.appendChild(div);
         });
-        selectedIndex = -1;
       });
-  
-      input.addEventListener("keydown", (e) => {
-        const items = list.querySelectorAll(".autocomplete-item");
-        if (e.key === "ArrowDown") {
-          selectedIndex = (selectedIndex + 1) % items.length;
-          updateSelection(items, selectedIndex);
+
+      input.addEventListener('keydown', e=>{
+        let items=list.querySelectorAll('.autocomplete-item');
+        if(e.key==='ArrowDown'){ idx=(idx+1)%items.length; updateSel(items,idx); e.preventDefault(); }
+        if(e.key==='ArrowUp'){ idx=(idx-1+items.length)%items.length; updateSel(items,idx); e.preventDefault(); }
+        if(e.key==='Enter'){
           e.preventDefault();
-        } else if (e.key === "ArrowUp") {
-          selectedIndex = (selectedIndex - 1 + items.length) % items.length;
-          updateSelection(items, selectedIndex);
-          e.preventDefault();
-        } else if (e.key === "Enter") {
-          e.preventDefault();
-          if (selectedIndex >= 0 && items[selectedIndex]) {
-            items[selectedIndex].click();
-          } else {
-            searchEntity();
-          }
+          if(idx>=0 && items[idx]) items[idx].click();
+          else searchEntity();
         }
       });
     }
-  
-    async function searchEntity() {
-      const query = document.getElementById("pokemonInput").value.toLowerCase().trim();
-      const type = document.getElementById("searchType").value;
-  
-      document.getElementById("pokedex").style.display = "none";
-      document.getElementById("infoBox").style.display = "none";
-  
-      if (!query) return;
-      if (type === "pokemon") return getPokemon();
-  
+    function updateSel(items, idx){
+      items.forEach(i=>i.classList.remove('selected'));
+      if(idx>=0) items[idx].classList.add('selected');
+    }
+
+    // ----- Search Entity -----
+    async function searchEntity(){
+      let q=document.getElementById('pokemonInput').value.trim().toLowerCase();
+      let t=document.getElementById('searchType').value;
+      document.getElementById('pokedex').style.display='none';
+      document.getElementById('infoBox').style.display='none';
+      if(!q) return;
+      if(t==='pokemon') return getPokemon();
       try {
-        const res = await fetch(`https://pokeapi.co/api/v2/${type}/${query}`);
-        if (!res.ok) return alert(`${type} not found.`);
-        const data = await res.json();
-        document.getElementById("infoBox").style.display = "block";
-        document.getElementById("infoTitle").textContent = data.name.toUpperCase();
-        document.getElementById("infoDetails").innerHTML = "";
-  
-        if (type === "item") {
-          document.getElementById("infoDescription").textContent = data.effect_entries.find(e => e.language.name === "en")?.effect || "No description.";
-          document.getElementById("infoDetails").innerHTML = `<li><strong>Category:</strong> ${data.category.name}</li>`;
-        } else if (type === "ability") {
-          document.getElementById("infoDescription").textContent = data.effect_entries.find(e => e.language.name === "en")?.short_effect || "No description.";
-          document.getElementById("infoDetails").innerHTML = `<li><strong>Generation:</strong> ${data.generation.name}</li>`;
-        } else if (type === "move") {
-          document.getElementById("infoDescription").textContent = data.effect_entries.find(e => e.language.name === "en")?.effect || "No description.";
-          document.getElementById("infoDetails").innerHTML = `
-            <li><strong>Type:</strong> ${data.type.name}</li>
-            <li><strong>Power:</strong> ${data.power || 'N/A'}</li>
-            <li><strong>PP:</strong> ${data.pp}</li>
-            <li><strong>Accuracy:</strong> ${data.accuracy || 'N/A'}</li>
-          `;
+        let r=await fetch(`https://pokeapi.co/api/v2/${t}/${q}`);
+        if(!r.ok) return alert(`${t} not found.`);
+        let d=await r.json();
+        let box=document.getElementById('infoBox');
+        box.style.display='block';
+        document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+        document.getElementById('infoDetails').innerHTML='';
+        let desc=document.getElementById('infoDescription');
+        if(t==='item'){
+          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No description';
+          document.getElementById('infoDetails').innerHTML=`<li><strong>Category:</strong> ${d.category.name}</li>`;
         }
-      } catch (err) {
-        alert("Error fetching data.");
+        else if(t==='ability'){
+          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
+          document.getElementById('infoDetails').innerHTML=`<li><strong>Generation:</strong> ${d.generation.name}</li>`;
+        }
+        else if(t==='move'){
+          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
+          document.getElementById('infoDetails').innerHTML=`
+            <li><strong>Type:</strong> ${d.type.name}</li>
+            <li><strong>Power:</strong> ${d.power||'N/A'}</li>
+            <li><strong>PP:</strong> ${d.pp}</li>
+            <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>`;
+        }
+      } catch {
+        alert('Error fetching data.');
       }
     }
-  
-    async function getPokemon(nameOverride = null) {
-      const name = nameOverride || document.getElementById("pokemonInput").value.toLowerCase().trim();
-      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-      if (!res.ok) return alert("Pokémon not found.");
-      const data = await res.json();
-  
+
+    // ----- Get Pokémon -----
+    async function getPokemon(override=null){
+      let name=override||document.getElementById('pokemonInput').value.trim().toLowerCase();
+      let res=await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+      if(!res.ok) return alert('Pokémon not found.');
+      let d=await res.json();
       pushHistory(name);
-      document.getElementById("pokedex").style.display = "block";
-      document.getElementById("pokemonName").textContent = data.name.toUpperCase();
-      document.getElementById("pokemonImg").src = data.sprites.other["official-artwork"].front_default || data.sprites.front_default;
-      document.getElementById("cryAudio").src = `https://play.pokemonshowdown.com/audio/cries/${data.name}.ogg`;
-  
-      document.getElementById("pokemonTypes").innerHTML = data.types.map(t => `<span>${t.type.name}</span>`).join("");
-      document.getElementById("pokemonAbilities").innerHTML = data.abilities.map(a => `<a href="#" onclick="showAbility('${a.ability.name}')">${a.ability.name}</a>`).join(", ");
-      document.getElementById("pokemonStats").innerHTML = data.stats.map(s => `<li>${s.stat.name}: ${s.base_stat}</li>`).join("");
-  
-      const moveList = document.getElementById("pokemonMoves");
-      moveList.innerHTML = "Loading moves...";
-      const detailedMoves = await Promise.all(
-        data.moves.slice(0, 10).map(async m => {
-          const moveRes = await fetch(m.move.url);
-          const moveData = await moveRes.json();
-          const levelLearned = m.version_group_details[0]?.level_learned_at || "-";
-          return `<li><a href="#" onclick="showMove('${moveData.name}')">${moveData.name}</a> <span class="move-details">(Type: ${moveData.type.name}, Power: ${moveData.power || "N/A"}, Level: ${levelLearned})</span></li>`;
+      document.getElementById('pokedex').style.display='block';
+      document.getElementById('pokemonName').textContent=d.name.toUpperCase();
+      document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
+      document.getElementById('cryAudio').src=`https://play.pokemonshowdown.com/audio/cries/${d.name}.ogg`;
+
+      // ←── COLOR-CODED TYPES HERE ──→
+      document.getElementById('pokemonTypes').innerHTML =
+        d.types.map(t=>{
+          let tn=t.type.name.toLowerCase();
+          return `<span class="types type-${tn}">${
+            tn.charAt(0).toUpperCase()+tn.slice(1)
+          }</span>`;
+        }).join('');
+
+      // Abilities, Stats, Moves, Evolution, Damage...
+      document.getElementById('pokemonAbilities').innerHTML =
+        d.abilities.map(a=>
+          `<a href="#" onclick="showAbility('${a.ability.name}')">${a.ability.name}</a>`
+        ).join(', ');
+
+      document.getElementById('pokemonStats').innerHTML =
+        d.stats.map(s=>`<li>${s.stat.name}: ${s.base_stat}</li>`).join('');
+
+      let mList=document.getElementById('pokemonMoves');
+      mList.innerHTML='Loading moves…';
+      let moves=await Promise.all(
+        d.moves.slice(0,10).map(async m=>{
+          let md=await (await fetch(m.move.url)).json();
+          let lvl=m.version_group_details[0]?.level_learned_at||'-';
+          return `<li><a href="#" onclick="showMove('${md.name}')">${md.name}</a>
+            <span class="move-details">(Type: ${md.type.name}, Power: ${md.power||'N/A'}, Lv: ${lvl})</span></li>`;
         })
       );
-      moveList.innerHTML = detailedMoves.join("");
-  
-      const speciesRes = await fetch(data.species.url);
-      const speciesData = await speciesRes.json();
-      const entry = speciesData.flavor_text_entries.find(e => e.language.name === "en");
-      document.getElementById("flavorText").textContent = entry ? entry.flavor_text.replace(/\n|\f/g, " ") : "No entry available.";
-  
-      const evoRes = await fetch(speciesData.evolution_chain.url);
-      const evoData = await evoRes.json();
-      const evoList = [];
-      let evo = evoData.chain;
-      do {
-        evoList.push(evo.species.name);
-        evo = evo.evolves_to[0];
-      } while (evo);
-      document.getElementById("evolutionChain").innerHTML = evoList.map(p => `<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`).join("");
-  
-      const typeRes = await Promise.all(data.types.map(t => fetch(t.type.url)));
-      const typeData = await Promise.all(typeRes.map(r => r.json()));
-      const relations = new Set();
-      typeData.forEach(td => {
-        td.damage_relations.double_damage_from.forEach(d => relations.add(`Takes 2× from ${d.name}`));
-        td.damage_relations.half_damage_from.forEach(d => relations.add(`Takes 0.5× from ${d.name}`));
-        td.damage_relations.no_damage_from.forEach(d => relations.add(`Immune to ${d.name}`));
+      mList.innerHTML=moves.join('');
+
+      // Flavor text
+      let sp=await (await fetch(d.species.url)).json();
+      let text=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
+        .replace(/\n|\f/g,' ')||'No entry';
+      document.getElementById('flavorText').textContent=text;
+
+      // Evolution chain
+      let evc=await (await fetch(sp.evolution_chain.url)).json();
+      let evoArr=[]; for(let e=evc.chain;e;e=e.evolves_to[0]) evoArr.push(e.species.name);
+      document.getElementById('evolutionChain').innerHTML =
+        evoArr.map(p=>
+          `<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`
+        ).join('');
+
+      // Damage relations
+      let typeDatas=await Promise.all(d.types.map(t=>fetch(t.type.url).then(r=>r.json())));
+      let rel=new Set();
+      typeDatas.forEach(td=>{
+        td.damage_relations.double_damage_from.forEach(d=>rel.add(`2× from ${d.name}`));
+        td.damage_relations.half_damage_from.forEach(d=>rel.add(`0.5× from ${d.name}`));
+        td.damage_relations.no_damage_from.forEach(d=>rel.add(`Immune to ${d.name}`));
       });
-      document.getElementById("damageRelations").innerHTML = [...relations].map(r => `<li>${r}</li>`).join("");
+      document.getElementById('damageRelations').innerHTML =
+        [...rel].map(r=>`<li>${r}</li>`).join('');
     }
-  
-    async function showAbility(name) {
-      const res = await fetch(`https://pokeapi.co/api/v2/ability/${name}`);
-      if (!res.ok) return alert("Ability not found.");
-      const data = await res.json();
-      document.getElementById("infoBox").style.display = "block";
-      document.getElementById("infoTitle").textContent = data.name.toUpperCase();
-      document.getElementById("infoDescription").textContent = data.effect_entries.find(e => e.language.name === "en")?.short_effect || "No description.";
-      document.getElementById("infoDetails").innerHTML = `<li><strong>Generation:</strong> ${data.generation.name}</li>`;
+
+    // ----- Abilities & Moves Info Boxes -----
+    async function showAbility(name){
+      let r=await fetch(`https://pokeapi.co/api/v2/ability/${name}`);
+      if(!r.ok) return alert('Ability not found.');
+      let d=await r.json();
+      document.getElementById('infoBox').style.display='block';
+      document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+      document.getElementById('infoDescription').textContent=
+        d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
+      document.getElementById('infoDetails').innerHTML=
+        `<li><strong>Generation:</strong> ${d.generation.name}</li>`;
     }
-  
-    async function showMove(name) {
-      const res = await fetch(`https://pokeapi.co/api/v2/move/${name}`);
-      if (!res.ok) return alert("Move not found.");
-      const data = await res.json();
-      document.getElementById("infoBox").style.display = "block";
-      document.getElementById("infoTitle").textContent = data.name.toUpperCase();
-      document.getElementById("infoDescription").textContent = data.effect_entries.find(e => e.language.name === "en")?.effect || "No description.";
-      document.getElementById("infoDetails").innerHTML = `
-        <li><strong>Type:</strong> ${data.type.name}</li>
-        <li><strong>Power:</strong> ${data.power || "N/A"}</li>
-        <li><strong>PP:</strong> ${data.pp}</li>
-        <li><strong>Accuracy:</strong> ${data.accuracy || "N/A"}</li>
-        <li><strong>Category:</strong> ${data.damage_class.name}</li>
-      `;
+    async function showMove(name){
+      let r=await fetch(`https://pokeapi.co/api/v2/move/${name}`); if(!r.ok) return alert('Move not found.');
+      let d=await r.json();
+      document.getElementById('infoBox').style.display='block';
+      document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+      document.getElementById('infoDescription').textContent=
+        d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
+      document.getElementById('infoDetails').innerHTML=`
+        <li><strong>Type:</strong> ${d.type.name}</li>
+        <li><strong>Power:</strong> ${d.power||'N/A'}</li>
+        <li><strong>PP:</strong> ${d.pp}</li>
+        <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>
+        <li><strong>Category:</strong> ${d.damage_class.name}</li>`;
     }
-    document.addEventListener("DOMContentLoaded", () => {
-    toggleDarkMode(true); // Ensure dark mode is set on load
-    });
 
-    function openCalculator() {
-  const name = document.getElementById("pokemonName").textContent.toLowerCase();
-  if (name) {
-    window.open(`https://calc.pokemonshowdown.com/?p1=${name}`, '_blank');
-  } else {
-    alert("No Pokémon selected.");
-  }
-}
+    // ----- External Links -----
+    function openCalculator(){
+      let n=document.getElementById('pokemonName').textContent.toLowerCase();
+      if(n) window.open(`https://calc.pokemonshowdown.com/?p1=${n}`,'_blank');
+      else alert('No Pokémon selected.');
+    }
+    function openShowdown(){
+      let n=document.getElementById('pokemonName').textContent.trim();
+      if(n){
+        alert(`To add ${n}, click “Add Pokémon” and search "${n}"`);
+        window.open('https://play.pokemonshowdown.com/teambuilder','_blank');
+      } else alert('No Pokémon selected.');
+    }
 
-function openShowdown() {
-  const name = document.getElementById("pokemonName").textContent.trim();
-  if (name) {
-    alert(`To select ${name}, click 'Add Pokémon' in Showdown's teambuilder and type "${name}" in the search.`);
-    window.open("https://play.pokemonshowdown.com/teambuilder", "_blank");
-  } else {
-    alert("No Pokémon selected.");
-  }
-}
-
-
-
-  
-    // Init on load
-    document.addEventListener("DOMContentLoaded", async () => {
+    // ----- Init -----
+    document.addEventListener('DOMContentLoaded', async ()=>{
       await fetchAllNames();
       setupAutocomplete();
+      toggleDarkMode(); // start in dark
     });
   </script>
-      </div> <!-- End of .pokedex -->
-
-      <div class="pokedex" id="infoBox" style="display:none;">
-        <h2 id="infoTitle"></h2>
-        <p id="infoDescription"></p>
-        <ul id="infoDetails"></ul>
-      </div>
-
-      <footer style="margin-top: 3rem; font-size: 0.9rem; opacity: 0.6;">
-        <p>Made with ❤️ by Izya (and one all nighter). Data from <a href="https://pokeapi.co/" target="_blank" style="color: var(--accent);">PokéAPI</a>.</p>
-      </footer>
-
-    </div> <!-- End of main container -->
-
-  </body>
+</body>
 </html>
-  
