@@ -380,6 +380,24 @@
         gap: 1rem;
       }
     }
+    /* —— “Report issues” link —— */
+      .report-link {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--accent);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s ease;
+      }
+      .report-link:hover {
+        opacity: 0.8;
+}
+
 
   </style>
 </head>
@@ -462,6 +480,14 @@
     <p id="infoDescription"></p>
     <ul id="infoDetails"></ul>
   </div>
+  <a
+  href="https://github.com/Izyawastaken/CobbleDex/issues"
+  target="_blank"
+  class="report-link"
+>
+  Report issues here!
+</a>
+
 
   <footer>
     <p>Made with ❤️ by Izya (and a lot of redbulls ,sleepless nights). Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.</p>
