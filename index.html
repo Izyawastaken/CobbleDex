@@ -392,6 +392,16 @@ button:focus {
   outline: none;
   box-shadow: none;
 }
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  border: none;
+  outline: none;
+}
 
 
 
@@ -402,7 +412,7 @@ button:focus {
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">⬅ Go Back</button>
 
-  <div style="position:relative; display:inline-block; margin-top:1rem;">
+  <div class="search-bar-wrapper">
     <select id="searchType">
       <option value="pokemon">Pokémon</option>
       <option value="item">Item</option>
@@ -411,7 +421,7 @@ button:focus {
     </select>
     <input type="text" id="pokemonInput" placeholder="Enter name or ID" oninput="autocomplete()" style="margin-left:0.5rem;" />
     <div id="autocomplete-list" class="autocomplete"></div>
-    <button onclick="searchEntity()" style="margin-left:0.5rem;">Search</button>
+    <button onclick="searchEntity()">Search</button>
   </div>
 
   <div class="pokedex" id="pokedex" style="display:none;">
