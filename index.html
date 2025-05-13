@@ -122,13 +122,72 @@
       display:inline-block; height:8px; border-radius:4px;
       vertical-align:middle;
     }
-    .stats-bar.low  { background:#f5dc40; }
-    .stats-bar.high { background:#8cdf56; }
+
+    .stats-bar.terrible    { background: #f44336; }  /*red*/
+    .stats-bar.very-low    { background: #ff7043; }  /*orange-ish*/
+    .stats-bar.low         { background: #f5dc40; }  /*yellow*/
+    .stats-bar.mid         { background: #8bc34a; }  /*green*/
+    .stats-bar.high        { background: #4caf50; }  /*darker green*/
+    .stats-bar.very-high   { background: #4fc3f7; }  /*sky blue*/
+    .stats-bar.ultra       { background: #00bcd4; }  /*teal*/
+
+
 
     footer { margin-top:2rem; font-size:0.9rem; opacity:0.6; }
     footer a { color:var(--accent); }
 
     @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+
+    .ability-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  margin: 4px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ability-pill:hover {
+  background: #c62828;
+  transform: scale(1.05);
+}
+
+.ability-pill.priority {
+  background: teal;
+}
+
+.ability-pill.hidden {
+  background: #7b1fa2;
+}
+.ability-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  margin: 4px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ability-pill:hover {
+  background: #c62828;
+  transform: scale(1.05);
+}
+
+.ability-pill.priority {
+  background: teal;
+}
+
+.ability-pill.hidden {
+  background: #7b1fa2;
+}
+
+
   </style>
 </head>
 <body>
@@ -216,6 +275,15 @@
     let allData = { pokemon:[], item:[], ability:[], move:[] };
     const historyStack = [];
 
+    // ── track which ability we’ll pass to pkmn.help ──
+    let currentAbility = 'none';
+    const priorityAbilities = [
+      "delta-stream","dry-skin","earth-eater","filter","flash-fire","fluffy",
+      "heatproof","levitate","lightning-rod","motor-drive","purifying-salt",
+      "sap-sipper","storm-drain","tera-shell","thick-fat","volt-absorb",
+      "water-absorb","water-bubble","well-baked-body","wonder-guard"
+   ];
+
     // fetch autocomplete lists
     async function fetchAllNames() {
       for (let t of ['pokemon','item','ability','move']) {
@@ -229,7 +297,7 @@
         }
       }
     }
-
+    
     function toggleDarkMode() {
       document.body.classList.toggle('dark');
     }
@@ -251,12 +319,25 @@
     function showTab(id) {
       const name = document.getElementById('pokemonName').textContent.toLowerCase();
       if (id==='strategy') return window.open(`https://www.smogon.com/dex/sv/pokemon/${name}/`,'_blank');
-      if (id==='damage') {
-        let types = Array.from(document.getElementById('pokemonTypes').children)
-                         .map(s=>s.textContent.toLowerCase()).join('+');
-        if (types) window.open(`https://www.pkmn.help/defense/?types=${types}&ability=none&tera_type=none`,'_blank');
-        return;
-      }
+     
+      if (id === 'damage') {
+    // collect types
+    const types = Array.from(
+      document.getElementById('pokemonTypes').children
+    )
+      .map(span => span.textContent.toLowerCase())
+      .join('+');
+
+    if (types) {
+      window.open(
+        `https://www.pkmn.help/defense/?types=${types}` +
+        `&ability=${currentAbility}` +
+        `&tera_type=none`,
+        '_blank'
+      );
+    }
+    return;
+  }
       if (id==='stats')   return window.open(`https://pokemondb.net/pokedex/${name}#dex-stats`,'_blank');
       if (id==='moves')   return window.open(`https://pokemondb.net/pokedex/${name}#dex-moves`,'_blank');
       document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
@@ -352,10 +433,31 @@
         }).join('');
 
       // abilities
-      document.getElementById('pokemonAbilities').innerHTML =
-        d.abilities.map(a=>
-          `<a href="#" onclick="showAbility('${a.ability.name}')">${a.ability.name}</a>`
-        ).join(', ');
+            const abilityNames = d.abilities.map(o => o.ability.name);
+            // pick a priority ability if present, otherwise the first ability
+            let rawAbility = abilityNames.find(a => priorityAbilities.includes(a))
+                || abilityNames[0]
+                || 'none';
+            currentAbility = rawAbility.replace(/-/g, '_');
+            // build the pills (linking out to PokemonDB)
+            const abilityHTML = d.abilities.map(obj => {
+            const ab = obj.ability.name.toLowerCase();
+            const display = ab.replace(/-/g,' ')
+                            .replace(/\b\w/g, c => c.toUpperCase());
+            const isHidden  = obj.is_hidden;
+            const isPrio    = priorityAbilities.includes(ab);
+            const cls       = isPrio ? 'priority' : (isHidden ? 'hidden' : '');
+            return `<a 
+                    class="ability-pill ${cls}" 
+                    href="https://pokemondb.net/ability/${ab}" 
+                    target="_blank"
+                >
+                    ${display}${isHidden?' (HA)':''}
+                </a>`;
+            }).join('');
+            document.getElementById('pokemonAbilities').innerHTML = abilityHTML;
+
+
 
       // —— base stats chart —— 
       (()=>{
@@ -369,9 +471,18 @@
               <th></th>
             </tr></thead>
             <tbody>`;
-        stats.forEach(s=>{
-          let pct = (s.v/maxV*100).toFixed(1),
-              cls = s.v>=100? 'high':'low';
+                stats.forEach(s => {
+                let pct = (s.v / maxV * 100).toFixed(1);
+                let cls = 'terrible';
+                    if (s.v >= 140) cls = 'ultra';
+                    else if (s.v >= 120) cls = 'very-high';
+                    else if (s.v >= 100) cls = 'high';
+                    else if (s.v >= 80) cls = 'mid';
+                    else if (s.v >= 60) cls = 'low';
+                    else if (s.v >= 40) cls = 'very-low';
+  
+
+
           html += `
             <tr>
               <td>${s.n.toUpperCase()}</td>
