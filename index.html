@@ -615,12 +615,24 @@ body.dark select {
 </a>
 <input type="color" id="accentPicker" title="Pick your accent color" value="#e3350d" />
 
-
-  <footer>
-    <p>Made with ❤️ by Izya (and a lot of redbulls ,sleepless nights). Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.</p>
-  </footer>
+<footer>
+  <p>
+    Made with <span id="easterEgg" title="Click me!">❤️</span> by Izya 
+    (and a lot of redbulls, sleepless nights). 
+    Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
+  </p>
+</footer>
 
 <script>
+  const twitchLinks = [
+    "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+  ];
+
+  document.getElementById("easterEgg").addEventListener("click", () => {
+    const randomUrl = twitchLinks[Math.floor(Math.random() * twitchLinks.length)];
+    window.open(randomUrl, "_blank");
+  });
+
   const cache = localStorage;
   let allData = { pokemon:[], item:[], ability:[], move:[] };
   const historyStack = [];
