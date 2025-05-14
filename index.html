@@ -526,6 +526,25 @@ body.dark select {
 #easterEgg:hover {
   transform: scale(1.3);
 }
+#toggleCobblemon {
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#toggleCobblemon:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
 
 
   </style>
@@ -535,6 +554,7 @@ body.dark select {
   <h1 class="title">Primordium</h1>
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">Go Back</button>
+  <button id="toggleCobblemon" onclick="toggleCobblemon()">Cobblemon: OFF</button>
 
   <div class="search-wrapper">
     <select id="searchType">
@@ -577,6 +597,8 @@ body.dark select {
 
       <p><strong>Flavor Text:</strong></p>
       <p id="flavorText"></p>
+      <p id="cobblemonStatus" style="display: none; font-weight: bold;"></p>
+
     </div>
 
     <!-- Moves -->
@@ -829,7 +851,10 @@ document.getElementById(id).classList.add('active');
     let d=await r.json();
     pushHistory(n);
     document.getElementById('pokedex').style.display='block';
-    document.getElementById('pokemonName').textContent=d.name.toUpperCase();
+    document.getElementById('pokemonName').textContent = d.name.toUpperCase();
+currentPokemonName = d.name; // 👈 This stores the current Pokémon
+updateCobblemonStatus(currentPokemonName); // 👈 This updates the Cobblemon status
+
     document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
    // ── inside your getPokemon(d) after fetching d ──
 const cryAudio = document.getElementById('cryAudio');
@@ -979,6 +1004,7 @@ setTimeout(() => {
     let txt=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
               .replace(/\n|\f/g,' ')||'No entry';
     document.getElementById('flavorText').textContent = txt;
+    
 
     // evolution
     let ec=await (await fetch(sp.evolution_chain.url)).json();
@@ -1056,6 +1082,43 @@ document.getElementById("accentPicker").addEventListener("input", (e) => {
   document.documentElement.style.setProperty('--accent', color);
   localStorage.setItem('accentColor', color);
 });
+
+let cobblemonMode = false;
+let cobblemonList = [];
+
+function toggleCobblemon() {
+  cobblemonMode = !cobblemonMode;
+  document.getElementById('toggleCobblemon').textContent = `Cobblemon: ${cobblemonMode ? 'ON' : 'OFF'}`;
+  updateCobblemonStatus(currentPokemonName); // Ensure currentPokemonName is defined
+}
+
+function updateCobblemonStatus(pokemonName) {
+  const statusElement = document.getElementById('cobblemonStatus');
+  if (cobblemonMode) {
+    const isAvailable = cobblemonList.includes(pokemonName.toLowerCase());
+    statusElement.textContent = isAvailable ? '✅ In Cobblemon' : '❌ Not in Cobblemon';
+    statusElement.style.display = 'block';
+  } else {
+    statusElement.style.display = 'none';
+  }
+}
+
+// Load Cobblemon list from the spreadsheet
+async function loadCobblemonList() {
+  try {
+    const response = await fetch('https://docs.google.com/spreadsheets/d/16JrrEp919HVn8YE0AtmeAu6_tPkMkKqEmRzMlKW442A/gviz/tq?tqx=out:csv');
+    const csvText = await response.text();
+    const lines = csvText.split('\n');
+    cobblemonList = lines.map(line => line.split(',')[0].trim().toLowerCase());
+  } catch (error) {
+    console.error('Error loading Cobblemon list:', error);
+  }
+}
+
+
+// Call this function on page load
+loadCobblemonList();
+
 
 
   // init
