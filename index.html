@@ -545,6 +545,47 @@ body.dark select {
   opacity: 0.9;
   transform: scale(1.05);
 }
+/* ─── Cobblemon status card ─── */
+#cobblemonStatus {
+  display: none;           
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--card-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: left;
+  color: inherit;
+  transition: background var(--transition), color var(--transition);
+}
+/* Dark-mode version */
+body.dark #cobblemonStatus {
+  background: var(--card-dark);
+}
+
+/* Make it a nice bullet list */
+#cobblemonStatus ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+#cobblemonStatus li {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+}
+
+/* Optional: highlight the key bits */
+#cobblemonStatus .rarity {
+  font-weight: 600;
+  color: var(--accent);
+}
+#cobblemonStatus .biome {
+  font-style: italic;
+}
+#cobblemonStatus .context {
+  opacity: 0.8;
+  font-size: 0.9em;
+}
+
 
 
   </style>
@@ -1117,16 +1158,21 @@ function updateCobblemonStatus(pokemonName) {
   const spawns = cobblemonList[key] || [];
 
   if (spawns.length) {
-    const parts = spawns.map((s, i) => {
-      // s.bucket = “ultra-rare”, s.biomes = “Jungle…”, s.context = “grounded”
-      const rarity = s.bucket   || 'unknown rarity';
-      const zone   = s.biomes   || 'unknown biome';
-      const ctx    = s.context  ? `, context = ${s.context}` : '';
-      return `Spawn ${i+1}: ${rarity} in ${zone}${ctx}`;
-    });
-    statusElement.textContent = `✅ In Cobblemon — ` + parts.join('; ');
+    // build an <li> for each spawn
+    const items = spawns.map((s, i) => {
+      const rarity  = s.bucket  || 'unknown rarity';
+      const zone    = s.biomes  || 'unknown biome';
+      const ctx     = s.context
+                      ? ` <span class="context">(context: ${s.context})</span>`
+                      : '';
+      return `<li>
+        <span class="rarity">Spawn ${i+1}: ${rarity}</span>
+        in <span class="biome">${zone}</span>${ctx}
+      </li>`;
+    }).join('');
+    statusElement.innerHTML = `<ul>${items}</ul>`;
   } else {
-    statusElement.textContent = `❌ Not in Cobblemon`;
+    statusElement.innerHTML = `❌ Not in Cobblemon`;
   }
 
   statusElement.style.display = 'block';
