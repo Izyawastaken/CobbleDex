@@ -693,22 +693,28 @@ body.dark #cobblemonStatus {
     (and a lot of redbulls, sleepless nights). 
     Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
   </p>
-</footer>
+</footer>  
+
 
 <script>
-   // this will be called by the sheet’s JSONP wrapper:
-   function handleCobblemonData(response) {
-  response.table.rows.forEach(r => {
-    const name    = r.c[1]?.v?.toLowerCase();  // “Pokémon”
-    const bucket  = r.c[3]?.v;                // “Bucket”
-    const biomes  = r.c[7]?.v;                // “Biomes”
-    const context = r.c[12]?.v;               // **Context** column
-
-    if (!name) return;
-    if (!cobblemonList[name]) cobblemonList[name] = [];
-    cobblemonList[name].push({ bucket, biomes, context });
-  });
-}
+  const cobblemonCsvData = {};
+  fetch('https://raw.githubusercontent.com/Izyawastaken/Primordium/main/cobblemon_pokemon.csv')  .then(r => r.text())
+  .then(text => {
+    const lines = text.trim().split('\n');
+    // header: name,bucket,biomes,context
+    for (let i = 1; i < lines.length; i++) {
+      let [name, bucket, biomes, context] = lines[i].split(',');
+      const entry = {
+        bucket,
+        biomes: biomes === '-' ? [] : biomes.split('-'),
+        context: context === '-' ? '' : context
+      };
+      // push into an array for this Pokémon
+      if (!cobblemonCsvData[name]) cobblemonCsvData[name] = [];
+      cobblemonCsvData[name].push(entry);
+    }
+  })
+  .catch(err => console.error('CSV load failed:', err));
 
   const twitchLinks = [
     "https://www.twitch.tv/astralaeyna",
@@ -1148,57 +1154,38 @@ function toggleCobblemon() {
 }
 
 function updateCobblemonStatus(pokemonName) {
-  const statusElement = document.getElementById('cobblemonStatus');
+  const statusEl = document.getElementById('cobblemonStatus');
   if (!cobblemonMode) {
-    statusElement.style.display = 'none';
+    statusEl.style.display = 'none';
     return;
   }
-
-  const key    = pokemonName?.toLowerCase();
-  const spawns = cobblemonList[key] || [];
-
+  const key     = pokemonName?.toLowerCase();
+  const spawns  = cobblemonCsvData[key] || [];
   if (spawns.length) {
-    // build an <li> for each spawn
-    const items = spawns.map((s, i) => {
-      const rarity  = s.bucket  || 'unknown rarity';
-      const zone    = s.biomes  || 'unknown biome';
-      const ctx     = s.context
-                      ? ` <span class="context">(context: ${s.context})</span>`
-                      : '';
+    // build one <li> per spawn
+    statusEl.innerHTML = '<ul>' + spawns.map((s, i) => {
+      const zones = s.biomes.length
+        ? `in <span class="biome">${s.biomes.join(', ')}</span>`
+        : '';
+      const ctx = s.context
+        ? ` <span class="context">(${s.context})</span>`
+        : '';
       return `<li>
-        <span class="rarity">Spawn ${i+1}: ${rarity}</span>
-        in <span class="biome">${zone}</span>${ctx}
+        <span class="rarity">Spawn ${i+1}: ${s.bucket}</span>
+        ${zones}${ctx}
       </li>`;
-    }).join('');
-    statusElement.innerHTML = `<ul>${items}</ul>`;
+    }).join('') + '</ul>';
   } else {
-    statusElement.innerHTML = `❌ Not in Cobblemon`;
+    statusEl.textContent = '❌ Not in Cobblemon';
   }
-
-  statusElement.style.display = 'block';
+  statusEl.style.display = 'block';
 }
 
-function loadCobblemonList() {
-  // build the JSONP URL: out:json plus a responseHandler of handleCobblemonData
-  const url = 
-    'https://docs.google.com/spreadsheets/d/16JrrEp919HVn8YE0AtmeAu6_tPkMkKqEmRzMlKW442A/' +
-    'gviz/tq?gid=0&tqx=out:json;responseHandler:handleCobblemonData';
-
-  const script = document.createElement('script');
-  script.src = url;
-  document.body.appendChild(script);
-}
-
-
-
-// Call this function on page load
-loadCobblemonList();
 
 
 
   // init
   document.addEventListener('DOMContentLoaded', async ()=>{
-    await loadCobblemonList();
    await fetchAllNames();
   setupAutocomplete();
   toggleDarkMode(); // start dark
