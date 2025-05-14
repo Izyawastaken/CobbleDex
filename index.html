@@ -503,6 +503,22 @@ transform: scale(1.05);
   border-radius: 50%;
   padding: 0;
 }
+body.dark select {
+  background: rgba(40, 40, 40, 0.8); /* darker background */
+  color: #eee; /* light text */
+  border: 1px solid #444;
+}
+
+/* Optional: Add better styling for the options in dark mode */
+body.dark select option {
+  background: #2a2a2a;
+  color: #eee;
+}
+body.dark select {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
   </style>
 </head>
 <body>
@@ -633,8 +649,12 @@ transform: scale(1.05);
   }
   
   function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  document.querySelector('button[onclick="toggleDarkMode()"]').textContent =
+    isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+}
+
   function playCry() {
     document.getElementById('cryAudio').play();
   }
@@ -794,12 +814,16 @@ this.src = `https://play.pokemonshowdown.com/audio/cries/${base}.mp3`;
 cryAudio.src = `https://play.pokemonshowdown.com/audio/cries/${base}.ogg`;
 
 
-    // types
-    document.getElementById('pokemonTypes').innerHTML =
-      d.types.map(t=>{
-        let tn=t.type.name.toLowerCase();
-        return `<span class="types type-${tn}">${tn[0].toUpperCase()+tn.slice(1)}</span>`;
-      }).join('');
+document.getElementById('pokemonTypes').innerHTML =
+  d.types.map(t => {
+    const tn = t.type.name.toLowerCase();
+    const label = tn[0].toUpperCase() + tn.slice(1);
+    const url = `https://www.pkmn.help/defense/?types=${tn}&ability=none&tera_type=none`;
+    return `<a href="#" onclick="openSmartTab('${url}'); return false;">
+              <span class="types type-${tn}">${label}</span>
+            </a>`;
+  }).join('');
+
 
     // abilities
           const abilityNames = d.abilities.map(o => o.ability.name);
