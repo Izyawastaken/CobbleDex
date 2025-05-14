@@ -397,12 +397,87 @@
       .report-link:hover {
         opacity: 0.8;
 }
+.stats-bar {
+  width: 0%;
+  transition: width 1.2s ease-in-out;
+}
+@keyframes subtleGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(227, 53, 13, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(227, 53, 13, 0.7);
+  }
+}
+h1.title {
+  animation: subtleGlow 2.5s ease-in-out infinite;
+}
+
+body.dark 
+.types.type-fire     { box-shadow: 0 0 8px #F08030; }
+.types.type-water    { box-shadow: 0 0 8px #6890F0; }
+.types.type-grass    { box-shadow: 0 0 8px #78C850; }
+.types.type-electric { box-shadow: 0 0 8px #F8D030; }
+.types.type-ice      { box-shadow: 0 0 8px #98D8D8; }
+.types.type-fighting { box-shadow: 0 0 8px #C03028; }
+.types.type-poison   { box-shadow: 0 0 8px #A040A0; }
+.types.type-ground   { box-shadow: 0 0 8px #E0C068; }
+.types.type-flying   { box-shadow: 0 0 8px #A890F0; }
+.types.type-psychic  { box-shadow: 0 0 8px #F85888; }
+.types.type-bug      { box-shadow: 0 0 8px #A8B820; }
+.types.type-rock     { box-shadow: 0 0 8px #B8A038; }
+.types.type-ghost    { box-shadow: 0 0 8px #705898; }
+.types.type-dragon   { box-shadow: 0 0 8px #7038F8; }
+.types.type-dark     { box-shadow: 0 0 8px #705848; }
+.types.type-steel    { box-shadow: 0 0 8px #B8B8D0; }
+.types.type-fairy    { box-shadow: 0 0 8px #EE99AC; }
+.types.type-normal   { box-shadow: 0 0 8px #A8A878; } 
+
+.optimized-tab-toggle {
+position: fixed;
+bottom: 3.5rem;
+right: 1rem;
+padding: 0.5rem 1rem;
+font-weight: 600;
+font-size: 0.95rem;
+background: var(--accent);
+color: white;
+border: none;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+cursor: pointer;
+transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.optimized-tab-toggle:hover {
+opacity: 0.9;
+transform: scale(1.05);
+}
+.optimized-tab-toggle {
+position: fixed;
+bottom: 3.5rem;
+right: 1rem;
+padding: 0.5rem 1rem;
+font-weight: 600;
+font-size: 0.95rem;
+background: var(--accent);
+color: white;
+border: none;
+border-radius: var(--radius);
+box-shadow: var(--shadow);
+cursor: pointer;
+transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.optimized-tab-toggle:hover {
+opacity: 0.9;
+transform: scale(1.05);
+}
+
 
 
   </style>
 </head>
 <body>
-  <h1>CobbleDex</h1>
+  <h1 class="title">CobbleDex</h1>
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">Go Back</button>
 
@@ -474,6 +549,11 @@
     </div>
   </div>
 
+  <button id="toggleOptimizedTabs" class="optimized-tab-toggle" onclick="toggleOptimizedTabs()">
+    Optimised Tabs: OFF
+  </button>
+  
+
   <!-- InfoBox for Moves/Abilities/Items -->
   <div class="pokedex" id="infoBox" style="display:none;">
     <h2 id="infoTitle"></h2>
@@ -493,355 +573,393 @@
     <p>Made with ❤️ by Izya (and a lot of redbulls ,sleepless nights). Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.</p>
   </footer>
 
-  <script>
-    const cache = localStorage;
-    let allData = { pokemon:[], item:[], ability:[], move:[] };
-    const historyStack = [];
+<script>
+  const cache = localStorage;
+  let allData = { pokemon:[], item:[], ability:[], move:[] };
+  const historyStack = [];
 
-    // ── track which ability we’ll pass to pkmn.help ──
-    let currentAbility = 'none';
-    const priorityAbilities = [
-      "delta-stream","dry-skin","earth-eater","filter","flash-fire","fluffy",
-      "heatproof","levitate","lightning-rod","motor-drive","purifying-salt",
-      "sap-sipper","storm-drain","tera-shell","thick-fat","volt-absorb",
-      "water-absorb","water-bubble","well-baked-body","wonder-guard"
-   ];
+  // ── track which ability we’ll pass to pkmn.help ──
+  let currentAbility = 'none';
+  const priorityAbilities = [
+    "delta-stream","dry-skin","earth-eater","filter","flash-fire","fluffy",
+    "heatproof","levitate","lightning-rod","motor-drive","purifying-salt",
+    "sap-sipper","storm-drain","tera-shell","thick-fat","volt-absorb",
+    "water-absorb","water-bubble","well-baked-body","wonder-guard"
+ ];
 
-    // fetch autocomplete lists
-    async function fetchAllNames() {
-      for (let t of ['pokemon','item','ability','move']) {
-        let key = `names_${t}`, c = cache.getItem(key);
-        if (c) allData[t] = JSON.parse(c);
-        else {
-          let r = await fetch(`https://pokeapi.co/api/v2/${t}?limit=10000`);
-          let j = await r.json();
-          allData[t] = j.results.map(x=>x.name);
-          cache.setItem(key, JSON.stringify(allData[t]));
-        }
+  // fetch autocomplete lists
+  async function fetchAllNames() {
+    for (let t of ['pokemon','item','ability','move']) {
+      let key = `names_${t}`, c = cache.getItem(key);
+      if (c) allData[t] = JSON.parse(c);
+      else {
+        let r = await fetch(`https://pokeapi.co/api/v2/${t}?limit=10000`);
+        let j = await r.json();
+        allData[t] = j.results.map(x=>x.name);
+        cache.setItem(key, JSON.stringify(allData[t]));
       }
     }
-    
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-    function playCry() {
-      document.getElementById('cryAudio').play();
-    }
-
-    function pushHistory(name) {
-      let cur = document.getElementById('pokemonName').textContent.toLowerCase();
-      if (cur && cur!==name) historyStack.push(cur);
-    }
-    function goBack() {
-      if (!historyStack.length) return;
-      let prev = historyStack.pop();
-      document.getElementById('pokemonInput').value = prev;
-      getPokemon();
-    }
-
-    function showTab(id) {
-      const name = document.getElementById('pokemonName').textContent.toLowerCase();
-      if (id==='strategy') return window.open(`https://www.smogon.com/dex/sv/pokemon/${name}/`,'_blank');
-     
-      if (id === 'damage') {
-    // collect types
-    const types = Array.from(
-      document.getElementById('pokemonTypes').children
-    )
-      .map(span => span.textContent.toLowerCase())
-      .join('+');
-
-    if (types) {
-      window.open(
-        `https://www.pkmn.help/defense/?types=${types}` +
-        `&ability=${currentAbility}` +
-        `&tera_type=none`,
-        '_blank'
-      );
-    }
-    return;
   }
-      if (id==='moves')   return window.open(`https://pokemondb.net/pokedex/${name}#dex-moves`,'_blank');
-      document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
+  
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+  function playCry() {
+    document.getElementById('cryAudio').play();
+  }
 
-    function setupAutocomplete() {
-      const inp = document.getElementById('pokemonInput');
-      const list= document.getElementById('autocomplete-list');
-      let idx=-1, sug=[];
-      inp.addEventListener('input', ()=>{
-        let v=inp.value.toLowerCase(), t=document.getElementById('searchType').value;
-        list.innerHTML=''; sug=[]; idx=-1;
-        if (!v) return;
-        sug = allData[t].filter(n=>n.includes(v)).slice(0,10);
-        sug.forEach((n,i)=>{
-          let d=document.createElement('div');
-          d.textContent=n; d.className='autocomplete-item'; d.dataset.idx=i;
-          d.onclick=()=>{ inp.value=n; list.innerHTML=''; searchEntity(); };
-          list.appendChild(d);
-        });
+  function pushHistory(name) {
+    let cur = document.getElementById('pokemonName').textContent.toLowerCase();
+    if (cur && cur!==name) historyStack.push(cur);
+  }
+  function goBack() {
+    if (!historyStack.length) return;
+    let prev = historyStack.pop();
+    document.getElementById('pokemonInput').value = prev;
+    getPokemon();
+  }
+
+  let useOptimizedTabs = false;
+let optimizedTabRef = null;
+
+function toggleOptimizedTabs() {
+useOptimizedTabs = !useOptimizedTabs;
+document.getElementById("toggleOptimizedTabs").textContent =
+  `Optimised Tabs: ${useOptimizedTabs ? "ON" : "OFF"}`;
+}
+
+function openSmartTab(url) {
+if (useOptimizedTabs) {
+  if (!optimizedTabRef || optimizedTabRef.closed) {
+    optimizedTabRef = window.open(url, "OptimisedTab");
+  } else {
+    optimizedTabRef.location.href = url;
+    optimizedTabRef.focus();
+  }
+} else {
+  window.open(url, "_blank");
+}
+}
+
+function showTab(id) {
+const name = document.getElementById('pokemonName').textContent.toLowerCase();
+
+if (id === 'strategy') {
+  return openSmartTab(`https://www.smogon.com/dex/sv/pokemon/${name}/`);
+}
+
+if (id === 'damage') {
+  const types = Array.from(
+    document.getElementById('pokemonTypes').children
+  )
+    .map(span => span.textContent.toLowerCase())
+    .join('+');
+
+  if (types) {
+    const url = `https://www.pkmn.help/defense/?types=${types}&ability=${currentAbility}&tera_type=none`;
+    return openSmartTab(url);
+  }
+  return;
+}
+
+if (id === 'moves') {
+  return openSmartTab(`https://bulbapedia.bulbagarden.net/wiki/${name.charAt(0).toUpperCase() + name.slice(1)}_(Pokémon)#Learnset`);
+}
+
+// Normal tab display logic
+document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+
+  function setupAutocomplete() {
+    const inp = document.getElementById('pokemonInput');
+    const list= document.getElementById('autocomplete-list');
+    let idx=-1, sug=[];
+    inp.addEventListener('input', ()=>{
+      let v=inp.value.toLowerCase(), t=document.getElementById('searchType').value;
+      list.innerHTML=''; sug=[]; idx=-1;
+      if (!v) return;
+      sug = allData[t].filter(n=>n.includes(v)).slice(0,10);
+      sug.forEach((n,i)=>{
+        let d=document.createElement('div');
+        d.textContent=n; d.className='autocomplete-item'; d.dataset.idx=i;
+        d.onclick=()=>{ inp.value=n; list.innerHTML=''; searchEntity(); };
+        list.appendChild(d);
       });
-      inp.addEventListener('keydown', e=>{
-        let items=list.querySelectorAll('.autocomplete-item');
-        if (e.key==='ArrowDown') { idx=(idx+1)%items.length; updateSel(items,idx); e.preventDefault(); }
-        if (e.key==='ArrowUp')   { idx=(idx-1+items.length)%items.length; updateSel(items,idx); e.preventDefault(); }
-        if (e.key==='Enter')     {
-          e.preventDefault();
-          if (idx>=0 && items[idx]) items[idx].click();
-          else searchEntity();
-        }
-      });
-    }
-    function updateSel(it,i) {
-      it.forEach(x=>x.classList.remove('selected'));
-      if (i>=0) it[i].classList.add('selected');
-    }
-
-    async function searchEntity() {
-      let q=document.getElementById('pokemonInput').value.trim().toLowerCase(),
-          t=document.getElementById('searchType').value;
-      document.getElementById('pokedex').style.display='none';
-      document.getElementById('infoBox').style.display='none';
-      if (!q) return;
-      if (t==='pokemon') return getPokemon();
-      try {
-        let r=await fetch(`https://pokeapi.co/api/v2/${t}/${q}`);
-        if (!r.ok) return alert(`${t} not found.`);
-        let d=await r.json();
-        let box=document.getElementById('infoBox');
-        box.style.display='block';
-        document.getElementById('infoTitle').textContent=d.name.toUpperCase();
-        document.getElementById('infoDetails').innerHTML='';
-        let desc=document.getElementById('infoDescription');
-        if (t==='item') {
-          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No description';
-          document.getElementById('infoDetails').innerHTML=`<li><strong>Category:</strong> ${d.category.name}</li>`;
-        }
-        else if (t==='ability') {
-          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
-          document.getElementById('infoDetails').innerHTML=`<li><strong>Generation:</strong> ${d.generation.name}</li>`;
-        }
-        else if (t==='move') {
-          desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
-          document.getElementById('infoDetails').innerHTML=`
-            <li><strong>Type:</strong> ${d.type.name}</li>
-            <li><strong>Power:</strong> ${d.power||'N/A'}</li>
-            <li><strong>PP:</strong> ${d.pp}</li>
-            <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>`;
-        }
+    });
+    inp.addEventListener('keydown', e=>{
+      let items=list.querySelectorAll('.autocomplete-item');
+      if (e.key==='ArrowDown') { idx=(idx+1)%items.length; updateSel(items,idx); e.preventDefault(); }
+      if (e.key==='ArrowUp')   { idx=(idx-1+items.length)%items.length; updateSel(items,idx); e.preventDefault(); }
+      if (e.key==='Enter')     {
+        e.preventDefault();
+        if (idx>=0 && items[idx]) items[idx].click();
+        else searchEntity();
       }
-      catch {
-        alert('Error fetching data.');
-      }
-    }
+    });
+  }
+  function updateSel(it,i) {
+    it.forEach(x=>x.classList.remove('selected'));
+    if (i>=0) it[i].classList.add('selected');
+  }
 
-    async function getPokemon(ov=null) {
-      let n=ov||document.getElementById('pokemonInput').value.trim().toLowerCase();
-      let r=await fetch(`https://pokeapi.co/api/v2/pokemon/${n}`);
-      if(!r.ok) return alert('Pokémon not found.');
+  async function searchEntity() {
+    let q=document.getElementById('pokemonInput').value.trim().toLowerCase(),
+        t=document.getElementById('searchType').value;
+    document.getElementById('pokedex').style.display='none';
+    document.getElementById('infoBox').style.display='none';
+    if (!q) return;
+    if (t==='pokemon') return getPokemon();
+    try {
+      let r=await fetch(`https://pokeapi.co/api/v2/${t}/${q}`);
+      if (!r.ok) return alert(`${t} not found.`);
       let d=await r.json();
-      pushHistory(n);
-      document.getElementById('pokedex').style.display='block';
-      document.getElementById('pokemonName').textContent=d.name.toUpperCase();
-      document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
-     // ── inside your getPokemon(d) after fetching d ──
+      let box=document.getElementById('infoBox');
+      box.style.display='block';
+      document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+      document.getElementById('infoDetails').innerHTML='';
+      let desc=document.getElementById('infoDescription');
+      if (t==='item') {
+        desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No description';
+        document.getElementById('infoDetails').innerHTML=`<li><strong>Category:</strong> ${d.category.name}</li>`;
+      }
+      else if (t==='ability') {
+        desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
+        document.getElementById('infoDetails').innerHTML=`<li><strong>Generation:</strong> ${d.generation.name}</li>`;
+      }
+      else if (t==='move') {
+        desc.textContent=d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
+        document.getElementById('infoDetails').innerHTML=`
+          <li><strong>Type:</strong> ${d.type.name}</li>
+          <li><strong>Power:</strong> ${d.power||'N/A'}</li>
+          <li><strong>PP:</strong> ${d.pp}</li>
+          <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>`;
+      }
+    }
+    catch {
+      alert('Error fetching data.');
+    }
+  }
+
+  async function getPokemon(ov=null) {
+    let n=ov||document.getElementById('pokemonInput').value.trim().toLowerCase();
+    let r=await fetch(`https://pokeapi.co/api/v2/pokemon/${n}`);
+    if(!r.ok) return alert('Pokémon not found.');
+    let d=await r.json();
+    pushHistory(n);
+    document.getElementById('pokedex').style.display='block';
+    document.getElementById('pokemonName').textContent=d.name.toUpperCase();
+    document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
+   // ── inside your getPokemon(d) after fetching d ──
 const cryAudio = document.getElementById('cryAudio');
 const base = d.name.toLowerCase();
 // If .ogg fails, try .mp3 once
 cryAudio.onerror = function() {
-  this.onerror = null;
-  this.src = `https://play.pokemonshowdown.com/audio/cries/${base}.mp3`;
+this.onerror = null;
+this.src = `https://play.pokemonshowdown.com/audio/cries/${base}.mp3`;
 };
 // Now kick off the request for .ogg
 cryAudio.src = `https://play.pokemonshowdown.com/audio/cries/${base}.ogg`;
 
 
-      // types
-      document.getElementById('pokemonTypes').innerHTML =
-        d.types.map(t=>{
-          let tn=t.type.name.toLowerCase();
-          return `<span class="types type-${tn}">${tn[0].toUpperCase()+tn.slice(1)}</span>`;
-        }).join('');
+    // types
+    document.getElementById('pokemonTypes').innerHTML =
+      d.types.map(t=>{
+        let tn=t.type.name.toLowerCase();
+        return `<span class="types type-${tn}">${tn[0].toUpperCase()+tn.slice(1)}</span>`;
+      }).join('');
 
-      // abilities
-            const abilityNames = d.abilities.map(o => o.ability.name);
-            // pick a priority ability if present, otherwise the first ability
-            let rawAbility = abilityNames.find(a => priorityAbilities.includes(a))
-                || abilityNames[0]
-                || 'none';
-            currentAbility = rawAbility.replace(/-/g, '_');
-            // build the pills (linking out to PokemonDB)
-            const abilityHTML = d.abilities.map(obj => {
-            const ab = obj.ability.name.toLowerCase();
-            const display = ab.replace(/-/g,' ')
-                            .replace(/\b\w/g, c => c.toUpperCase());
-            const isHidden  = obj.is_hidden;
-            const isPrio    = priorityAbilities.includes(ab);
-            const cls       = isPrio ? 'priority' : (isHidden ? 'hidden' : '');
-            return `<a 
-                    class="ability-pill ${cls}" 
-                    href="https://pokemondb.net/ability/${ab}" 
-                    target="_blank"
-                >
-                    ${display}${isHidden?' (HA)':''}
-                </a>`;
-            }).join('');
-            document.getElementById('pokemonAbilities').innerHTML = abilityHTML;
+    // abilities
+          const abilityNames = d.abilities.map(o => o.ability.name);
+          // pick a priority ability if present, otherwise the first ability
+          let rawAbility = abilityNames.find(a => priorityAbilities.includes(a))
+              || abilityNames[0]
+              || 'none';
+          currentAbility = rawAbility.replace(/-/g, '_');
+          // build the pills (linking out to PokemonDB)
+          const abilityHTML = d.abilities.map(obj => {
+          const ab = obj.ability.name.toLowerCase();
+          const display = ab.replace(/-/g,' ')
+                          .replace(/\b\w/g, c => c.toUpperCase());
+          const isHidden  = obj.is_hidden;
+          const isPrio    = priorityAbilities.includes(ab);
+          const cls       = isPrio ? 'priority' : (isHidden ? 'hidden' : '');
+          return `<a 
+                  class="ability-pill ${cls}" 
+                  href="https://pokemondb.net/ability/${ab}" 
+                  target="_blank"
+              >
+                  ${display}${isHidden?' (HA)':''}
+              </a>`;
+          }).join('');
+          document.getElementById('pokemonAbilities').innerHTML = abilityHTML;
 
 
 
-      // —— base stats chart —— 
-      (() => {
-  const shorthand = {
-    hp: "HP",
-    attack: "Atk",
-    defense: "Def",
-    "special-attack": "SpA",
-    "special-defense": "SpD",
-    speed: "Spe",
-  };
+    // —— base stats chart —— 
+    (() => {
+const shorthand = {
+  hp: "HP",
+  attack: "Atk",
+  defense: "Def",
+  "special-attack": "SpA",
+  "special-defense": "SpD",
+  speed: "Spe",
+};
 
-  let stats = d.stats.map(s => ({
-    n: shorthand[s.stat.name] || s.stat.name.toUpperCase(),
-    v: s.base_stat
-  }));
+let stats = d.stats.map(s => ({
+  n: shorthand[s.stat.name] || s.stat.name.toUpperCase(),
+  v: s.base_stat
+}));
 
-  let maxV = Math.max(200, ...stats.map(x => x.v));
-  let html = `
-    <table class="stats-table">
-      <thead>
-        <tr>
-          <th>Stat</th>
-          <th>Bar</th>
-          <th>Base</th>
-        </tr>
-      </thead>
-      <tbody>`;
-
-  stats.forEach(s => {
-    let pct = (s.v / maxV * 100).toFixed(1);
-    let cls = "terrible";
-    if (s.v >= 140) cls = "ultra";
-    else if (s.v >= 120) cls = "very-high";
-    else if (s.v >= 100) cls = "high";
-    else if (s.v >= 80) cls = "mid";
-    else if (s.v >= 60) cls = "low";
-    else if (s.v >= 40) cls = "very-low";
-
-    html += `
+let maxV = Math.max(200, ...stats.map(x => x.v));
+let html = `
+  <table class="stats-table">
+    <thead>
       <tr>
-        <td>${s.n}</td>
-        <td>
-          <div class="stats-bar-container">
-            <div class="stats-bar ${cls}" style="width:${pct}%"></div>
-          </div>
-        </td>
-        <td class="stat-value">${s.v}</td>
-      </tr>`;
-  });
-
-  let tot = stats.reduce((a, b) => a + b.v, 0);
-  html += `
-      <tr>
-        <td><strong>Total</strong></td>
-        <td></td>
-        <td><strong>${tot}</strong></td>
+        <th>Stat</th>
+        <th>Bar</th>
+        <th>Base</th>
       </tr>
-    </tbody>
-  </table>`;
+    </thead>
+    <tbody>`;
 
-  document.getElementById("statsChart").innerHTML = html;
-})();
+stats.forEach((s, i) => {
+  let pct = (s.v / maxV * 100).toFixed(1);
+  let cls = "terrible";
+  if (s.v >= 140) cls = "ultra";
+  else if (s.v >= 120) cls = "very-high";
+  else if (s.v >= 100) cls = "high";
+  else if (s.v >= 80) cls = "mid";
+  else if (s.v >= 60) cls = "low";
+  else if (s.v >= 40) cls = "very-low";
+
+  html += `
+    <tr>
+      <td>${s.n}</td>
+      <td>
+        <div class="stats-bar-container">
+          <div class="stats-bar ${cls}" data-width="${pct}%"></div>
+        </div>
+      </td>
+      <td class="stat-value">${s.v}</td>
+    </tr>`;
+});
+
+let tot = stats.reduce((a, b) => a + b.v, 0);
+html += `
+    <tr>
+      <td><strong>Total</strong></td>
+      <td></td>
+      <td><strong>${tot}</strong></td>
+    </tr>
+  </tbody>
+</table>`;
+
+const container = document.getElementById("statsChart");
+container.innerHTML = html;
+
+
+// Animate stat bars after rendering
+const bars = container.querySelectorAll('.stats-bar');
+bars.forEach((bar, i) => {
+bar.style.width = '0%';
+bar.offsetHeight;
+setTimeout(() => {
+  bar.style.width = bar.dataset.width;
+}, 100 * i); // 100ms stagger per stat
+});
+
+    })();
 
 
 
-      // moves
-      let ml=document.getElementById('pokemonMoves');
-      ml.innerHTML='Loading…';
-      let mv=await Promise.all(d.moves.slice(0,10).map(async m=>{
-        let md=await (await fetch(m.move.url)).json(),
-            lvl=m.version_group_details[0]?.level_learned_at||'-';
-        return `<li>
-          <a href="#" onclick="showMove('${md.name}')">${md.name}</a>
-          <span class="move-details">
-            (Type:${md.type.name}, Power:${md.power||'N/A'}, Lv:${lvl})
-          </span>
-        </li>`;
-      }));
-      ml.innerHTML = mv.join('');
+    // moves
+    let ml=document.getElementById('pokemonMoves');
+    ml.innerHTML='Loading…';
+    let mv=await Promise.all(d.moves.slice(0,10).map(async m=>{
+      let md=await (await fetch(m.move.url)).json(),
+          lvl=m.version_group_details[0]?.level_learned_at||'-';
+      return `<li>
+        <a href="#" onclick="showMove('${md.name}')">${md.name}</a>
+        <span class="move-details">
+          (Type:${md.type.name}, Power:${md.power||'N/A'}, Lv:${lvl})
+        </span>
+      </li>`;
+    }));
+    ml.innerHTML = mv.join('');
 
-      // flavor text
-      let sp=await (await fetch(d.species.url)).json();
-      let txt=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
-                .replace(/\n|\f/g,' ')||'No entry';
-      document.getElementById('flavorText').textContent = txt;
+    // flavor text
+    let sp=await (await fetch(d.species.url)).json();
+    let txt=sp.flavor_text_entries.find(e=>e.language.name==='en')?.flavor_text
+              .replace(/\n|\f/g,' ')||'No entry';
+    document.getElementById('flavorText').textContent = txt;
 
-      // evolution
-      let ec=await (await fetch(sp.evolution_chain.url)).json();
-      let chain=[], c=ec.chain;
-      do { chain.push(c.species.name); c=c.evolves_to[0]; } while(c);
-      document.getElementById('evolutionChain').innerHTML =
-        chain.map(p=>`<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`).join('');
+    // evolution
+    let ec=await (await fetch(sp.evolution_chain.url)).json();
+    let chain=[], c=ec.chain;
+    do { chain.push(c.species.name); c=c.evolves_to[0]; } while(c);
+    document.getElementById('evolutionChain').innerHTML =
+      chain.map(p=>`<li><a href="#" onclick="getPokemon('${p}')">${p}</a></li>`).join('');
 
-      // damage relations
-      let tds=await Promise.all(d.types.map(t=>fetch(t.type.url).then(r=>r.json())));
-      let rel=new Set();
-      tds.forEach(td=>{
-        td.damage_relations.double_damage_from.forEach(x=>rel.add(`2× from ${x.name}`));
-        td.damage_relations.half_damage_from.forEach(x=>rel.add(`0.5× from ${x.name}`));
-        td.damage_relations.no_damage_from.forEach(x=>rel.add(`Immune to ${x.name}`));
-      });
-      document.getElementById('damageRelations').innerHTML =
-        [...rel].map(r=>`<li>${r}</li>`).join('');
-    }
-
-    async function showAbility(n){
-      let r=await fetch(`https://pokeapi.co/api/v2/ability/${n}`);
-      if(!r.ok) return alert('Ability not found.');
-      let d=await r.json();
-      document.getElementById('infoBox').style.display='block';
-      document.getElementById('infoTitle').textContent=d.name.toUpperCase();
-      document.getElementById('infoDescription').textContent=
-        d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
-      document.getElementById('infoDetails').innerHTML=
-        `<li><strong>Generation:</strong> ${d.generation.name}</li>`;
-    }
-    async function showMove(n){
-      let r=await fetch(`https://pokeapi.co/api/v2/move/${n}`);
-      if(!r.ok) return alert('Move not found.');
-      let d=await r.json();
-      document.getElementById('infoBox').style.display='block';
-      document.getElementById('infoTitle').textContent=d.name.toUpperCase();
-      document.getElementById('infoDescription').textContent=
-        d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
-      document.getElementById('infoDetails').innerHTML=`
-        <li><strong>Type:</strong> ${d.type.name}</li>
-        <li><strong>Power:</strong> ${d.power||'N/A'}</li>
-        <li><strong>PP:</strong> ${d.pp}</li>
-        <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>
-        <li><strong>Category:</strong> ${d.damage_class.name}</li>`;
-    }
-
-    function openCalculator(){
-      let n=document.getElementById('pokemonName').textContent.toLowerCase();
-      if(n) window.open(`https://calc.pokemonshowdown.com/?p1=${n}`,'_blank');
-      else alert('No Pokémon selected.');
-    }
-    function openShowdown(){
-      let n=document.getElementById('pokemonName').textContent.trim();
-      if(n){
-        alert(`To add ${n}, click “Add Pokémon” and search "${n}"`);
-        window.open('https://play.pokemonshowdown.com/teambuilder','_blank');
-      } else alert('No Pokémon selected.');
-    }
-
-    // init
-    document.addEventListener('DOMContentLoaded', async ()=>{
-      await fetchAllNames();
-      setupAutocomplete();
-      toggleDarkMode(); // start dark
+    // damage relations
+    let tds=await Promise.all(d.types.map(t=>fetch(t.type.url).then(r=>r.json())));
+    let rel=new Set();
+    tds.forEach(td=>{
+      td.damage_relations.double_damage_from.forEach(x=>rel.add(`2× from ${x.name}`));
+      td.damage_relations.half_damage_from.forEach(x=>rel.add(`0.5× from ${x.name}`));
+      td.damage_relations.no_damage_from.forEach(x=>rel.add(`Immune to ${x.name}`));
     });
-  </script>
+    document.getElementById('damageRelations').innerHTML =
+      [...rel].map(r=>`<li>${r}</li>`).join('');
+  }
+
+  async function showAbility(n){
+    let r=await fetch(`https://pokeapi.co/api/v2/ability/${n}`);
+    if(!r.ok) return alert('Ability not found.');
+    let d=await r.json();
+    document.getElementById('infoBox').style.display='block';
+    document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+    document.getElementById('infoDescription').textContent=
+      d.effect_entries.find(e=>e.language.name==='en')?.short_effect||'No desc';
+    document.getElementById('infoDetails').innerHTML=
+      `<li><strong>Generation:</strong> ${d.generation.name}</li>`;
+  }
+  async function showMove(n){
+    let r=await fetch(`https://pokeapi.co/api/v2/move/${n}`);
+    if(!r.ok) return alert('Move not found.');
+    let d=await r.json();
+    document.getElementById('infoBox').style.display='block';
+    document.getElementById('infoTitle').textContent=d.name.toUpperCase();
+    document.getElementById('infoDescription').textContent=
+      d.effect_entries.find(e=>e.language.name==='en')?.effect||'No desc';
+    document.getElementById('infoDetails').innerHTML=`
+      <li><strong>Type:</strong> ${d.type.name}</li>
+      <li><strong>Power:</strong> ${d.power||'N/A'}</li>
+      <li><strong>PP:</strong> ${d.pp}</li>
+      <li><strong>Accuracy:</strong> ${d.accuracy||'N/A'}</li>
+      <li><strong>Category:</strong> ${d.damage_class.name}</li>`;
+  }
+
+  function openCalculator(){
+    let n=document.getElementById('pokemonName').textContent.toLowerCase();
+    if(n) window.open(`https://calc.pokemonshowdown.com/?p1=${n}`,'_blank');
+    else alert('No Pokémon selected.');
+  }
+  function openShowdown(){
+    let n=document.getElementById('pokemonName').textContent.trim();
+    if(n){
+      alert(`To add ${n}, click “Add Pokémon” and search "${n}"`);
+      window.open('https://play.pokemonshowdown.com/teambuilder','_blank');
+    } else alert('No Pokémon selected.');
+  }
+  // init
+  document.addEventListener('DOMContentLoaded', async ()=>{
+    await fetchAllNames();
+    setupAutocomplete();
+    toggleDarkMode(); // start dark
+  });
+</script>
 </body>
 </html>
