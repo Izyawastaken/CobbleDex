@@ -50,7 +50,7 @@
       padding: 0.65rem 1.3rem;
       border: none;
       border-radius: 50px;
-      background: linear-gradient(145deg, var(--accent), #ff5733);
+      background: linear-gradient(145deg, var(--accent), var(--accent));
       color: white;
       font-weight: bold;
       font-size: 1rem;
@@ -62,7 +62,7 @@
     button:hover {
       transform: scale(1.07);
       box-shadow: 0 0 14px var(--accent);
-      background: linear-gradient(145deg, #ff4c2f, var(--accent));
+      background: linear-gradient(145deg, var(--accent), var(--accent));
     }
     
     #toggle-theme {
@@ -403,12 +403,13 @@
 }
 @keyframes subtleGlow {
   0%, 100% {
-    text-shadow: 0 0 8px rgba(227, 53, 13, 0.3);
+    text-shadow: 0 0 8px var(--accent);
   }
   50% {
-    text-shadow: 0 0 16px rgba(227, 53, 13, 0.7);
+    text-shadow: 0 0 16px var(--accent);
   }
 }
+
 h1.title {
   animation: subtleGlow 2.5s ease-in-out infinite;
 }
@@ -472,12 +473,41 @@ opacity: 0.9;
 transform: scale(1.05);
 }
 
+#accentPicker {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  padding: 0;
+}
 
+/* Ensure circular swatch wrapper */
+#accentPicker::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
+/* Style the color swatch inside */
+#accentPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
   </style>
 </head>
 <body>
-  <h1 class="title">CobbleDex</h1>
+  
+  <h1 class="title">Primordium</h1>
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <button onclick="goBack()">Go Back</button>
 
@@ -567,6 +597,7 @@ transform: scale(1.05);
 >
   Report issues here!
 </a>
+<input type="color" id="accentPicker" title="Pick your accent color" value="#e3350d" />
 
 
   <footer>
@@ -786,12 +817,12 @@ cryAudio.src = `https://play.pokemonshowdown.com/audio/cries/${base}.ogg`;
           const isPrio    = priorityAbilities.includes(ab);
           const cls       = isPrio ? 'priority' : (isHidden ? 'hidden' : '');
           return `<a 
-                  class="ability-pill ${cls}" 
-                  href="https://pokemondb.net/ability/${ab}" 
-                  target="_blank"
-              >
-                  ${display}${isHidden?' (HA)':''}
-              </a>`;
+  class="ability-pill ${cls}" 
+  href="#" 
+  onclick="openSmartTab('https://pokemondb.net/ability/${ab}'); return false;"
+>
+  ${display}${isHidden ? ' (HA)' : ''}
+</a>`;
           }).join('');
           document.getElementById('pokemonAbilities').innerHTML = abilityHTML;
 
@@ -954,6 +985,26 @@ setTimeout(() => {
       window.open('https://play.pokemonshowdown.com/teambuilder','_blank');
     } else alert('No Pokémon selected.');
   }
+
+  document.getElementById("accentPicker").addEventListener("input", (e) => {
+  const color = e.target.value;
+  document.documentElement.style.setProperty('--accent', color);
+});
+// Load saved accent color
+const savedAccent = localStorage.getItem('accentColor');
+if (savedAccent) {
+  document.documentElement.style.setProperty('--accent', savedAccent);
+  document.getElementById('accentPicker').value = savedAccent;
+}
+
+// Save new color on change
+document.getElementById("accentPicker").addEventListener("input", (e) => {
+  const color = e.target.value;
+  document.documentElement.style.setProperty('--accent', color);
+  localStorage.setItem('accentColor', color);
+});
+
+
   // init
   document.addEventListener('DOMContentLoaded', async ()=>{
     await fetchAllNames();
