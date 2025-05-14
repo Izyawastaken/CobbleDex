@@ -655,6 +655,18 @@ body.dark select {
 </footer>
 
 <script>
+  // this will be called by the sheet’s JSONP wrapper:
+function handleCobblemonData(response) {
+  // `response.table.rows` is an array of row objects
+  response.table.rows.forEach(r => {
+    // columns by zero-based index:
+    const name   = r.c[1]?.v?.toLowerCase(); // “Pokémon”
+    const bucket = r.c[3]?.v;               // “Bucket”
+    const biomes = r.c[7]?.v;               // “Biomes”
+    if (name) cobblemonList[name] = { bucket, biomes };
+  });
+}
+
   const twitchLinks = [
     "https://www.twitch.tv/astralaeyna",
     "https://www.twitch.tv/jophunny",
@@ -1084,7 +1096,7 @@ document.getElementById("accentPicker").addEventListener("input", (e) => {
 });
 
 let cobblemonMode = false;
-let cobblemonList = [];
+const cobblemonList = {};
 
 function toggleCobblemon() {
   cobblemonMode = !cobblemonMode;
@@ -1094,26 +1106,32 @@ function toggleCobblemon() {
 
 function updateCobblemonStatus(pokemonName) {
   const statusElement = document.getElementById('cobblemonStatus');
-  if (cobblemonMode) {
-    const isAvailable = cobblemonList.includes(pokemonName.toLowerCase());
-    statusElement.textContent = isAvailable ? '✅ In Cobblemon' : '❌ Not in Cobblemon';
-    statusElement.style.display = 'block';
-  } else {
+  if (!cobblemonMode) {
     statusElement.style.display = 'none';
+    return;
   }
+
+  const key = pokemonName?.toLowerCase();
+  if (cobblemonList[key]) {
+    const { bucket, biomes } = cobblemonList[key];
+    statusElement.textContent = `✅ In Cobblemon — Found in ${biomes || 'unknown biome'}, ${bucket || 'unknown rarity'}`;
+  } else {
+    statusElement.textContent = `❌ Not in Cobblemon`;
+  }
+  statusElement.style.display = 'block';
 }
 
-// Load Cobblemon list from the spreadsheet
-async function loadCobblemonList() {
-  try {
-    const response = await fetch('https://docs.google.com/spreadsheets/d/16JrrEp919HVn8YE0AtmeAu6_tPkMkKqEmRzMlKW442A/gviz/tq?tqx=out:csv');
-    const csvText = await response.text();
-    const lines = csvText.split('\n');
-    cobblemonList = lines.map(line => line.split(',')[0].trim().toLowerCase());
-  } catch (error) {
-    console.error('Error loading Cobblemon list:', error);
-  }
+function loadCobblemonList() {
+  // build the JSONP URL: out:json plus a responseHandler of handleCobblemonData
+  const url = 
+    'https://docs.google.com/spreadsheets/d/16JrrEp919HVn8YE0AtmeAu6_tPkMkKqEmRzMlKW442A/' +
+    'gviz/tq?gid=0&tqx=out:json;responseHandler:handleCobblemonData';
+
+  const script = document.createElement('script');
+  script.src = url;
+  document.body.appendChild(script);
 }
+
 
 
 // Call this function on page load
@@ -1123,9 +1141,11 @@ loadCobblemonList();
 
   // init
   document.addEventListener('DOMContentLoaded', async ()=>{
-    await fetchAllNames();
-    setupAutocomplete();
-    toggleDarkMode(); // start dark
+    await loadCobblemonList();
+   await fetchAllNames();
+  setupAutocomplete();
+  toggleDarkMode(); // start dark
+
   });
 </script>
 </body>
