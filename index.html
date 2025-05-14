@@ -655,21 +655,19 @@ body.dark select {
 </footer>
 
 <script>
-  // this will be called by the sheet’s JSONP wrapper:
-  function handleCobblemonData(response) {
+   // this will be called by the sheet’s JSONP wrapper:
+   function handleCobblemonData(response) {
   response.table.rows.forEach(r => {
-    const name   = r.c[1]?.v?.toLowerCase();
-    const bucket = r.c[3]?.v;
-    const biomes = r.c[7]?.v;
-    if (!name) return;
+    const name    = r.c[1]?.v?.toLowerCase();  // “Pokémon”
+    const bucket  = r.c[3]?.v;                // “Bucket”
+    const biomes  = r.c[7]?.v;                // “Biomes”
+    const context = r.c[12]?.v;               // **Context** column
 
-    // ensure an array exists for this Pokémon
+    if (!name) return;
     if (!cobblemonList[name]) cobblemonList[name] = [];
-    // push this spawn entry onto it
-    cobblemonList[name].push({ bucket, biomes });
+    cobblemonList[name].push({ bucket, biomes, context });
   });
 }
-
 
   const twitchLinks = [
     "https://www.twitch.tv/astralaeyna",
@@ -1119,11 +1117,12 @@ function updateCobblemonStatus(pokemonName) {
   const spawns = cobblemonList[key] || [];
 
   if (spawns.length) {
-    // build one string per spawn, e.g. “ultra-rare in Jungle”
-    const parts = spawns.map(s => {
-      const rarity = s.bucket  || 'unknown rarity';
-      const zone   = s.biomes  || 'unknown biome';
-      return `${rarity} in ${zone}`;
+    const parts = spawns.map((s, i) => {
+      // s.bucket = “ultra-rare”, s.biomes = “Jungle…”, s.context = “grounded”
+      const rarity = s.bucket   || 'unknown rarity';
+      const zone   = s.biomes   || 'unknown biome';
+      const ctx    = s.context  ? `, context = ${s.context}` : '';
+      return `Spawn ${i+1}: ${rarity} in ${zone}${ctx}`;
     });
     statusElement.textContent = `✅ In Cobblemon — ` + parts.join('; ');
   } else {
