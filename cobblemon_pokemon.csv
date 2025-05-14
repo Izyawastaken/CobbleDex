@@ -1,0 +1,2338 @@
+slug,bucket,biomes,context
+bulbasaur,ultra-rare,Jungle-Tropical Island,grounded
+ivysaur,ultra-rare,Jungle-Tropical Island,grounded
+venusaur,ultra-rare,Jungle-Tropical Island,grounded
+charmander,ultra-rare,Hills-Volcanic,grounded
+charmander,ultra-rare,Nether Basalt,grounded
+charmeleon,ultra-rare,Hills-Volcanic,grounded
+charmeleon,ultra-rare,Nether Basalt,grounded
+charizard,ultra-rare,Hills-Volcanic,grounded
+charizard,ultra-rare,Nether Basalt,grounded
+squirtle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,grounded
+squirtle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+squirtle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+squirtle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+squirtle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+wartortle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,grounded
+wartortle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+wartortle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+wartortle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+wartortle,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+blastoise,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,grounded
+blastoise,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+blastoise,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+blastoise,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,submerged
+blastoise,ultra-rare,Freshwater-Hills-Jungle-Temperate-Tropical Island,fishing
+caterpie,common,Forest-Plains-Skyroot Forest-Skyroot Woodland,grounded
+caterpie-valencian,common,Jungle-Tropical Island,grounded
+caterpie-valencian,common,Floral Meadow,grounded
+metapod,common,Forest-Plains-Skyroot Forest-Skyroot Woodland,grounded
+metapod-valencian,common,Jungle-Tropical Island,grounded
+metapod-valencian,common,Floral Meadow,grounded
+butterfree,common,Temperate,grounded
+butterfree,common,Floral,grounded
+butterfree,common,Aether,grounded
+butterfree-valencian,common,Jungle-Tropical Island,grounded
+butterfree-valencian,common,Floral Meadow,grounded
+weedle,common,Forest-Jungle-Skyroot Forest-Skyroot Woodland,grounded
+weedle,common,Bumblezone,grounded
+kakuna,common,Forest-Jungle-Skyroot Forest-Skyroot Woodland,grounded
+kakuna,common,Bumblezone,grounded
+beedrill,common,Forest-Jungle-Skyroot Forest-Skyroot Woodland,grounded
+beedrill,common,Bumblezone,grounded
+pidgey,common,Temperate-Sky,grounded
+pidgey,common,Skyroot Forest-Skyroot Woodland,grounded
+pidgeotto,common,Temperate-Sky,grounded
+pidgeotto,common,Skyroot Forest-Skyroot Woodland,grounded
+pidgeot,common,Temperate-Sky,grounded
+pidgeot,common,Skyroot Forest-Skyroot Woodland,grounded
+rattata,common,Grassland,grounded
+rattata,common,Overworld,grounded
+rattata,uncommon,Overworld,grounded
+rattata-alola,common,Overworld,grounded
+rattata-alola,uncommon,Overworld,grounded
+rattata-alola,common,Spooky,grounded
+rattata-alola,uncommon,Spooky,grounded
+raticate,common,Grassland,grounded
+raticate,common,Overworld,grounded
+raticate,uncommon,Overworld,grounded
+raticate-alola,common,Overworld,grounded
+raticate-alola,uncommon,Overworld,grounded
+raticate-alola,common,Spooky,grounded
+raticate-alola,uncommon,Spooky,grounded
+spearow,common,Badlands-Savanna-Sky,grounded
+fearow,common,Badlands-Savanna-Sky,grounded
+ekans,common,Arid,grounded
+ekans,common,Arid,grounded
+ekans,common,Nether Desert,grounded
+arbok,common,Arid,grounded
+arbok,common,Arid,grounded
+arbok,common,Nether Desert,grounded
+pikachu,uncommon,Forest,grounded
+pikachu,uncommon,Beach-Skyroot Forest-Skyroot Woodland-Tropical Island,grounded
+raichu,uncommon,Forest,grounded
+raichu-alola,uncommon,Beach-Skyroot Forest-Skyroot Woodland-Tropical Island,grounded
+sandshrew,common,Badlands-Desert,grounded
+sandslash,common,Badlands-Desert,grounded
+nidoran,uncommon,Savanna,grounded
+nidorina,uncommon,Savanna,grounded
+nidoqueen,uncommon,Savanna,grounded
+nidoran,uncommon,Savanna,grounded
+nidorino,uncommon,Savanna,grounded
+nidoking,uncommon,Savanna,grounded
+clefairy,uncommon,Dripstone,grounded
+clefairy,uncommon,Aether-Dripstone,grounded
+clefairy,uncommon,Hills,grounded
+clefairy,uncommon,Magical,grounded
+clefable,uncommon,Dripstone,grounded
+clefable,uncommon,Aether-Dripstone,grounded
+clefable,uncommon,Hills,grounded
+clefable,uncommon,Magical,grounded
+vulpix,uncommon,Forest-Taiga,grounded
+vulpix,common,Nether Forest,grounded
+vulpix-alola,uncommon,Snowy Forest-Snowy Taiga,grounded
+vulpix-alola,common,Nether Frozen,grounded
+ninetales,uncommon,Forest-Taiga,grounded
+ninetales,common,Nether Forest,grounded
+ninetales-alola,uncommon,Snowy Forest-Snowy Taiga,grounded
+ninetales-alola,common,Nether Frozen,grounded
+jigglypuff,common,Floral,grounded
+jigglypuff,common,Plains,grounded
+jigglypuff,common,Skyroot Grove-Skyroot Meadow,grounded
+wigglytuff,common,Floral,grounded
+wigglytuff,common,Plains,grounded
+wigglytuff,common,Skyroot Grove-Skyroot Meadow,grounded
+zubat,common,Forest-Swamp,grounded
+zubat,common,Forest-Swamp,grounded
+zubat,common,Overworld,grounded
+zubat,uncommon,Overworld,grounded
+zubat,common,Spooky,grounded
+zubat,uncommon,Deep Dark,grounded
+zubat,common,Aether,grounded
+golbat,common,Forest-Swamp,grounded
+golbat,common,Forest-Swamp,grounded
+golbat,common,Overworld,grounded
+golbat,uncommon,Overworld,grounded
+golbat,common,Spooky,grounded
+golbat,uncommon,Deep Dark,grounded
+golbat,common,Aether,grounded
+oddish,common,Jungle,grounded
+oddish,common,Temperate,grounded
+oddish-valencian,common,Savanna-Tropical Island,grounded
+gloom,common,Jungle,grounded
+gloom,common,Temperate,grounded
+gloom-valencian,common,Savanna-Tropical Island,grounded
+vileplume,common,Jungle,grounded
+vileplume,common,Temperate,grounded
+vileplume-valencian,common,Savanna-Tropical Island,grounded
+paras,uncommon,Lush,grounded
+paras,common,Mushroom,grounded
+paras,common,Nether Fungus,grounded
+paras,uncommon,Overworld,grounded
+parasect,uncommon,Lush,grounded
+parasect,common,Mushroom,grounded
+parasect,common,Nether Fungus,grounded
+parasect,uncommon,Overworld,grounded
+venonat,common,Spooky-Swamp,grounded
+venomoth,common,Spooky-Swamp,grounded
+diglett,common,Overworld,grounded
+diglett-alola,common,Overworld,grounded
+dugtrio,common,Overworld,grounded
+dugtrio-alola,common,Overworld,grounded
+meowth,common,Overworld,grounded
+meowth,common,Overworld,grounded
+meowth,common,Arid,grounded
+meowth,common,Arid,grounded
+meowth-alola,common,Overworld,grounded
+meowth-alola,common,Arid-Freezing,grounded
+meowth-alola,uncommon,Overworld,grounded
+meowth-galar,common,Freezing-Taiga,grounded
+meowth-galar,common,Freezing-Taiga,grounded
+persian,common,Overworld,grounded
+persian,common,Overworld,grounded
+persian,common,Arid,grounded
+persian,common,Arid,grounded
+persian-alola,common,Overworld,grounded
+persian-alola,common,Arid-Freezing,grounded
+persian-alola,uncommon,Overworld,grounded
+psyduck,common,Swamp,grounded
+psyduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,grounded
+psyduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,submerged
+psyduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,fishing
+golduck,common,Swamp,grounded
+golduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,grounded
+golduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,submerged
+golduck,common,Forest-Freshwater-Grassland-Magical-Tropical Island,fishing
+mankey,common,Hills-Jungle,grounded
+primeape,common,Hills-Jungle,grounded
+growlithe,common,Overworld,grounded
+growlithe,common,Overworld,grounded
+arcanine,common,Overworld,grounded
+arcanine,common,Overworld,grounded
+poliwag,common,Swamp,grounded
+poliwag,common,Swamp,submerged
+poliwag,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,grounded
+poliwag,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwag,common,Lush,grounded
+poliwag,common,Lush,submerged
+poliwag,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwag,common,Lush,fishing
+poliwag,common,Swamp,submerged
+poliwag,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwag,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwag,common,Overworld,grounded
+poliwag,common,Overworld,submerged
+poliwag,common,Overworld,fishing
+poliwhirl,common,Swamp,grounded
+poliwhirl,common,Swamp,submerged
+poliwhirl,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,grounded
+poliwhirl,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwhirl,common,Lush,grounded
+poliwhirl,common,Lush,submerged
+poliwhirl,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwhirl,common,Lush,fishing
+poliwhirl,common,Swamp,submerged
+poliwhirl,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwhirl,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwhirl,common,Overworld,grounded
+poliwhirl,common,Overworld,submerged
+poliwhirl,common,Overworld,fishing
+poliwrath,common,Swamp,grounded
+poliwrath,common,Swamp,submerged
+poliwrath,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,grounded
+poliwrath,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwrath,common,Lush,grounded
+poliwrath,common,Lush,submerged
+poliwrath,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwrath,common,Lush,fishing
+poliwrath,common,Swamp,submerged
+poliwrath,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+poliwrath,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+poliwrath,common,Overworld,grounded
+poliwrath,common,Overworld,submerged
+poliwrath,common,Overworld,fishing
+abra,rare,Hills-Temperate,grounded
+abra,uncommon,Magical,grounded
+abra,common,Overworld,grounded
+kadabra,rare,Hills-Temperate,grounded
+kadabra,uncommon,Magical,grounded
+kadabra,common,Overworld,grounded
+alakazam,rare,Hills-Temperate,grounded
+alakazam,uncommon,Magical,grounded
+alakazam,common,Overworld,grounded
+machop,common,Hills,grounded
+machoke,common,Hills,grounded
+machamp,common,Hills,grounded
+bellsprout,common,Jungle,grounded
+weepinbell,common,Jungle,grounded
+victreebel,common,Jungle,grounded
+tentacool,common,Deep Ocean,submerged
+tentacool,common,Ocean,submerged
+tentacool,uncommon,Overworld,submerged
+tentacool,uncommon,Ocean,surface
+tentacool,common,Ocean,fishing
+tentacool,common,Overworld,fishing
+tentacool,common,Ocean,fishing
+tentacool,common,Overworld,submerged
+tentacool,common,Overworld,fishing
+tentacruel,common,Deep Ocean,submerged
+tentacruel,common,Ocean,submerged
+tentacruel,uncommon,Overworld,submerged
+tentacruel,uncommon,Ocean,surface
+tentacruel,common,Ocean,fishing
+tentacruel,common,Overworld,fishing
+tentacruel,common,Ocean,fishing
+tentacruel,common,Overworld,submerged
+tentacruel,common,Overworld,fishing
+geodude,common,Mountain,grounded
+geodude,common,Overworld,grounded
+geodude-alola,common,Overworld,grounded
+graveler,common,Mountain,grounded
+graveler,common,Overworld,grounded
+graveler-alola,common,Overworld,grounded
+golem,common,Mountain,grounded
+golem,common,Overworld,grounded
+golem-alola,common,Overworld,grounded
+ponyta,uncommon,Grassland,grounded
+ponyta,common,Nether Overgrowth-Nether Wasteland,grounded
+ponyta-galar,uncommon,Floral-Magical,grounded
+ponyta-galar,common,Aether,grounded
+rapidash,uncommon,Grassland,grounded
+rapidash,common,Nether Overgrowth-Nether Wasteland,grounded
+rapidash-galar,uncommon,Floral-Magical,grounded
+rapidash-galar,common,Aether,grounded
+slowpoke,common,Beach,grounded
+slowpoke,common,River,grounded
+slowpoke,common,Beach,fishing
+slowpoke,common,Freshwater,fishing
+slowpoke,common,Beach,fishing
+slowpoke,common,Freshwater,fishing
+slowpoke-galar,common,Mushroom Fields-Tropical Island,grounded
+slowpoke-galar,common,Mushroom Fields-Tropical Island,fishing
+slowpoke-galar,common,Mushroom Fields-Tropical Island,fishing
+slowbro,common,Beach,grounded
+slowbro,common,Beach,fishing
+slowbro,common,Beach,fishing
+slowbro-galar,common,Mushroom Fields-Tropical Island,grounded
+slowbro-galar,common,Mushroom Fields-Tropical Island,fishing
+slowbro-galar,common,Mushroom Fields-Tropical Island,fishing
+magnemite,uncommon,Overworld,grounded
+magnemite,common,Overworld,grounded
+magneton,uncommon,Overworld,grounded
+magneton,common,Overworld,grounded
+farfetch-d,common,Overworld,grounded
+farfetch-d-galar,rare,Forest,grounded
+doduo,common,Savanna,grounded
+doduo,common,Skyroot Grove-Skyroot Meadow,grounded
+dodrio,common,Savanna,grounded
+dodrio,common,Skyroot Grove-Skyroot Meadow,grounded
+seel,common,Frozen Ocean,grounded
+seel,common,Frozen Ocean,submerged
+seel,common,Cold Ocean-Frozen Ocean,fishing
+seel,common,Frozen Ocean,submerged
+seel,common,Cold Ocean-Frozen Ocean,fishing
+dewgong,common,Frozen Ocean,grounded
+dewgong,common,Frozen Ocean,submerged
+dewgong,common,Cold Ocean-Frozen Ocean,fishing
+dewgong,common,Frozen Ocean,submerged
+dewgong,common,Cold Ocean-Frozen Ocean,fishing
+grimer,uncommon,Swamp,surface
+grimer,uncommon,Overworld,surface
+grimer,uncommon,Overworld,surface
+grimer,common,Swamp,fishing
+grimer,common,Overworld,fishing
+grimer,common,Overworld,fishing
+grimer,common,Nether Toxic,grounded
+grimer,common,Swamp,fishing
+grimer,common,Overworld,fishing
+grimer,common,Overworld,fishing
+muk,uncommon,Swamp,surface
+muk,uncommon,Overworld,surface
+muk,uncommon,Overworld,surface
+muk,common,Swamp,fishing
+muk,common,Overworld,fishing
+muk,common,Overworld,fishing
+muk,common,Nether Toxic,grounded
+muk,common,Swamp,fishing
+muk,common,Overworld,fishing
+muk,common,Overworld,fishing
+shellder,common,Cold Ocean-Frozen Ocean,seafloor
+shellder,common,Ocean,seafloor
+shellder,common,Cold Ocean-Frozen Ocean,fishing
+shellder,common,Coast-Ocean,fishing
+shellder,common,Cold Ocean-Frozen Ocean,fishing
+shellder,common,Coast-Ocean,fishing
+shellder,common,Overworld,seafloor
+shellder,common,Overworld,fishing
+cloyster,common,Cold Ocean-Frozen Ocean,seafloor
+cloyster,common,Ocean,seafloor
+cloyster,common,Cold Ocean-Frozen Ocean,fishing
+cloyster,common,Coast-Ocean,fishing
+cloyster,common,Cold Ocean-Frozen Ocean,fishing
+cloyster,common,Coast-Ocean,fishing
+cloyster,common,Overworld,seafloor
+cloyster,common,Overworld,fishing
+gastly,common,Aether-Overworld,grounded
+gastly,uncommon,Overworld,grounded
+gastly,common,Spooky,grounded
+gastly,common,Nether,grounded
+haunter,common,Aether-Overworld,grounded
+haunter,uncommon,Overworld,grounded
+haunter,common,Spooky,grounded
+haunter,common,Nether,grounded
+gengar,common,Aether-Overworld,grounded
+gengar,uncommon,Overworld,grounded
+gengar,common,Spooky,grounded
+gengar,common,Nether,grounded
+onix,uncommon,Overworld,grounded
+onix,uncommon,Nether Basalt,grounded
+drowzee,common,Overworld,grounded
+drowzee,common,Overworld,grounded
+hypno,common,Overworld,grounded
+hypno,common,Overworld,grounded
+krabby,common,Coast,grounded
+krabby,common,Coast-Ocean,seafloor
+krabby,common,Coast-Ocean,fishing
+krabby,common,Coast-Ocean,fishing
+krabby,common,Overworld,seafloor
+krabby,common,Overworld,fishing
+kingler,common,Coast,grounded
+kingler,common,Coast-Ocean,seafloor
+kingler,common,Coast-Ocean,fishing
+kingler,common,Coast-Ocean,fishing
+kingler,common,Overworld,seafloor
+kingler,common,Overworld,fishing
+voltorb,common,Overworld,grounded
+voltorb,common,Overworld,grounded
+voltorb,uncommon,Overworld,grounded
+voltorb-hisui,uncommon,Overworld,grounded
+electrode,common,Overworld,grounded
+electrode,common,Overworld,grounded
+electrode,uncommon,Overworld,grounded
+electrode-hisui,uncommon,Overworld,grounded
+exeggcute,common,Jungle-Savanna,grounded
+exeggcute,uncommon,Beach-Tropical Island,grounded
+exeggutor,common,Jungle-Savanna,grounded
+exeggutor-alola,uncommon,Beach-Tropical Island,grounded
+cubone,common,Badlands-Desert,grounded
+cubone,common,Volcanic,grounded
+cubone,common,Nether Desert,grounded
+marowak,common,Badlands-Desert,grounded
+marowak-alola,common,Volcanic,grounded
+marowak-alola,common,Nether Desert,grounded
+hitmonlee,uncommon,Hills,grounded
+hitmonchan,uncommon,Hills,grounded
+lickitung,uncommon,Grassland,grounded
+koffing,common,Overworld,grounded
+koffing,common,Overworld,grounded
+koffing,common,Nether Toxic,grounded
+weezing,common,Overworld,grounded
+weezing,common,Overworld,grounded
+weezing,common,Nether Toxic,grounded
+rhyhorn,common,Mountain-Savanna,grounded
+rhydon,common,Mountain-Savanna,grounded
+chansey,rare,Overworld,grounded
+chansey,rare,Overworld,grounded
+chansey,rare,Aether,grounded
+tangela,common,Jungle,grounded
+kangaskhan,rare,Savanna,grounded
+horsea,common,Lukewarm Ocean-Warm Ocean,submerged
+horsea,common,Ocean,fishing
+horsea,common,Lukewarm Ocean-Warm Ocean,submerged
+horsea,common,Ocean,fishing
+horsea,common,Overworld,submerged
+horsea,common,Overworld,fishing
+seadra,common,Lukewarm Ocean-Warm Ocean,submerged
+seadra,common,Ocean,fishing
+seadra,common,Lukewarm Ocean-Warm Ocean,submerged
+seadra,common,Ocean,fishing
+seadra,common,Overworld,submerged
+seadra,common,Overworld,fishing
+goldeen,common,River,submerged
+goldeen,common,Aether-Bamboo-Floral-Freezing-Freshwater-Jungle-Magical-Mountain-Taiga-Temperate,fishing
+goldeen,common,River,submerged
+goldeen,common,Aether-Bamboo-Floral-Freezing-Freshwater-Jungle-Magical-Mountain-Taiga-Temperate,fishing
+seaking,common,River,submerged
+seaking,common,Aether-Bamboo-Floral-Freezing-Freshwater-Jungle-Magical-Mountain-Taiga-Temperate,fishing
+seaking,common,River,submerged
+seaking,common,Aether-Bamboo-Floral-Freezing-Freshwater-Jungle-Magical-Mountain-Taiga-Temperate,fishing
+staryu,uncommon,Coast,grounded
+staryu,uncommon,Ocean,submerged
+staryu,uncommon,Coast-Ocean-Tropical Island,fishing
+staryu,common,Coast-Ocean-Tropical Island,fishing
+staryu,uncommon,Ocean,submerged
+staryu,uncommon,Coast-Ocean-Tropical Island,fishing
+staryu,common,Coast-Ocean-Tropical Island,fishing
+staryu,uncommon,Overworld,submerged
+staryu,uncommon,Overworld,fishing
+staryu,common,Overworld,fishing
+starmie,uncommon,Coast,grounded
+starmie,uncommon,Ocean,submerged
+starmie,uncommon,Coast-Ocean-Tropical Island,fishing
+starmie,common,Coast-Ocean-Tropical Island,fishing
+starmie,uncommon,Ocean,submerged
+starmie,uncommon,Coast-Ocean-Tropical Island,fishing
+starmie,common,Coast-Ocean-Tropical Island,fishing
+starmie,uncommon,Overworld,submerged
+starmie,uncommon,Overworld,fishing
+starmie,common,Overworld,fishing
+mr-mime,uncommon,Overworld,grounded
+mr-mime,uncommon,Overworld,grounded
+mr-mime,common,Overworld,grounded
+scyther,rare,Forest-Hills,grounded
+scyther,uncommon,Jungle,grounded
+scyther,rare,Skyroot Forest-Skyroot Woodland,grounded
+jynx,uncommon,Freezing,grounded
+jynx,uncommon,Freezing,grounded
+electabuzz,uncommon,Hills-Plains,grounded
+magmar,common,Hills,grounded
+magmar,common,Volcanic,grounded
+magmar,common,Nether Basalt-Nether Wasteland,grounded
+pinsir,rare,Jungle-Tropical Island,grounded
+pinsir,rare,Skyroot Forest-Skyroot Woodland,grounded
+tauros,common,Grassland,grounded
+tauros-paldean-combat,common,Highlands,grounded
+tauros-paldean-blaze,common,Highlands,grounded
+tauros-paldean-aqua,common,Highlands,grounded
+magikarp,common,Freshwater-Ocean,submerged
+magikarp,uncommon,Freshwater-Ocean,surface
+magikarp,common,Aether-Overworld,fishing
+magikarp,common,Freshwater-Ocean,submerged
+magikarp,common,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+magikarp,uncommon,Aether-Overworld,fishing
+gyarados,common,Freshwater-Ocean,submerged
+gyarados,uncommon,Freshwater-Ocean,surface
+gyarados,common,Aether-Overworld,fishing
+gyarados,common,Freshwater-Ocean,submerged
+gyarados,common,Aether-Overworld,fishing
+lapras,uncommon,Frozen Ocean,surface
+lapras,ultra-rare,Ocean,surface
+lapras,uncommon,Frozen Ocean,fishing
+lapras,common,Frozen Ocean,fishing
+lapras,ultra-rare,Ocean,fishing
+lapras,uncommon,Frozen Ocean,fishing
+lapras,common,Frozen Ocean,fishing
+lapras,ultra-rare,Ocean,fishing
+ditto,rare,Overworld,grounded
+ditto,ultra-rare,Overworld,grounded
+ditto,uncommon,Overworld,grounded
+eevee,ultra-rare,Overworld,grounded
+eevee,rare,Aether-Temperate,grounded
+eevee,uncommon,Overworld,grounded
+eevee,uncommon,Overworld,grounded
+eevee,uncommon,Overworld,grounded
+vaporeon,ultra-rare,Freshwater-Jungle-Magical-Temperate-Tropical Island,grounded
+vaporeon,ultra-rare,Freshwater-Jungle-Magical-Temperate-Tropical Island,submerged
+vaporeon,uncommon,Overworld,grounded
+vaporeon,uncommon,Overworld,grounded
+vaporeon,uncommon,Overworld,grounded
+vaporeon,ultra-rare,Freshwater-Jungle-Magical-Temperate-Tropical Island,fishing
+jolteon,ultra-rare,Grassland,grounded
+jolteon,uncommon,Overworld,grounded
+jolteon,uncommon,Overworld,grounded
+jolteon,uncommon,Overworld,grounded
+flareon,ultra-rare,Badlands-Desert,grounded
+flareon,uncommon,Overworld,grounded
+flareon,uncommon,Overworld,grounded
+flareon,uncommon,Overworld,grounded
+porygon,uncommon,Overworld,grounded
+omanyte,ultra-rare,Lush,grounded
+omanyte,ultra-rare,Lush,submerged
+omastar,ultra-rare,Lush,grounded
+omastar,ultra-rare,Lush,submerged
+kabuto,ultra-rare,Lush,grounded
+kabuto,ultra-rare,Lush,submerged
+kabutops,ultra-rare,Lush,grounded
+kabutops,ultra-rare,Lush,submerged
+aerodactyl,ultra-rare,Lush,grounded
+snorlax,rare,Skyroot Forest-Skyroot Woodland-Snowy Forest-Forest-Hills,grounded
+dratini,rare,Overworld,surface
+dratini,rare,Overworld,submerged
+dratini,uncommon,Ocean,submerged
+dratini,rare,Aether-Overworld,fishing
+dratini,ultra-rare,Aether-Magical-Ocean,fishing
+dratini,uncommon,Ocean,submerged
+dratini,ultra-rare,Aether-Magical-Ocean,fishing
+dragonair,rare,Overworld,surface
+dragonair,rare,Overworld,submerged
+dragonair,uncommon,Ocean,submerged
+dragonair,rare,Aether-Overworld,fishing
+dragonair,ultra-rare,Aether-Magical-Ocean,fishing
+dragonair,uncommon,Ocean,submerged
+dragonair,ultra-rare,Aether-Magical-Ocean,fishing
+dragonite,rare,Overworld,grounded
+dragonite,uncommon,Ocean,submerged
+dragonite,ultra-rare,Sky,grounded
+dragonite,rare,Aether-Overworld,fishing
+dragonite,ultra-rare,Aether-Magical-Ocean,fishing
+dragonite,uncommon,Ocean,submerged
+dragonite,ultra-rare,Aether-Magical-Ocean,fishing
+chikorita,ultra-rare,Aether-Floral,grounded
+chikorita,ultra-rare,Floral Meadow,grounded
+bayleef,ultra-rare,Aether-Floral,grounded
+bayleef,ultra-rare,Floral Meadow,grounded
+meganium,ultra-rare,Aether-Floral,grounded
+meganium,ultra-rare,Floral Meadow,grounded
+cyndaquil,ultra-rare,Temperate,grounded
+cyndaquil,ultra-rare,Taiga,grounded
+cyndaquil,ultra-rare,Nether Crimson-Nether Forest-Nether Overgrowth,grounded
+quilava,ultra-rare,Temperate,grounded
+quilava,ultra-rare,Taiga,grounded
+quilava,ultra-rare,Nether Crimson-Nether Forest-Nether Overgrowth,grounded
+typhlosion,ultra-rare,Temperate,grounded
+typhlosion-hisui,ultra-rare,Taiga,grounded
+typhlosion-hisui,ultra-rare,Nether Crimson-Nether Forest-Nether Overgrowth,grounded
+totodile,ultra-rare,Swamp,grounded
+totodile,ultra-rare,Swamp,submerged
+totodile,ultra-rare,Arid-Jungle-Swamp,fishing
+totodile,ultra-rare,Swamp,submerged
+totodile,ultra-rare,Arid-Jungle-Swamp,fishing
+croconaw,ultra-rare,Swamp,grounded
+croconaw,ultra-rare,Swamp,submerged
+croconaw,ultra-rare,Arid-Jungle-Swamp,fishing
+croconaw,ultra-rare,Swamp,submerged
+croconaw,ultra-rare,Arid-Jungle-Swamp,fishing
+feraligatr,ultra-rare,Swamp,grounded
+feraligatr,ultra-rare,Swamp,submerged
+feraligatr,ultra-rare,Arid-Jungle-Swamp,fishing
+feraligatr,ultra-rare,Swamp,submerged
+feraligatr,ultra-rare,Arid-Jungle-Swamp,fishing
+sentret,common,Aether-Taiga-Temperate-Tundra,grounded
+furret,common,Aether-Taiga-Temperate-Tundra,grounded
+hoothoot,common,Forest-Sky-Spooky,grounded
+noctowl,common,Forest-Sky-Spooky,grounded
+ledyba,common,Temperate,grounded
+ledyba,common,Floral Meadow,grounded
+ledyba,common,Aether,grounded
+ledian,common,Temperate,grounded
+ledian,common,Floral Meadow,grounded
+ledian,common,Aether,grounded
+spinarak,common,Forest-Jungle-Spooky,grounded
+spinarak,common,Overworld,grounded
+spinarak,common,Overworld,grounded
+spinarak,common,,grounded
+spinarak,common,Overworld,grounded
+ariados,common,Forest-Jungle-Spooky,grounded
+ariados,common,Overworld,grounded
+ariados,common,Overworld,grounded
+ariados,common,,grounded
+ariados,common,Overworld,grounded
+crobat,common,Forest-Swamp,grounded
+crobat,common,Forest-Swamp,grounded
+crobat,common,Overworld,grounded
+crobat,uncommon,Overworld,grounded
+crobat,common,Spooky,grounded
+crobat,uncommon,Deep Dark,grounded
+crobat,common,Aether,grounded
+chinchou,common,Deep Ocean,submerged
+chinchou,common,Ocean,fishing
+chinchou,common,Deep Ocean,submerged
+chinchou,common,Ocean,fishing
+chinchou,common,Overworld,submerged
+chinchou,common,Overworld,fishing
+lanturn,common,Deep Ocean,submerged
+lanturn,common,Ocean,fishing
+lanturn,common,Deep Ocean,submerged
+lanturn,common,Ocean,fishing
+lanturn,common,Overworld,submerged
+lanturn,common,Overworld,fishing
+pichu,uncommon,Forest,grounded
+cleffa,uncommon,Dripstone,grounded
+cleffa,uncommon,Aether-Dripstone,grounded
+cleffa,uncommon,Hills,grounded
+cleffa,uncommon,Magical,grounded
+igglybuff,common,Floral,grounded
+igglybuff,common,Plains,grounded
+igglybuff,common,Skyroot Grove-Skyroot Meadow,grounded
+natu,common,Badlands-Plateau,grounded
+natu,common,Overworld,grounded
+xatu,common,Badlands-Plateau,grounded
+xatu,common,Overworld,grounded
+mareep,common,Highlands-Plains,grounded
+flaaffy,common,Highlands-Plains,grounded
+ampharos,common,Highlands-Plains,grounded
+bellossom,common,Floral,grounded
+bellossom,common,Jungle,grounded
+bellossom-valencian,common,Savanna-Tropical Island,grounded
+sudowoodo,uncommon,Forest,grounded
+politoed,common,Swamp,grounded
+politoed,common,Swamp,submerged
+politoed,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,grounded
+politoed,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+politoed,common,Lush,grounded
+politoed,common,Lush,submerged
+politoed,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+politoed,common,Lush,fishing
+politoed,common,Swamp,submerged
+politoed,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,submerged
+politoed,common,Freshwater-Hills-Jungle-Magical-Mushroom-Temperate,fishing
+politoed,common,Overworld,grounded
+politoed,common,Overworld,submerged
+politoed,common,Overworld,fishing
+aipom,common,Jungle-Tropical Island,grounded
+aipom,common,Overworld,grounded
+sunkern,common,Sunflower Plains,grounded
+sunkern,common,Overworld,grounded
+sunkern,common,Skyroot Grove-Skyroot Meadow,grounded
+sunkern,common,Floral Meadow,grounded
+sunflora,common,Sunflower Plains,grounded
+sunflora,common,Overworld,grounded
+sunflora,common,Skyroot Grove-Skyroot Meadow,grounded
+sunflora,common,Floral Meadow,grounded
+yanma,uncommon,Freshwater,surface
+yanma,uncommon,Lush,surface
+yanma,uncommon,Bumblezone,surface
+yanma,uncommon,Overworld,surface
+yanma,uncommon,Aether,surface
+wooper,common,Lush,grounded
+wooper,common,Lush,submerged
+wooper,uncommon,Overworld,grounded
+wooper,uncommon,Overworld,submerged
+wooper,common,Swamp,grounded
+wooper,common,Swamp,submerged
+wooper,common,Swamp,submerged
+wooper,common,Aether-Overworld,fishing
+wooper,common,Mushroom-Swamp,fishing
+wooper,common,Mushroom-Swamp,fishing
+wooper,common,Overworld,grounded
+wooper,common,Overworld,submerged
+wooper,uncommon,Aether,grounded
+wooper,uncommon,Aether,submerged
+wooper,uncommon,Aether-Overworld,fishing
+wooper,uncommon,Mushroom-Swamp,fishing
+wooper,common,Aether-Overworld,fishing
+wooper,common,Mushroom-Swamp,fishing
+wooper,uncommon,Mushroom-Swamp,fishing
+wooper,common,Mushroom-Swamp,fishing
+wooper-paldea,common,Muddy,grounded
+wooper-paldea,common,Muddy,submerged
+wooper-paldea,uncommon,Savanna,grounded
+wooper-paldea,uncommon,Savanna,submerged
+wooper-paldea,common,Muddy,fishing
+wooper-paldea,uncommon,Arid,fishing
+wooper-paldea,common,Arid,fishing
+wooper-paldea,common,Muddy,submerged
+wooper-paldea,uncommon,Savanna,submerged
+wooper-paldea,common,Muddy,fishing
+wooper-paldea,uncommon,Arid,fishing
+wooper-paldea,common,Arid,fishing
+quagsire,common,Lush,grounded
+quagsire,common,Lush,submerged
+quagsire,uncommon,Overworld,grounded
+quagsire,uncommon,Overworld,submerged
+quagsire,common,Swamp,grounded
+quagsire,common,Swamp,submerged
+quagsire,common,Aether-Overworld,fishing
+quagsire,common,Mushroom-Swamp,fishing
+quagsire,common,Swamp,submerged
+quagsire,common,Mushroom-Swamp,fishing
+quagsire,common,Overworld,grounded
+quagsire,common,Overworld,submerged
+quagsire,uncommon,Aether,grounded
+quagsire,uncommon,Aether,submerged
+espeon,ultra-rare,Hills,grounded
+espeon,uncommon,Overworld,grounded
+espeon,uncommon,Overworld,grounded
+espeon,uncommon,Overworld,grounded
+umbreon,ultra-rare,Spooky,grounded
+umbreon,uncommon,Overworld,grounded
+umbreon,uncommon,Overworld,grounded
+umbreon,uncommon,Overworld,grounded
+murkrow,common,Spooky,grounded
+murkrow,common,Swamp,grounded
+murkrow,common,Taiga,grounded
+murkrow,common,Sky,grounded
+slowking,common,Beach,grounded
+slowking,common,Beach,fishing
+slowking,common,Beach,fishing
+slowking-galar,common,Mushroom Fields-Tropical Island,grounded
+slowking-galar,common,Mushroom Fields-Tropical Island,fishing
+slowking-galar,common,Mushroom Fields-Tropical Island,fishing
+misdreavus,common,Spooky,grounded
+misdreavus,common,Spooky-Swamp,grounded
+misdreavus,common,Spooky-Swamp,grounded
+misdreavus,common,Swamp,grounded
+misdreavus,common,Nether Warped,grounded
+misdreavus,common,Overworld,grounded
+wobbuffet,rare,Overworld,grounded
+girafarig,common,Savanna,grounded
+pineco,common,Taiga,grounded
+forretress,common,Taiga,grounded
+forretress-shulker,uncommon,End,grounded
+gligar,uncommon,Badlands,grounded
+gligar,common,Nether Mountain,grounded
+steelix,uncommon,Overworld,grounded
+steelix,uncommon,Nether Basalt,grounded
+snubbull,common,Overworld,grounded
+snubbull,common,Overworld,grounded
+snubbull,common,Overworld,grounded
+granbull,common,Overworld,grounded
+granbull,common,Overworld,grounded
+granbull,common,Overworld,grounded
+qwilfish,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+qwilfish,common,Ocean,submerged
+qwilfish,uncommon,Lukewarm Ocean-Warm Ocean,fishing
+qwilfish,common,Lukewarm Ocean-Warm Ocean,fishing
+qwilfish,common,Ocean,fishing
+qwilfish,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+qwilfish,common,Ocean,submerged
+qwilfish,uncommon,Lukewarm Ocean-Warm Ocean,fishing
+qwilfish,common,Lukewarm Ocean-Warm Ocean,fishing
+qwilfish,common,Ocean,fishing
+qwilfish,uncommon,Overworld,submerged
+qwilfish,uncommon,Overworld,fishing
+qwilfish,common,Overworld,fishing
+qwilfish-hisui,uncommon,Cold Ocean,submerged
+qwilfish-hisui,common,Cold Ocean-Frozen Ocean,submerged
+qwilfish-hisui,uncommon,Cold Ocean,fishing
+qwilfish-hisui,common,Cold Ocean,fishing
+qwilfish-hisui,common,Cold Ocean-Frozen Ocean,fishing
+qwilfish-hisui,uncommon,Cold Ocean,submerged
+qwilfish-hisui,common,Cold Ocean-Frozen Ocean,submerged
+qwilfish-hisui,uncommon,Cold Ocean,fishing
+qwilfish-hisui,common,Cold Ocean,fishing
+qwilfish-hisui,common,Cold Ocean-Frozen Ocean,fishing
+qwilfish-hisui,uncommon,Cold,submerged
+qwilfish-hisui,uncommon,Cold,fishing
+qwilfish-hisui,common,Cold,fishing
+scizor,uncommon,Jungle,grounded
+shuckle,uncommon,Lush,grounded
+shuckle,uncommon,Lush,fishing
+shuckle,common,Lush,fishing
+shuckle,uncommon,Overworld,grounded
+shuckle,uncommon,Overworld,fishing
+shuckle,common,Overworld,fishing
+heracross,rare,Forest,grounded
+heracross,uncommon,Jungle-Tropical Island,grounded
+heracross,rare,Skyroot Forest-Skyroot Woodland,grounded
+heracross,uncommon,Crystal Canyon,grounded
+sneasel,uncommon,Taiga,grounded
+sneasel-hisui,uncommon,Mountain,grounded
+teddiursa,common,Forest-Mountain-Taiga,grounded
+teddiursa,common,Skyroot Forest-Skyroot Woodland,grounded
+teddiursa,common,Crystal Canyon-Floral Meadow,grounded
+ursaring,common,Forest-Mountain-Taiga,grounded
+ursaring,common,Skyroot Forest-Skyroot Woodland,grounded
+ursaring,common,Crystal Canyon-Floral Meadow,grounded
+slugma,common,Nether Basalt-Nether Wasteland,grounded
+slugma,common,Nether-Volcanic,surface
+slugma,common,Overworld,surface
+slugma,common,Volcanic,grounded
+magcargo,common,Nether Basalt-Nether Wasteland,grounded
+magcargo,common,Nether-Volcanic,surface
+magcargo,common,Overworld,surface
+magcargo,common,Volcanic,grounded
+swinub,common,Tundra,grounded
+piloswine,common,Tundra,grounded
+corsola,uncommon,Warm Ocean,seafloor
+corsola,uncommon,Warm Ocean,fishing
+corsola,common,Warm Ocean,fishing
+corsola,uncommon,Warm Ocean,fishing
+corsola,common,Warm Ocean,fishing
+remoraid,common,Ocean,submerged
+remoraid,common,Ocean,fishing
+remoraid,common,Ocean,submerged
+remoraid,common,Ocean,fishing
+remoraid,common,Overworld,submerged
+remoraid,common,Overworld,fishing
+octillery,common,Ocean,seafloor
+octillery,common,Ocean,fishing
+octillery,common,Ocean,fishing
+octillery,common,Overworld,seafloor
+octillery,common,Overworld,fishing
+delibird,uncommon,Peak,grounded
+delibird,common,Aether,grounded
+mantine,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+mantine,uncommon,Ocean,fishing
+mantine,common,Ocean,fishing
+mantine,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+mantine,uncommon,Ocean,fishing
+mantine,common,Ocean,fishing
+skarmory,rare,Badlands-Desert-Sky,grounded
+kingdra,common,Lukewarm Ocean-Warm Ocean,submerged
+kingdra,common,Ocean,fishing
+kingdra,common,Lukewarm Ocean-Warm Ocean,submerged
+kingdra,common,Ocean,fishing
+kingdra,common,Overworld,submerged
+kingdra,common,Overworld,fishing
+phanpy,common,Badlands,grounded
+phanpy,common,Savanna,grounded
+donphan,common,Badlands,grounded
+donphan,common,Savanna,grounded
+porygon2,uncommon,Overworld,grounded
+stantler,common,Snowy Forest-Snowy Taiga-Tundra,grounded
+stantler,common,Aether,grounded
+smeargle,rare,Overworld,grounded
+smeargle,rare,Overworld,grounded
+smeargle,common,Overworld,grounded
+tyrogue,uncommon,Hills,grounded
+hitmontop,uncommon,Hills,grounded
+smoochum,uncommon,Freezing,grounded
+smoochum,uncommon,Freezing,grounded
+elekid,uncommon,Hills-Plains,grounded
+magby,common,Hills,grounded
+magby,common,Volcanic,grounded
+magby,common,Nether Basalt-Nether Wasteland,grounded
+miltank,common,Grassland,grounded
+miltank,common,Mushroom Fields,grounded
+miltank,common,Mushroom Fields,grounded
+blissey,rare,Overworld,grounded
+blissey,rare,Overworld,grounded
+blissey,rare,Aether,grounded
+larvitar,ultra-rare,Mountain,grounded
+larvitar,rare,Mountain,grounded
+pupitar,ultra-rare,Mountain,grounded
+pupitar,rare,Mountain,grounded
+tyranitar,ultra-rare,Mountain,grounded
+tyranitar,rare,Mountain,grounded
+treecko,ultra-rare,Jungle-Skyroot Forest-Skyroot Woodland,grounded
+grovyle,ultra-rare,Jungle-Skyroot Forest-Skyroot Woodland,grounded
+sceptile,ultra-rare,Jungle-Skyroot Forest-Skyroot Woodland,grounded
+torchic,ultra-rare,Plains-Skyroot Grove-Skyroot Meadow,grounded
+combusken,ultra-rare,Plains-Skyroot Grove-Skyroot Meadow,grounded
+blaziken,ultra-rare,Plains-Skyroot Grove-Skyroot Meadow,grounded
+mudkip,ultra-rare,Swamp,grounded
+mudkip,ultra-rare,Swamp,submerged
+mudkip,ultra-rare,Lush,grounded
+mudkip,ultra-rare,Lush,submerged
+mudkip,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+mudkip,ultra-rare,Lush,fishing
+mudkip,ultra-rare,Swamp,submerged
+mudkip,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+mudkip,ultra-rare,Overworld,grounded
+mudkip,ultra-rare,Overworld,submerged
+mudkip,ultra-rare,Overworld,fishing
+marshtomp,ultra-rare,Swamp,grounded
+marshtomp,ultra-rare,Swamp,submerged
+marshtomp,ultra-rare,Lush,grounded
+marshtomp,ultra-rare,Lush,submerged
+marshtomp,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+marshtomp,ultra-rare,Lush,fishing
+marshtomp,ultra-rare,Swamp,submerged
+marshtomp,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+marshtomp,ultra-rare,Overworld,grounded
+marshtomp,ultra-rare,Overworld,submerged
+marshtomp,ultra-rare,Overworld,fishing
+swampert,ultra-rare,Swamp,grounded
+swampert,ultra-rare,Swamp,submerged
+swampert,ultra-rare,Lush,grounded
+swampert,ultra-rare,Lush,submerged
+swampert,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+swampert,ultra-rare,Lush,fishing
+swampert,ultra-rare,Swamp,submerged
+swampert,ultra-rare,Badlands-Forest-Jungle-Mushroom-Savanna-Swamp,fishing
+swampert,ultra-rare,Overworld,grounded
+swampert,ultra-rare,Overworld,submerged
+swampert,ultra-rare,Overworld,fishing
+poochyena,common,Badlands-Savanna,grounded
+poochyena,common,Overworld,grounded
+mightyena,common,Badlands-Savanna,grounded
+mightyena,common,Overworld,grounded
+zigzagoon,common,Temperate,grounded
+zigzagoon,common,Skyroot Forest-Skyroot Woodland,grounded
+zigzagoon-galar,common,Taiga,grounded
+linoone,common,Temperate,grounded
+linoone,common,Skyroot Forest-Skyroot Woodland,grounded
+linoone-galar,common,Taiga,grounded
+lotad,common,Swamp,grounded
+lotad,common,Swamp,surface
+lotad,common,Forest-Jungle-Swamp,fishing
+lotad,common,Forest-Jungle-Swamp,fishing
+lombre,common,Swamp,grounded
+lombre,common,Swamp,surface
+lombre,common,Forest-Jungle-Swamp,fishing
+lombre,common,Forest-Jungle-Swamp,fishing
+ludicolo,common,Swamp,grounded
+ludicolo,common,Swamp,surface
+ludicolo,common,Forest-Jungle-Swamp,fishing
+ludicolo,common,Forest-Jungle-Swamp,fishing
+seedot,common,Forest-Skyroot Forest-Skyroot Woodland,grounded
+nuzleaf,common,Forest-Skyroot Forest-Skyroot Woodland,grounded
+shiftry,common,Forest-Skyroot Forest-Skyroot Woodland,grounded
+taillow,common,Sky-Temperate,grounded
+taillow,common,Aether,grounded
+swellow,common,Sky-Temperate,grounded
+swellow,common,Aether,grounded
+wingull,common,Coast-Ocean-Sky-Tropical Island,grounded
+pelipper,common,Coast-Ocean-Sky-Tropical Island,grounded
+ralts,rare,Floral-Magical-Skyroot Grove-Skyroot Meadow-Snowy Forest,grounded
+ralts,rare,Overworld,grounded
+ralts,rare,Overworld,grounded
+ralts,common,Overworld,grounded
+kirlia,rare,Floral-Magical-Skyroot Grove-Skyroot Meadow-Snowy Forest,grounded
+kirlia,rare,Overworld,grounded
+kirlia,rare,Overworld,grounded
+kirlia,common,Overworld,grounded
+gardevoir,rare,Floral-Magical-Skyroot Grove-Skyroot Meadow-Snowy Forest,grounded
+gardevoir,rare,Overworld,grounded
+gardevoir,rare,Overworld,grounded
+gardevoir,common,Overworld,grounded
+surskit,uncommon,Freshwater,surface
+surskit,uncommon,Bumblezone,surface
+masquerain,uncommon,Freshwater,surface
+masquerain,uncommon,Bumblezone,surface
+shroomish,common,Forest-Skyroot Forest-Skyroot Woodland,grounded
+shroomish,common,Mushroom,grounded
+breloom,common,Forest-Skyroot Forest-Skyroot Woodland,grounded
+breloom,common,Mushroom,grounded
+slakoth,common,Jungle,grounded
+vigoroth,common,Jungle,grounded
+slaking,common,Jungle,grounded
+nincada,common,Forest-Jungle,grounded
+nincada,common,Skyroot Forest-Skyroot Woodland,grounded
+ninjask,common,Forest-Jungle,grounded
+ninjask,common,Skyroot Forest-Skyroot Woodland,grounded
+shedinja,common,Forest-Jungle,grounded
+shedinja,common,Skyroot Forest-Skyroot Woodland,grounded
+whismur,uncommon,Deep Dark,grounded
+whismur,common,Overworld,grounded
+loudred,uncommon,Deep Dark,grounded
+loudred,common,Overworld,grounded
+exploud,uncommon,Deep Dark,grounded
+exploud,common,Overworld,grounded
+makuhita,common,Mountain,grounded
+hariyama,common,Mountain,grounded
+nosepass,uncommon,Overworld,grounded
+sableye,common,Aether-Overworld,grounded
+sableye,rare,Deep Dark,grounded
+sableye,common,Crystal Canyon-Crystalline Chasm,grounded
+mawile,uncommon,Deep Dark,grounded
+mawile,rare,Overworld,grounded
+aron,common,Mountain,grounded
+aron,uncommon,Overworld,grounded
+lairon,common,Mountain,grounded
+lairon,uncommon,Overworld,grounded
+aggron,common,Mountain,grounded
+aggron,uncommon,Overworld,grounded
+plusle,uncommon,Plains,grounded
+plusle,uncommon,Plains,grounded
+minun,uncommon,Plains,grounded
+minun,uncommon,Plains,grounded
+volbeat,common,Freshwater,grounded
+volbeat,uncommon,Freshwater,surface
+volbeat,common,Floral Meadow,grounded
+volbeat,uncommon,Bumblezone,surface
+illumise,common,Freshwater,grounded
+illumise,uncommon,Freshwater,surface
+illumise,common,Floral Meadow,grounded
+illumise,uncommon,Bumblezone,surface
+roselia,common,Aether-Floral,grounded
+roselia,common,Floral Meadow,grounded
+carvanha,common,Ocean-Swamp,submerged
+carvanha,common,Ocean,fishing
+carvanha,common,Jungle-Swamp,fishing
+carvanha,common,Ocean-Swamp,submerged
+carvanha,common,Ocean,fishing
+carvanha,common,Jungle-Swamp,fishing
+carvanha,common,Overworld,submerged
+carvanha,common,Overworld,fishing
+sharpedo,common,Ocean,submerged
+sharpedo,common,Ocean,fishing
+sharpedo,common,Ocean,submerged
+sharpedo,common,Ocean,fishing
+sharpedo,common,Overworld,submerged
+sharpedo,common,Overworld,fishing
+wailmer,uncommon,Deep Ocean,submerged
+wailmer,uncommon,Ocean,fishing
+wailmer,common,Ocean,fishing
+wailmer,uncommon,Deep Ocean,submerged
+wailmer,uncommon,Ocean,fishing
+wailmer,common,Ocean,fishing
+wailord,uncommon,Deep Ocean,submerged
+wailord,uncommon,Ocean,fishing
+wailord,common,Ocean,fishing
+wailord,uncommon,Deep Ocean,submerged
+wailord,uncommon,Ocean,fishing
+wailord,common,Ocean,fishing
+numel,common,Badlands,grounded
+numel,common,Volcanic,grounded
+numel,common,Nether Overgrowth-Nether Wasteland,grounded
+camerupt,common,Badlands,grounded
+camerupt,common,Volcanic,grounded
+camerupt,common,Nether Overgrowth-Nether Wasteland,grounded
+torkoal,common,Mountain-Thermal,grounded
+torkoal,uncommon,Overworld,grounded
+torkoal,common,Nether Basalt,grounded
+spinda,uncommon,Bamboo-Hills,grounded
+spinda,uncommon,Bamboo-Hills,grounded
+spinda,uncommon,Bamboo-Hills,grounded
+spinda,uncommon,Bamboo-Hills,grounded
+spinda,uncommon,Bamboo-Hills,grounded
+trapinch,rare,Desert,grounded
+trapinch,uncommon,Desert,grounded
+vibrava,rare,Desert,grounded
+flygon,rare,Desert,grounded
+cacnea,common,Badlands-Desert,grounded
+cacturne,common,Badlands-Desert,grounded
+lunatone,uncommon,Dripstone,grounded
+lunatone,common,Dripstone,grounded
+lunatone,uncommon,Mountain,grounded
+lunatone,common,Overworld,grounded
+solrock,uncommon,Dripstone,grounded
+solrock,common,Dripstone,grounded
+solrock,uncommon,Mountain,grounded
+solrock,common,Overworld,grounded
+solrock,uncommon,Skyroot Grove-Skyroot Meadow,grounded
+barboach,common,Swamp,submerged
+barboach,uncommon,Overworld,submerged
+barboach,common,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+barboach,common,Overworld,fishing
+barboach,common,Swamp,submerged
+barboach,common,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+whiscash,common,Swamp,submerged
+whiscash,uncommon,Overworld,submerged
+whiscash,common,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+whiscash,common,Overworld,fishing
+whiscash,rare,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+whiscash,rare,Overworld,fishing
+whiscash,common,Swamp,submerged
+whiscash,common,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+whiscash,rare,Arid-Freshwater-Hills-Jungle-Mushroom-Temperate,fishing
+corphish,common,Freshwater,grounded
+corphish,common,Freshwater,seafloor
+corphish,common,Arid-Freshwater-Hills-Jungle-Temperate,fishing
+corphish,common,Arid-Freshwater-Hills-Jungle-Temperate,fishing
+crawdaunt,common,Freshwater,grounded
+crawdaunt,common,Freshwater,seafloor
+crawdaunt,common,Arid-Freshwater-Hills-Jungle-Temperate,fishing
+crawdaunt,common,Arid-Freshwater-Hills-Jungle-Temperate,fishing
+baltoy,uncommon,Badlands-Desert,grounded
+baltoy,common,Overworld,grounded
+baltoy,common,Howling Constructs,grounded
+claydol,uncommon,Badlands-Desert,grounded
+claydol,common,Overworld,grounded
+claydol,common,Howling Constructs,grounded
+lileep,ultra-rare,Lush,seafloor
+cradily,ultra-rare,Lush,seafloor
+anorith,ultra-rare,Lush,grounded
+anorith,ultra-rare,Lush,submerged
+armaldo,ultra-rare,Lush,grounded
+armaldo,ultra-rare,Lush,submerged
+feebas,common,Overworld,fishing
+feebas,common,Overworld,fishing
+milotic,common,Overworld,fishing
+milotic,common,Overworld,fishing
+kecleon,uncommon,Jungle-Tropical Island,grounded
+duskull,common,Spooky,grounded
+duskull,common,Nether Soul Sand,grounded
+dusclops,common,Spooky,grounded
+dusclops,common,Nether Soul Sand,grounded
+tropius,uncommon,Jungle,grounded
+tropius,uncommon,Aether,grounded
+chimecho,uncommon,Forest-Mountain-Spooky-Taiga,grounded
+chimecho,uncommon,Magical,grounded
+chimecho,uncommon,Overworld,grounded
+absol,rare,Mountain-Snowy Forest-Taiga,grounded
+wynaut,rare,Overworld,grounded
+spheal,common,Frozen Ocean,grounded
+spheal,common,Frozen Ocean,submerged
+spheal,common,Cold Ocean-Frozen Ocean,fishing
+spheal,common,Frozen Ocean,submerged
+spheal,common,Cold Ocean-Frozen Ocean,fishing
+sealeo,common,Frozen Ocean,grounded
+sealeo,common,Frozen Ocean,submerged
+sealeo,common,Cold Ocean-Frozen Ocean,fishing
+sealeo,common,Frozen Ocean,submerged
+sealeo,common,Cold Ocean-Frozen Ocean,fishing
+walrein,common,Frozen Ocean,grounded
+walrein,common,Frozen Ocean,submerged
+walrein,common,Cold Ocean-Frozen Ocean,fishing
+walrein,common,Frozen Ocean,submerged
+walrein,common,Cold Ocean-Frozen Ocean,fishing
+clamperl,uncommon,Deep Ocean,seafloor
+clamperl,rare,Warm Ocean,seafloor
+clamperl,rare,Ocean,fishing
+clamperl,rare,Ocean,fishing
+clamperl,uncommon,Overworld,seafloor
+clamperl,rare,Overworld,fishing
+huntail,uncommon,Deep Ocean,submerged
+huntail,rare,Warm Ocean,submerged
+huntail,rare,Ocean,fishing
+huntail,uncommon,Deep Ocean,submerged
+huntail,rare,Warm Ocean,submerged
+huntail,rare,Ocean,fishing
+huntail,uncommon,Overworld,submerged
+huntail,rare,Overworld,fishing
+gorebyss,uncommon,Deep Ocean,submerged
+gorebyss,rare,Warm Ocean,submerged
+gorebyss,rare,Ocean,fishing
+gorebyss,uncommon,Deep Ocean,submerged
+gorebyss,rare,Warm Ocean,submerged
+gorebyss,rare,Ocean,fishing
+gorebyss,uncommon,Overworld,submerged
+gorebyss,rare,Overworld,fishing
+relicanth,uncommon,Deep Ocean,submerged
+relicanth,common,Ocean,submerged
+relicanth,rare,Overworld,submerged
+relicanth,uncommon,Deep Ocean,fishing
+relicanth,common,Deep Ocean,fishing
+relicanth,rare,Ocean,fishing
+relicanth,uncommon,Overworld,fishing
+relicanth,common,Overworld,fishing
+relicanth,common,Ocean,submerged
+relicanth,rare,Ocean,fishing
+relicanth,uncommon,Overworld,submerged
+relicanth,uncommon,Overworld,fishing
+relicanth,common,Overworld,fishing
+luvdisc,common,Warm Ocean,submerged
+luvdisc,common,Warm Ocean,fishing
+luvdisc,common,Warm Ocean,submerged
+luvdisc,common,Warm Ocean,fishing
+bagon,ultra-rare,Peak,grounded
+bagon,ultra-rare,Dripstone,grounded
+bagon,rare,Aether-Dripstone,grounded
+shelgon,ultra-rare,Dripstone,grounded
+shelgon,rare,Aether-Dripstone,grounded
+salamence,ultra-rare,Peak-Sky,grounded
+salamence,ultra-rare,Dripstone,grounded
+salamence,rare,Aether-Dripstone,grounded
+beldum,ultra-rare,Dripstone-Peak,grounded
+beldum,rare,End,grounded
+beldum,rare,Aether,grounded
+beldum,uncommon,Aether,grounded
+beldum,rare,Howling Constructs,grounded
+metang,ultra-rare,Dripstone-Peak,grounded
+metang,rare,End,grounded
+metang,rare,Aether,grounded
+metang,uncommon,Aether,grounded
+metang,rare,Howling Constructs,grounded
+metagross,ultra-rare,Dripstone-Peak,grounded
+metagross,rare,End,grounded
+metagross,rare,Aether,grounded
+metagross,uncommon,Aether,grounded
+metagross,rare,Howling Constructs,grounded
+turtwig,ultra-rare,Forest,grounded
+grotle,ultra-rare,Forest,grounded
+torterra,ultra-rare,Forest,grounded
+chimchar,ultra-rare,Mountain,grounded
+chimchar,ultra-rare,Nether Forest,grounded
+monferno,ultra-rare,Mountain,grounded
+monferno,ultra-rare,Nether Forest,grounded
+infernape,ultra-rare,Mountain,grounded
+infernape,ultra-rare,Nether Forest,grounded
+piplup,ultra-rare,Frozen Ocean,grounded
+piplup,ultra-rare,Frozen Ocean,submerged
+piplup,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+piplup,ultra-rare,Frozen Ocean,submerged
+piplup,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+prinplup,ultra-rare,Frozen Ocean,grounded
+prinplup,ultra-rare,Frozen Ocean,submerged
+prinplup,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+prinplup,ultra-rare,Frozen Ocean,submerged
+prinplup,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+empoleon,ultra-rare,Frozen Ocean,grounded
+empoleon,ultra-rare,Frozen Ocean,submerged
+empoleon,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+empoleon,ultra-rare,Frozen Ocean,submerged
+empoleon,ultra-rare,Cold Ocean-Frozen Ocean-Frozen River-Glacial-Tundra,fishing
+starly,common,Hills-Sky-Snowy Forest-Taiga,grounded
+staravia,common,Hills-Sky-Snowy Forest-Taiga,grounded
+staraptor,common,Hills-Sky-Snowy Forest-Taiga,grounded
+bidoof,common,Freshwater,grounded
+bidoof,uncommon,Forest-Taiga,grounded
+bidoof,uncommon,Forest-Freshwater-Taiga,surface
+bidoof,common,Forest-Freshwater-Snowy Forest-Taiga,fishing
+bidoof,common,Forest-Freshwater-Snowy Forest-Taiga,fishing
+bibarel,common,Freshwater,grounded
+bibarel,uncommon,Forest-Taiga,grounded
+bibarel,uncommon,Forest-Freshwater-Taiga,surface
+bibarel,common,Forest-Freshwater-Snowy Forest-Taiga,fishing
+bibarel,common,Forest-Freshwater-Snowy Forest-Taiga,fishing
+kricketot,common,Forest-Swamp,grounded
+kricketune,common,Forest-Swamp,grounded
+shinx,uncommon,Desert-Savanna,grounded
+luxio,uncommon,Desert-Savanna,grounded
+luxray,uncommon,Desert-Savanna,grounded
+budew,common,Aether-Floral,grounded
+budew,common,Floral Meadow,grounded
+roserade,common,Aether-Floral,grounded
+roserade,common,Floral Meadow,grounded
+cranidos,ultra-rare,Lush,grounded
+rampardos,ultra-rare,Lush,grounded
+shieldon,ultra-rare,Lush,grounded
+bastiodon,ultra-rare,Lush,grounded
+combee,common,Temperate,grounded
+combee,common,Aether,grounded
+combee,common,Bumblezone,grounded
+vespiquen,common,Temperate,grounded
+vespiquen,common,Aether,grounded
+vespiquen,common,Bumblezone,grounded
+pachirisu,uncommon,Forest-Skyroot Forest-Skyroot Woodland,grounded
+buizel,common,Freshwater,grounded
+buizel,common,Freshwater,submerged
+buizel,uncommon,Freshwater,surface
+buizel,common,Forest-Freshwater-Grassland-Hills-Jungle-Taiga,fishing
+floatzel,common,Freshwater,grounded
+floatzel,common,Freshwater,submerged
+floatzel,uncommon,Freshwater,surface
+floatzel,common,Forest-Freshwater-Grassland-Hills-Jungle-Taiga,fishing
+shellos-east-sea,uncommon,Beach,grounded
+shellos-east-sea,common,Cold Ocean-Frozen Ocean,seafloor
+shellos-east-sea,common,Cold Ocean-Frozen Ocean,fishing
+shellos-west-sea,uncommon,Beach,grounded
+shellos-west-sea,common,Lukewarm Ocean-Warm Ocean,seafloor
+shellos-west-sea,common,Lukewarm Ocean-Warm Ocean,fishing
+shellos-east-sea,common,Cold Ocean-Frozen Ocean,fishing
+shellos-west-sea,common,Lukewarm Ocean-Warm Ocean,fishing
+gastrodon-east-sea,uncommon,Beach,grounded
+gastrodon-east-sea,common,Cold Ocean-Frozen Ocean,seafloor
+gastrodon-east-sea,common,Cold Ocean-Frozen Ocean,fishing
+gastrodon-west-sea,uncommon,Beach,grounded
+gastrodon-west-sea,common,Lukewarm Ocean-Warm Ocean,seafloor
+gastrodon-west-sea,common,Lukewarm Ocean-Warm Ocean,fishing
+gastrodon-east-sea,common,Cold Ocean-Frozen Ocean,fishing
+gastrodon-west-sea,common,Lukewarm Ocean-Warm Ocean,fishing
+ambipom,common,Jungle-Tropical Island,grounded
+ambipom,common,Overworld,grounded
+drifloon,uncommon,Overworld,grounded
+drifloon,common,Sky,grounded
+drifblim,uncommon,Overworld,grounded
+drifblim,common,Sky,grounded
+buneary,common,Forest-Hills-Snowy Forest-Snowy Taiga-Taiga,grounded
+lopunny,common,Forest-Hills-Snowy Forest-Snowy Taiga-Taiga,grounded
+mismagius,common,Spooky,grounded
+mismagius,common,Spooky-Swamp,grounded
+mismagius,common,Spooky-Swamp,grounded
+mismagius,common,Swamp,grounded
+mismagius,common,Nether Warped,grounded
+mismagius,common,Overworld,grounded
+honchkrow,common,Spooky,grounded
+honchkrow,common,Swamp-Taiga,grounded
+honchkrow,common,Sky,grounded
+chingling,uncommon,Forest-Mountain-Spooky-Taiga,grounded
+chingling,uncommon,Magical,grounded
+chingling,uncommon,Overworld,grounded
+bonsly,uncommon,Forest,grounded
+mime-jr,uncommon,Overworld,grounded
+mime-jr,uncommon,Overworld,grounded
+mime-jr,common,Overworld,grounded
+happiny,rare,Overworld,grounded
+happiny,rare,Overworld,grounded
+happiny,rare,Aether,grounded
+chatot,uncommon,Jungle,grounded
+chatot,common,Tropical Island,grounded
+chatot,common,Sky,grounded
+chatot,common,Overworld,grounded
+chatot,uncommon,Skyroot Forest-Skyroot Woodland,grounded
+spiritomb,uncommon,Deep Dark,grounded
+spiritomb,rare,Overworld,grounded
+spiritomb,uncommon,Overworld,grounded
+spiritomb,rare,Overworld,grounded
+spiritomb,rare,Desert,grounded
+spiritomb,rare,Jungle,grounded
+spiritomb,rare,Howling Constructs,grounded
+gible,rare,Badlands-Mountain,grounded
+gible,ultra-rare,Badlands-Mountain,grounded
+gible,ultra-rare,Overworld,grounded
+gible,rare,Aether,grounded
+gabite,rare,Badlands-Mountain,grounded
+gabite,ultra-rare,Badlands-Mountain,grounded
+gabite,ultra-rare,Overworld,grounded
+gabite,rare,Aether,grounded
+garchomp,rare,Badlands-Mountain,grounded
+garchomp,ultra-rare,Badlands-Mountain,grounded
+garchomp,ultra-rare,Overworld,grounded
+garchomp,rare,Aether,grounded
+munchlax,rare,Skyroot Forest-Skyroot Woodland-Snowy Forest-Forest-Hills,grounded
+riolu,rare,Mountain,grounded
+riolu,rare,Aether,grounded
+lucario,rare,Mountain,grounded
+lucario,rare,Aether,grounded
+hippopotas,common,Desert,grounded
+hippowdon,common,Desert,grounded
+carnivine,uncommon,Skyroot Forest-Skyroot Woodland-Swamp,grounded
+carnivine,uncommon,Lush,grounded
+carnivine,uncommon,Overworld,grounded
+finneon,common,Deep Ocean,submerged
+finneon,common,Ocean,fishing
+finneon,common,Deep Ocean,submerged
+finneon,common,Ocean,fishing
+finneon,common,Overworld,submerged
+finneon,common,Overworld,fishing
+lumineon,common,Deep Ocean,submerged
+lumineon,common,Ocean,fishing
+lumineon,common,Deep Ocean,submerged
+lumineon,common,Ocean,fishing
+lumineon,common,Overworld,submerged
+lumineon,common,Overworld,fishing
+mantyke,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+mantyke,uncommon,Ocean,fishing
+mantyke,common,Ocean,fishing
+mantyke,uncommon,Lukewarm Ocean-Warm Ocean,submerged
+mantyke,uncommon,Ocean,fishing
+mantyke,common,Ocean,fishing
+weavile,uncommon,Taiga,grounded
+magnezone,uncommon,Overworld,grounded
+magnezone,common,Overworld,grounded
+lickilicky,uncommon,Grassland,grounded
+rhyperior,common,Mountain-Savanna,grounded
+tangrowth,common,Jungle,grounded
+electivire,uncommon,Hills-Plains,grounded
+magmortar,common,Hills,grounded
+magmortar,common,Volcanic,grounded
+magmortar,common,Nether Basalt-Nether Wasteland,grounded
+yanmega,uncommon,Freshwater,surface
+yanmega,uncommon,Lush,surface
+yanmega,uncommon,Bumblezone,surface
+yanmega,uncommon,Overworld,surface
+yanmega,uncommon,Aether,surface
+leafeon,ultra-rare,Forest-Jungle-Skyroot Forest-Skyroot Woodland,grounded
+leafeon,uncommon,Overworld,grounded
+leafeon,uncommon,Overworld,grounded
+leafeon,uncommon,Overworld,grounded
+glaceon,ultra-rare,Freezing,grounded
+glaceon,uncommon,Overworld,grounded
+glaceon,uncommon,Overworld,grounded
+glaceon,uncommon,Overworld,grounded
+gliscor,uncommon,Badlands,grounded
+gliscor,common,Nether Mountain,grounded
+mamoswine,common,Tundra,grounded
+porygon-z,uncommon,Overworld,grounded
+gallade,rare,Floral-Magical-Skyroot Grove-Skyroot Meadow-Snowy Forest,grounded
+gallade,rare,Overworld,grounded
+gallade,rare,Overworld,grounded
+gallade,common,Overworld,grounded
+probopass,uncommon,Overworld,grounded
+dusknoir,common,Spooky,grounded
+dusknoir,common,Nether Soul Sand,grounded
+snivy,ultra-rare,Jungle,grounded
+servine,ultra-rare,Jungle,grounded
+serperior,ultra-rare,Jungle,grounded
+tepig,ultra-rare,Plains,grounded
+tepig,ultra-rare,Nether Crimson-Nether Overgrowth,grounded
+pignite,ultra-rare,Plains,grounded
+pignite,ultra-rare,Nether Crimson-Nether Overgrowth,grounded
+emboar,ultra-rare,Plains,grounded
+emboar,ultra-rare,Nether Crimson-Nether Overgrowth,grounded
+oshawott,ultra-rare,Beach,grounded
+oshawott,ultra-rare,Beach,surface
+oshawott,ultra-rare,Beach-Ocean-Tropical Island,fishing
+oshawott,ultra-rare,Coast,grounded
+oshawott,ultra-rare,Coast,surface
+oshawott,ultra-rare,Snowy Beach,grounded
+oshawott,ultra-rare,Snowy Beach,surface
+oshawott,ultra-rare,Coast-Cold Ocean,fishing
+dewott,ultra-rare,Beach,grounded
+dewott,ultra-rare,Beach,surface
+dewott,ultra-rare,Beach-Ocean-Tropical Island,fishing
+dewott,ultra-rare,Coast,grounded
+dewott,ultra-rare,Coast,surface
+dewott,ultra-rare,Snowy Beach,grounded
+dewott,ultra-rare,Snowy Beach,surface
+dewott,ultra-rare,Coast-Cold Ocean,fishing
+samurott,ultra-rare,Beach,grounded
+samurott,ultra-rare,Beach,surface
+samurott,ultra-rare,Beach-Ocean-Tropical Island,fishing
+samurott-hisui,ultra-rare,Coast,grounded
+samurott-hisui,ultra-rare,Coast,surface
+samurott-hisui,ultra-rare,Snowy Beach,grounded
+samurott-hisui,ultra-rare,Snowy Beach,surface
+samurott-hisui,ultra-rare,Coast-Cold Ocean,fishing
+patrat,common,Grassland,grounded
+watchog,common,Grassland,grounded
+lillipup,common,Overworld,grounded
+lillipup,common,Overworld,grounded
+herdier,common,Overworld,grounded
+herdier,common,Overworld,grounded
+stoutland,common,Overworld,grounded
+stoutland,common,Overworld,grounded
+purrloin,common,Jungle-Swamp-Temperate,grounded
+purrloin,common,Savanna,grounded
+purrloin,common,Overworld,grounded
+purrloin,common,Overworld,grounded
+purrloin,common,Savanna,grounded
+purrloin,common,Savanna,grounded
+purrloin,common,Overworld,grounded
+purrloin,common,Overworld,grounded
+liepard,common,Jungle-Swamp-Temperate,grounded
+liepard,common,Savanna,grounded
+liepard,common,Overworld,grounded
+liepard,common,Overworld,grounded
+liepard,common,Savanna,grounded
+liepard,common,Savanna,grounded
+liepard,common,Overworld,grounded
+liepard,common,Overworld,grounded
+pidove,common,Mountain-Sky,grounded
+pidove,common,Overworld,grounded
+pidove,common,Overworld,grounded
+tranquill,common,Mountain-Sky,grounded
+tranquill,common,Overworld,grounded
+tranquill,common,Overworld,grounded
+unfezant,common,Mountain-Sky,grounded
+unfezant,common,Overworld,grounded
+unfezant,common,Overworld,grounded
+roggenrola,common,Overworld,grounded
+roggenrola,uncommon,Deep Dark,grounded
+boldore,common,Overworld,grounded
+boldore,uncommon,Deep Dark,grounded
+gigalith,common,Overworld,grounded
+gigalith,uncommon,Deep Dark,grounded
+woobat,common,Jungle-Savanna,grounded
+woobat,common,Jungle-Savanna,grounded
+swoobat,common,Jungle-Savanna,grounded
+swoobat,common,Jungle-Savanna,grounded
+timburr,common,Overworld,grounded
+timburr,common,Overworld,grounded
+gurdurr,common,Overworld,grounded
+gurdurr,common,Overworld,grounded
+conkeldurr,common,Overworld,grounded
+conkeldurr,common,Overworld,grounded
+venipede,common,Forest,grounded
+venipede,common,Jungle,grounded
+venipede,common,Lush,grounded
+venipede,common,Nether Forest-Nether Fungus,grounded
+venipede,common,Overworld,grounded
+whirlipede,common,Forest,grounded
+whirlipede,common,Jungle,grounded
+whirlipede,common,Lush,grounded
+whirlipede,common,Nether Forest-Nether Fungus,grounded
+whirlipede,common,Overworld,grounded
+scolipede,common,Forest,grounded
+scolipede,common,Jungle,grounded
+scolipede,common,Lush,grounded
+scolipede,common,Nether Forest-Nether Fungus,grounded
+scolipede,common,Overworld,grounded
+cottonee,common,Plains,grounded
+cottonee,common,Skyroot Grove-Skyroot Meadow,grounded
+whimsicott,common,Plains,grounded
+whimsicott,common,Skyroot Grove-Skyroot Meadow,grounded
+petilil,common,Floral,grounded
+petilil,common,Forest-Tropical Island,grounded
+petilil,common,Floral Meadow,grounded
+petilil,common,Hills,grounded
+petilil,common,Aether,grounded
+lilligant,common,Floral,grounded
+lilligant,common,Forest-Tropical Island,grounded
+lilligant,common,Floral Meadow,grounded
+lilligant-hisui,common,Hills,grounded
+lilligant-hisui,common,Aether,grounded
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Freshwater,submerged
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-blue-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Freshwater,submerged
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-red-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-white-striped,common,Freshwater,submerged
+basculin-white-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculin-white-striped,common,Freshwater,submerged
+basculin-white-striped,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+sandile,common,Desert,grounded
+krokorok,common,Desert,grounded
+krookodile,common,Desert,grounded
+darumaka,common,Desert-Jungle,grounded
+darumaka,common,Desert,grounded
+darumaka,common,Jungle,grounded
+darumaka,common,Nether,grounded
+darmanitan,common,Desert-Jungle,grounded
+darmanitan,common,Desert,grounded
+darmanitan,common,Jungle,grounded
+darmanitan,common,Nether,grounded
+maractus,common,Badlands-Desert,grounded
+dwebble,common,Badlands,grounded
+crustle,common,Badlands,grounded
+scraggy,common,Badlands,grounded
+scraggy,common,Arid,grounded
+scraggy,common,Arid,grounded
+scrafty,common,Badlands,grounded
+scrafty,common,Arid,grounded
+scrafty,common,Arid,grounded
+sigilyph,uncommon,Badlands-Desert,grounded
+sigilyph,common,Overworld,grounded
+sigilyph,common,Overworld,grounded
+sigilyph,common,Overworld,grounded
+sigilyph,uncommon,End,grounded
+sigilyph,uncommon,Aether,grounded
+sigilyph,common,Howling Constructs,grounded
+yamask,uncommon,Desert,grounded
+yamask,common,Overworld,grounded
+cofagrigus,uncommon,Desert,grounded
+cofagrigus,common,Overworld,grounded
+tirtouga,ultra-rare,Lush,grounded
+tirtouga,ultra-rare,Lush,submerged
+carracosta,ultra-rare,Lush,grounded
+carracosta,ultra-rare,Lush,submerged
+archen,ultra-rare,Lush,grounded
+archeops,ultra-rare,Lush,grounded
+zorua,uncommon,Forest,grounded
+zorua-hisui,uncommon,Snowy Forest-Snowy Taiga,grounded
+zorua-hisui,uncommon,Nether,grounded
+zoroark,uncommon,Forest,grounded
+zoroark-hisui,uncommon,Snowy Forest-Snowy Taiga,grounded
+zoroark-hisui,uncommon,Nether,grounded
+ducklett,uncommon,Freshwater,surface
+ducklett,common,Freshwater,grounded
+ducklett,uncommon,Sky,surface
+ducklett,common,Sky,grounded
+ducklett,common,Aether,grounded
+ducklett,uncommon,Aether,surface
+swanna,uncommon,Freshwater,surface
+swanna,common,Freshwater,grounded
+swanna,uncommon,Sky,surface
+swanna,common,Sky,grounded
+swanna,common,Aether,grounded
+swanna,uncommon,Aether,surface
+deerling,common,Floral-Forest-Hills-Plains-Snowy Forest-Taiga,grounded
+deerling,common,Aether,grounded
+deerling,uncommon,Floral Meadow,grounded
+sawsbuck,common,Floral-Forest-Hills-Plains-Snowy Forest-Taiga,grounded
+sawsbuck,common,Aether,grounded
+sawsbuck,uncommon,Floral Meadow,grounded
+emolga,uncommon,Taiga,grounded
+karrablast,common,Swamp,grounded
+escavalier,common,Swamp,grounded
+foongus,common,Mushroom,grounded
+foongus,common,Mushroom,grounded
+amoonguss,common,Mushroom,grounded
+amoonguss,common,Mushroom,grounded
+frillish,common,Ocean,submerged
+frillish,uncommon,Ocean,surface
+frillish,uncommon,Ocean,surface
+frillish,common,Ocean,surface
+frillish,common,Ocean,fishing
+frillish,common,Ocean,submerged
+frillish,common,Ocean,fishing
+frillish,common,Overworld,submerged
+frillish,common,Overworld,fishing
+jellicent,common,Ocean,submerged
+jellicent,uncommon,Ocean,surface
+jellicent,uncommon,Ocean,surface
+jellicent,common,Ocean,surface
+jellicent,common,Ocean,fishing
+jellicent,common,Ocean,submerged
+jellicent,common,Ocean,fishing
+jellicent,common,Overworld,submerged
+jellicent,common,Overworld,fishing
+alomomola,uncommon,Deep Ocean,submerged
+alomomola,uncommon,Ocean,fishing
+alomomola,common,Ocean,fishing
+alomomola,uncommon,Deep Ocean,submerged
+alomomola,uncommon,Ocean,fishing
+alomomola,common,Ocean,fishing
+joltik,common,Badlands-Jungle-Savanna,grounded
+joltik,common,Overworld,grounded
+joltik,common,,grounded
+galvantula,common,Badlands-Jungle-Savanna,grounded
+galvantula,common,Overworld,grounded
+galvantula,common,,grounded
+ferroseed,common,Lush,grounded
+ferroseed,common,Overworld,grounded
+ferrothorn,common,Lush,grounded
+ferrothorn,common,Overworld,grounded
+klink,common,Overworld,grounded
+klink,common,Overworld,grounded
+klink,common,Overworld,grounded
+klang,common,Overworld,grounded
+klang,common,Overworld,grounded
+klang,common,Overworld,grounded
+klinklang,common,Overworld,grounded
+klinklang,common,Overworld,grounded
+klinklang,common,Overworld,grounded
+elgyem,uncommon,End,grounded
+elgyem,common,Overworld,grounded
+elgyem,common,Howling Constructs,grounded
+beheeyem,uncommon,End,grounded
+beheeyem,common,Overworld,grounded
+beheeyem,common,Howling Constructs,grounded
+litwick,common,Nether Soul Fire,grounded
+litwick,common,Overworld,grounded
+lampent,common,Nether Soul Fire,grounded
+lampent,common,Overworld,grounded
+chandelure,common,Nether Soul Fire,grounded
+chandelure,common,Overworld,grounded
+cubchoo,common,Frozen Ocean,grounded
+beartic,common,Frozen Ocean,grounded
+cryogonal,uncommon,Freezing,grounded
+cryogonal,common,Nether Frozen,grounded
+shelmet,common,Swamp,grounded
+accelgor,common,Swamp,grounded
+golett,uncommon,Deep Dark,grounded
+golett,rare,Overworld,grounded
+golett,common,Overworld,grounded
+golett,common,Desert,grounded
+golett,common,Jungle,grounded
+golett,common,Howling Constructs,grounded
+golurk,uncommon,Deep Dark,grounded
+golurk,rare,Overworld,grounded
+golurk,common,Overworld,grounded
+golurk,common,Desert,grounded
+golurk,common,Jungle,grounded
+golurk,common,Howling Constructs,grounded
+bouffalant,common,Plains,grounded
+rufflet,common,Badlands-Hills,grounded
+rufflet,common,Sky,grounded
+braviary,common,Badlands-Hills,grounded
+braviary,common,Sky,grounded
+heatmor,uncommon,Badlands-Hills,grounded
+heatmor,common,Nether Mountain,grounded
+durant,common,Badlands-Hills,grounded
+durant,common,Badlands-Hills,grounded
+durant,common,Nether Mountain,grounded
+deino,rare,Deep Dark,grounded
+deino,ultra-rare,Overworld,grounded
+deino,rare,Aether,grounded
+zweilous,rare,Deep Dark,grounded
+zweilous,ultra-rare,Overworld,grounded
+zweilous,rare,Aether,grounded
+hydreigon,rare,Deep Dark,grounded
+hydreigon,ultra-rare,Overworld,grounded
+hydreigon,rare,Aether,grounded
+larvesta,uncommon,Desert,grounded
+larvesta,uncommon,Jungle,grounded
+larvesta,uncommon,Nether Crimson-Nether Forest,grounded
+larvesta,uncommon,Aether,grounded
+volcarona,uncommon,Desert,grounded
+volcarona,uncommon,Jungle,grounded
+volcarona,uncommon,Nether Crimson-Nether Forest,grounded
+volcarona,uncommon,Aether,grounded
+chespin,ultra-rare,Forest,grounded
+quilladin,ultra-rare,Forest,grounded
+chesnaught,ultra-rare,Forest,grounded
+fennekin,ultra-rare,Desert,grounded
+braixen,ultra-rare,Desert,grounded
+delphox,ultra-rare,Desert,grounded
+froakie,ultra-rare,Freshwater,grounded
+froakie,ultra-rare,Freshwater,submerged
+froakie,ultra-rare,Bamboo-Jungle,grounded
+froakie,ultra-rare,Bamboo-Jungle,submerged
+froakie,ultra-rare,Bamboo-Freshwater-Jungle,fishing
+frogadier,ultra-rare,Freshwater,grounded
+frogadier,ultra-rare,Freshwater,submerged
+frogadier,ultra-rare,Bamboo-Jungle,grounded
+frogadier,ultra-rare,Bamboo-Jungle,submerged
+frogadier,ultra-rare,Bamboo-Freshwater-Jungle,fishing
+greninja,ultra-rare,Freshwater,grounded
+greninja,ultra-rare,Freshwater,submerged
+greninja,ultra-rare,Bamboo-Jungle,grounded
+greninja,ultra-rare,Bamboo-Jungle,submerged
+greninja,ultra-rare,Bamboo-Freshwater-Jungle,fishing
+bunnelby,common,Hills-Temperate,grounded
+diggersby,common,Hills-Temperate,grounded
+fletchling,common,Forest-Sky-Taiga,grounded
+fletchling,common,Nether Forest-Nether Fungus,grounded
+fletchling,common,Skyroot Forest-Skyroot Woodland,grounded
+fletchinder,common,Forest-Sky-Taiga,grounded
+fletchinder,common,Nether Forest-Nether Fungus,grounded
+fletchinder,common,Skyroot Forest-Skyroot Woodland,grounded
+talonflame,common,Forest-Sky-Taiga,grounded
+talonflame,common,Nether Forest-Nether Fungus,grounded
+talonflame,common,Skyroot Forest-Skyroot Woodland,grounded
+scatterbug,common,Aether-Floral-Plains-Savanna,grounded
+scatterbug,common,Floral Meadow,grounded
+spewpa,common,Aether-Floral-Plains-Savanna,grounded
+spewpa,common,Floral Meadow,grounded
+vivillon-high-plains,common,Badlands,grounded
+vivillon-fancy,common,Cherry Blossom,grounded
+vivillon-ocean,common,Coast-Warm Ocean,grounded
+vivillon-sandstorm,common,Desert,grounded
+vivillon-meadow,common,Floral,grounded
+vivillon-meadow,common,Floral Meadow,grounded
+vivillon-garden,common,Forest,grounded
+vivillon-river,common,Freshwater,grounded
+vivillon-polar,common,Frozen Ocean,grounded
+vivillon-tundra,common,Glacial-Snowy Forest-Tundra,grounded
+vivillon-jungle,common,Jungle,grounded
+vivillon-monsoon,common,Mountain,grounded
+vivillon-archipelago,common,Mushroom,grounded
+vivillon-marine,common,Ocean,grounded
+vivillon-modern,common,Overworld,grounded
+vivillon-modern,common,Overworld,grounded
+vivillon-continental,common,Plains,grounded
+vivillon-savanna,common,Savanna,grounded
+vivillon-sun,common,Sunflower Plains-Sky-Tropical Island,grounded
+vivillon-elegant,common,Magical-Spooky,grounded
+vivillon-icy-snow,common,Taiga,grounded
+vivillon-fancy,common,Aether,grounded
+flabebe-red,common,Overworld,grounded
+flabebe-yellow,common,Overworld,grounded
+flabebe-orange,common,Overworld,grounded
+flabebe-blue,common,Overworld,grounded
+flabebe-white,common,Overworld,grounded
+flabebe-pink,common,Overworld,grounded
+flabebe-white,common,Aether,grounded
+flabebe,common,Floral Meadow,grounded
+floette-red,common,Overworld,grounded
+floette-yellow,common,Overworld,grounded
+floette-orange,common,Overworld,grounded
+floette-blue,common,Overworld,grounded
+floette-white,common,Overworld,grounded
+floette-pink,common,Overworld,grounded
+floette-white,common,Aether,grounded
+floette,common,Floral Meadow,grounded
+florges-red,common,Overworld,grounded
+florges-yellow,common,Overworld,grounded
+florges-orange,common,Overworld,grounded
+florges-blue,common,Overworld,grounded
+florges-white,common,Overworld,grounded
+florges-pink,common,Overworld,grounded
+florges-white,common,Aether,grounded
+florges,common,Floral Meadow,grounded
+honedge,uncommon,Nether,grounded
+honedge,uncommon,Overworld,grounded
+honedge,uncommon,Overworld,grounded
+honedge,uncommon,Aether,grounded
+doublade,uncommon,Nether,grounded
+doublade,uncommon,Overworld,grounded
+doublade,uncommon,Overworld,grounded
+doublade,uncommon,Aether,grounded
+aegislash,uncommon,Nether,grounded
+aegislash,uncommon,Overworld,grounded
+aegislash,uncommon,Overworld,grounded
+aegislash,uncommon,Aether,grounded
+binacle,uncommon,Coast-Ocean,fishing
+binacle,common,Coast-Ocean,fishing
+binacle,common,Coast,grounded
+binacle,uncommon,Ocean,seafloor
+barbaracle,uncommon,Coast-Ocean,fishing
+barbaracle,common,Coast-Ocean,fishing
+barbaracle,common,Coast,grounded
+barbaracle,uncommon,Ocean,seafloor
+skrelp,common,Ocean,submerged
+skrelp,common,Coast-Ocean,fishing
+skrelp,common,Ocean,submerged
+skrelp,common,Coast-Ocean,fishing
+skrelp,common,Overworld,submerged
+skrelp,common,Overworld,fishing
+dragalge,common,Ocean,submerged
+dragalge,common,Coast-Ocean,fishing
+dragalge,common,Ocean,submerged
+dragalge,common,Coast-Ocean,fishing
+dragalge,common,Overworld,submerged
+dragalge,common,Overworld,fishing
+clauncher,common,Ocean,seafloor
+clauncher,common,Coast-Ocean,fishing
+clauncher,common,Coast-Ocean,fishing
+clawitzer,common,Ocean,submerged
+clawitzer,common,Coast-Ocean,fishing
+clawitzer,common,Ocean,submerged
+clawitzer,common,Coast-Ocean,fishing
+tyrunt,ultra-rare,Lush,grounded
+tyrantrum,ultra-rare,Lush,grounded
+amaura,ultra-rare,Lush,grounded
+aurorus,ultra-rare,Lush,grounded
+sylveon,ultra-rare,Floral-Magical-Skyroot Grove-Skyroot Meadow,grounded
+sylveon,uncommon,Overworld,grounded
+sylveon,uncommon,Overworld,grounded
+sylveon,uncommon,Overworld,grounded
+carbink,common,Overworld,grounded
+carbink,uncommon,Nether Quartz,grounded
+carbink,common,Crystal Canyon,grounded
+goomy,rare,Swamp,grounded
+goomy,ultra-rare,Swamp,grounded
+goomy,rare,Swamp,grounded
+goomy,ultra-rare,Swamp,fishing
+goomy,rare,Swamp,fishing
+goomy,ultra-rare,Overworld,fishing
+goomy,rare,Dripstone-Lush,grounded
+goomy,ultra-rare,Overworld,grounded
+goomy,rare,Overworld,grounded
+goomy,rare,Dripstone-Lush,fishing
+goomy,common,Dripstone-Lush,fishing
+goomy,ultra-rare,Overworld,fishing
+goomy,rare,Overworld,fishing
+goomy,common,Overworld,fishing
+goomy,rare,Overworld,fishing
+goomy,common,Overworld,fishing
+sliggoo,rare,Swamp,grounded
+sliggoo,ultra-rare,Swamp,grounded
+sliggoo,rare,Swamp,grounded
+sliggoo,ultra-rare,Swamp,fishing
+sliggoo,rare,Swamp,fishing
+sliggoo,ultra-rare,Overworld,fishing
+sliggoo-hisui,rare,Dripstone-Lush,grounded
+sliggoo-hisui,ultra-rare,Overworld,grounded
+sliggoo-hisui,rare,Overworld,grounded
+sliggoo-hisui,rare,Dripstone-Lush,fishing
+sliggoo-hisui,common,Dripstone-Lush,fishing
+sliggoo-hisui,ultra-rare,Overworld,fishing
+sliggoo-hisui,rare,Overworld,fishing
+sliggoo-hisui,common,Overworld,fishing
+sliggoo-hisui,rare,Overworld,fishing
+sliggoo-hisui,common,Overworld,fishing
+goodra,rare,Swamp,grounded
+goodra,ultra-rare,Swamp,grounded
+goodra,rare,Swamp,grounded
+goodra,ultra-rare,Swamp,fishing
+goodra,rare,Swamp,fishing
+goodra,ultra-rare,Overworld,fishing
+goodra-hisui,rare,Dripstone-Lush,grounded
+goodra-hisui,ultra-rare,Overworld,grounded
+goodra-hisui,rare,Overworld,grounded
+goodra-hisui,rare,Dripstone-Lush,fishing
+goodra-hisui,common,Dripstone-Lush,fishing
+goodra-hisui,ultra-rare,Overworld,fishing
+goodra-hisui,rare,Overworld,fishing
+goodra-hisui,common,Overworld,fishing
+goodra-hisui,rare,Overworld,fishing
+goodra-hisui,common,Overworld,fishing
+klefki,uncommon,Overworld,grounded
+klefki,uncommon,Overworld,grounded
+klefki,common,Overworld,grounded
+phantump,common,Forest-Taiga,grounded
+phantump,common,Spooky,grounded
+trevenant,common,Forest-Taiga,grounded
+trevenant,common,Spooky,grounded
+pumpkaboo,common,Overworld,grounded
+pumpkaboo,uncommon,Nether Overgrowth,grounded
+gourgeist,common,Overworld,grounded
+gourgeist,uncommon,Nether Overgrowth,grounded
+bergmite,common,Frozen Ocean,grounded
+bergmite,common,Frozen Ocean,surface
+bergmite,common,Frozen Ocean,fishing
+bergmite,common,Nether Frozen,grounded
+bergmite,common,Frozen Ocean,fishing
+avalugg,common,Frozen Ocean,grounded
+avalugg,common,Frozen Ocean,surface
+avalugg,common,Frozen Ocean,fishing
+avalugg,common,Nether Frozen,grounded
+avalugg,common,Frozen Ocean,fishing
+rowlet,ultra-rare,Forest-Skyroot Forest-Skyroot Woodland-Taiga,grounded
+rowlet,ultra-rare,Snowy Forest-Snowy Taiga,grounded
+dartrix,ultra-rare,Forest-Skyroot Forest-Skyroot Woodland-Taiga,grounded
+dartrix,ultra-rare,Snowy Forest-Snowy Taiga,grounded
+decidueye,ultra-rare,Forest-Skyroot Forest-Skyroot Woodland-Taiga,grounded
+decidueye-hisui,ultra-rare,Snowy Forest-Snowy Taiga,grounded
+litten,ultra-rare,Jungle,grounded
+torracat,ultra-rare,Jungle,grounded
+incineroar,ultra-rare,Jungle,grounded
+popplio,ultra-rare,Coast,grounded
+popplio,ultra-rare,Coast,submerged
+popplio,ultra-rare,Coast,surface
+popplio,ultra-rare,Coast-Ocean-Tropical Island,fishing
+popplio,ultra-rare,Coast,submerged
+popplio,ultra-rare,Coast-Ocean-Tropical Island,fishing
+brionne,ultra-rare,Coast,grounded
+brionne,ultra-rare,Coast,submerged
+brionne,ultra-rare,Coast,surface
+brionne,ultra-rare,Coast-Ocean-Tropical Island,fishing
+brionne,ultra-rare,Coast,submerged
+brionne,ultra-rare,Coast-Ocean-Tropical Island,fishing
+primarina,ultra-rare,Coast,grounded
+primarina,ultra-rare,Coast,submerged
+primarina,ultra-rare,Coast,surface
+primarina,ultra-rare,Coast-Ocean-Tropical Island,fishing
+primarina,ultra-rare,Coast,submerged
+primarina,ultra-rare,Coast-Ocean-Tropical Island,fishing
+pikipek,common,Jungle-Sky-Tropical Island,grounded
+trumbeak,common,Jungle-Sky-Tropical Island,grounded
+toucannon,common,Jungle-Sky-Tropical Island,grounded
+crabrawler,common,Coast,grounded
+crabominable,uncommon,Peak,grounded
+cutiefly,common,Floral,grounded
+cutiefly,common,Overworld,grounded
+cutiefly,common,Aether,grounded
+cutiefly,common,Floral Meadow-Pollinated Fields,grounded
+ribombee,common,Floral,grounded
+ribombee,common,Overworld,grounded
+ribombee,common,Aether,grounded
+ribombee,common,Floral Meadow-Pollinated Fields,grounded
+wishiwashi,common,Ocean,submerged
+wishiwashi,common,Coast-Ocean,fishing
+wishiwashi,common,Ocean,submerged
+wishiwashi,common,Coast-Ocean,fishing
+mareanie,uncommon,Coast,grounded
+mareanie,common,Coast-Warm Ocean,seafloor
+mareanie,uncommon,Warm Ocean,fishing
+mareanie,common,Warm Ocean,fishing
+mareanie,uncommon,Warm Ocean,fishing
+mareanie,common,Warm Ocean,fishing
+toxapex,uncommon,Coast,grounded
+toxapex,common,Coast-Warm Ocean,seafloor
+toxapex,uncommon,Warm Ocean,fishing
+toxapex,common,Warm Ocean,fishing
+toxapex,uncommon,Warm Ocean,fishing
+toxapex,common,Warm Ocean,fishing
+mudbray,common,Badlands-Grassland,grounded
+mudsdale,common,Badlands-Grassland,grounded
+dewpider,uncommon,Forest-Freshwater-Grassland-Jungle,fishing
+dewpider,common,Forest-Freshwater-Grassland-Jungle,fishing
+dewpider,uncommon,Forest-Freshwater-Grassland-Jungle,fishing
+dewpider,common,Forest-Freshwater-Grassland-Jungle,fishing
+dewpider,uncommon,Freshwater,grounded
+dewpider,common,Freshwater,seafloor
+araquanid,uncommon,Forest-Freshwater-Grassland-Jungle,fishing
+araquanid,common,Forest-Freshwater-Grassland-Jungle,fishing
+araquanid,uncommon,Forest-Freshwater-Grassland-Jungle,fishing
+araquanid,common,Forest-Freshwater-Grassland-Jungle,fishing
+araquanid,uncommon,Freshwater,grounded
+araquanid,common,Freshwater,seafloor
+fomantis,common,Floral,grounded
+fomantis,common,Jungle-Tropical Island,grounded
+fomantis,common,Floral Meadow,grounded
+lurantis,common,Floral,grounded
+lurantis,common,Jungle-Tropical Island,grounded
+lurantis,common,Floral Meadow,grounded
+morelull,common,Aether-Jungle-Magical-Mushroom,grounded
+morelull,common,Lush,grounded
+morelull,common,Nether Fungus,grounded
+morelull,common,Overworld,grounded
+shiinotic,common,Aether-Jungle-Magical-Mushroom,grounded
+shiinotic,common,Lush,grounded
+shiinotic,common,Nether Fungus,grounded
+shiinotic,common,Overworld,grounded
+salandit,common,Volcanic,grounded
+salandit,common,Badlands-Mountain,grounded
+salandit,common,Nether Basalt,grounded
+salandit,common,Nether Desert,grounded
+salazzle,common,Volcanic,grounded
+salazzle,common,Badlands-Mountain,grounded
+salazzle,common,Nether Basalt,grounded
+salazzle,common,Nether Desert,grounded
+stufful,common,Bamboo,grounded
+bewear,common,Bamboo,grounded
+bounsweet,common,Jungle-Tropical Island,grounded
+steenee,common,Jungle-Tropical Island,grounded
+tsareena,common,Jungle-Tropical Island,grounded
+comfey,uncommon,Floral-Tropical Island,grounded
+comfey,rare,Aether-Overworld,grounded
+comfey,uncommon,Floral Meadow,grounded
+wimpod,uncommon,Coast,grounded
+wimpod,uncommon,Tropical Island,grounded
+wimpod,uncommon,Overworld,grounded
+wimpod,uncommon,Overworld,seafloor
+wimpod,uncommon,Coast-Tropical Island,fishing
+wimpod,common,Coast-Tropical Island,fishing
+wimpod,common,Overworld,fishing
+wimpod,uncommon,Coast-Tropical Island,fishing
+wimpod,common,Coast-Tropical Island,fishing
+golisopod,uncommon,Coast,grounded
+golisopod,uncommon,Tropical Island,grounded
+golisopod,uncommon,Overworld,grounded
+golisopod,uncommon,Overworld,seafloor
+golisopod,uncommon,Coast-Tropical Island,fishing
+golisopod,common,Coast-Tropical Island,fishing
+golisopod,common,Overworld,fishing
+golisopod,uncommon,Coast-Tropical Island,fishing
+golisopod,common,Coast-Tropical Island,fishing
+sandygast,common,Beach,grounded
+palossand,common,Beach,grounded
+pyukumuku,uncommon,Beach,grounded
+pyukumuku,common,Ocean,seafloor
+pyukumuku,common,Warm Ocean,seafloor
+pyukumuku,common,Beach-Ocean,fishing
+pyukumuku,common,Warm Ocean,fishing
+pyukumuku,common,Beach-Ocean,fishing
+pyukumuku,common,Warm Ocean,fishing
+komala,common,Skyroot Forest-Skyroot Woodland-Savanna,grounded
+turtonator,uncommon,Nether Basalt,grounded
+turtonator,,Thermal,grounded
+turtonator,,Thermal,grounded
+turtonator,,Volcanic,grounded
+turtonator,,Volcanic,grounded
+mimikyu,rare,Spooky,grounded
+mimikyu,uncommon,Overworld,grounded
+bruxish,uncommon,Warm Ocean,submerged
+bruxish,uncommon,Warm Ocean,fishing
+bruxish,common,Warm Ocean,fishing
+bruxish,uncommon,Warm Ocean,submerged
+bruxish,uncommon,Warm Ocean,fishing
+bruxish,common,Warm Ocean,fishing
+dhelmise,common,Ocean,submerged
+dhelmise,common,Ocean,fishing
+dhelmise,rare,Ocean,fishing
+dhelmise,common,Ocean,submerged
+dhelmise,common,Ocean,fishing
+dhelmise,rare,Ocean,fishing
+dhelmise,common,Ocean,submerged
+dhelmise,common,Ocean,fishing
+jangmo-o,ultra-rare,Jungle,grounded
+jangmo-o,rare,Tropical Island,grounded
+hakamo-o,ultra-rare,Jungle,grounded
+hakamo-o,rare,Tropical Island,grounded
+kommo-o,ultra-rare,Jungle,grounded
+kommo-o,rare,Tropical Island,grounded
+grookey,ultra-rare,Jungle-Tropical Island,grounded
+thwackey,ultra-rare,Jungle-Tropical Island,grounded
+rillaboom,ultra-rare,Jungle-Tropical Island,grounded
+scorbunny,ultra-rare,Grassland-Skyroot Grove-Skyroot Meadow-Tundra,grounded
+raboot,ultra-rare,Grassland-Skyroot Grove-Skyroot Meadow-Tundra,grounded
+cinderace,ultra-rare,Grassland-Skyroot Grove-Skyroot Meadow-Tundra,grounded
+sobble,ultra-rare,Swamp,grounded
+sobble,ultra-rare,Jungle,grounded
+sobble,ultra-rare,Jungle-Swamp,submerged
+sobble,ultra-rare,Forest-Jungle-Swamp,fishing
+drizzile,ultra-rare,Swamp,grounded
+drizzile,ultra-rare,Jungle,grounded
+drizzile,ultra-rare,Jungle-Swamp,submerged
+drizzile,ultra-rare,Forest-Jungle-Swamp,fishing
+inteleon,ultra-rare,Swamp,grounded
+inteleon,ultra-rare,Jungle,grounded
+inteleon,ultra-rare,Jungle-Swamp,submerged
+inteleon,ultra-rare,Forest-Jungle-Swamp,fishing
+rookidee,common,Hills-Sky-Spooky-Taiga,grounded
+corvisquire,common,Hills-Sky-Spooky-Taiga,grounded
+corviknight,common,Hills-Sky-Spooky-Taiga,grounded
+nickit,common,Forest-Taiga,grounded
+nickit,uncommon,Plains,grounded
+thievul,common,Forest-Taiga,grounded
+thievul,uncommon,Plains,grounded
+gossifleur,common,Floral,grounded
+gossifleur,common,Skyroot Grove-Skyroot Meadow,grounded
+gossifleur,common,Floral Meadow,grounded
+eldegoss,common,Floral,grounded
+eldegoss,common,Skyroot Grove-Skyroot Meadow,grounded
+eldegoss,common,Floral Meadow,grounded
+wooloo,common,Mountain-Plains,grounded
+wooloo,common,Skyroot Grove-Skyroot Meadow,grounded
+dubwool,common,Mountain-Plains,grounded
+dubwool,common,Skyroot Grove-Skyroot Meadow,grounded
+yamper,common,Overworld,grounded
+yamper,common,Overworld,grounded
+boltund,common,Overworld,grounded
+boltund,common,Overworld,grounded
+cramorant,uncommon,Coast-Island-Sky,grounded
+cramorant,uncommon,Coast-Island-Sky,surface
+cramorant,uncommon,Coast-Ocean,fishing
+cramorant,common,Coast-Ocean,fishing
+cramorant,uncommon,Aether,grounded
+cramorant,uncommon,Aether,surface
+cramorant,uncommon,Aether,fishing
+cramorant,common,Aether,fishing
+arrokuda,common,Ocean-Swamp,submerged
+arrokuda,common,Aether-Coast-Ocean-Swamp,fishing
+arrokuda,common,Ocean-Swamp,submerged
+arrokuda,common,Aether-Coast-Ocean-Swamp,fishing
+barraskewda,common,Ocean-Swamp,submerged
+barraskewda,common,Aether-Coast-Ocean-Swamp,fishing
+barraskewda,common,Ocean-Swamp,submerged
+barraskewda,common,Aether-Coast-Ocean-Swamp,fishing
+sizzlipede,common,Badlands-Volcanic,grounded
+sizzlipede,common,Nether Basalt,grounded
+sizzlipede,common,Nether Wasteland,grounded
+centiskorch,common,Badlands-Volcanic,grounded
+centiskorch,common,Nether Basalt,grounded
+centiskorch,common,Nether Wasteland,grounded
+hatenna,uncommon,Magical-Skyroot Forest-Skyroot Woodland,grounded
+hatenna,common,Overworld,grounded
+hatenna,common,Overworld,grounded
+hattrem,uncommon,Magical-Skyroot Forest-Skyroot Woodland,grounded
+hattrem,common,Overworld,grounded
+hattrem,common,Overworld,grounded
+hatterene,uncommon,Magical-Skyroot Forest-Skyroot Woodland,grounded
+hatterene,common,Overworld,grounded
+hatterene,common,Overworld,grounded
+impidimp,common,Magical,grounded
+impidimp,common,Nether Forest-Nether Warped,grounded
+morgrem,common,Magical,grounded
+morgrem,common,Nether Forest-Nether Warped,grounded
+grimmsnarl,common,Magical,grounded
+grimmsnarl,common,Nether Forest-Nether Warped,grounded
+obstagoon,common,Taiga,grounded
+perrserker,common,Freezing-Taiga,grounded
+perrserker,common,Freezing-Taiga,grounded
+sirfetch-d,rare,Forest,grounded
+milcery,common,Aether-Overworld,grounded
+milcery,uncommon,Aether-Overworld,grounded
+milcery,common,Overworld,grounded
+alcremie,common,Aether-Overworld,grounded
+alcremie,uncommon,Aether-Overworld,grounded
+alcremie,common,Overworld,grounded
+falinks,uncommon,Badlands,grounded
+falinks,uncommon,Nether,grounded
+pincurchin,uncommon,Coast-Ocean,seafloor
+pincurchin,uncommon,Coast-Ocean,fishing
+pincurchin,common,Coast-Ocean,fishing
+pincurchin,uncommon,Coast-Ocean,fishing
+pincurchin,common,Coast-Ocean,fishing
+pincurchin,uncommon,Overworld,seafloor
+pincurchin,uncommon,Overworld,fishing
+pincurchin,common,Overworld,fishing
+stonjourner,rare,Plains,grounded
+stonjourner,uncommon,Plains,grounded
+stonjourner,common,Overworld,grounded
+eiscue,common,Frozen Ocean,grounded
+eiscue,common,Frozen Ocean,surface
+eiscue,common,Frozen Ocean-Glacial-Tundra,fishing
+cufant,uncommon,Badlands-Hills-Savanna,grounded
+copperajah,uncommon,Badlands-Hills-Savanna,grounded
+dreepy,ultra-rare,Coast-Ocean,grounded
+dreepy,ultra-rare,Coast-Ocean,surface
+dreepy,ultra-rare,Coast-Ocean,fishing
+dreepy,ultra-rare,Coast-Ocean,fishing
+drakloak,ultra-rare,Coast-Ocean,grounded
+drakloak,ultra-rare,Coast-Ocean,surface
+drakloak,ultra-rare,Coast-Ocean,fishing
+drakloak,ultra-rare,Coast-Ocean,fishing
+dragapult,ultra-rare,Coast-Ocean,grounded
+dragapult,ultra-rare,Coast-Ocean,surface
+dragapult,ultra-rare,Coast-Ocean,fishing
+dragapult,ultra-rare,Coast-Ocean,fishing
+wyrdeer,common,Snowy Forest-Snowy Taiga-Tundra,grounded
+kleavor,rare,Forest-Hills,grounded
+kleavor,rare,Skyroot Forest-Skyroot Woodland,grounded
+ursaluna,common,Forest-Mountain-Taiga,grounded
+ursaluna,common,Skyroot Forest-Skyroot Woodland,grounded
+ursaluna,common,Crystal Canyon-Floral Meadow,grounded
+basculegion,common,Freshwater,submerged
+basculegion,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+basculegion,common,Freshwater,submerged
+basculegion,common,Arid-Forest-Freshwater-Grassland-Jungle-Mountain-Snowy Forest-Taiga-Tundra,fishing
+sneasler,uncommon,Mountain,grounded
+overqwil,uncommon,Cold Ocean,submerged
+overqwil,common,Cold Ocean-Frozen Ocean,submerged
+overqwil,uncommon,Cold Ocean,fishing
+overqwil,common,Cold Ocean,fishing
+overqwil,common,Cold Ocean-Frozen Ocean,fishing
+overqwil,uncommon,Cold Ocean,submerged
+overqwil,common,Cold Ocean-Frozen Ocean,submerged
+overqwil,uncommon,Cold Ocean,fishing
+overqwil,common,Cold Ocean,fishing
+overqwil,common,Cold Ocean-Frozen Ocean,fishing
+overqwil,uncommon,Cold,submerged
+overqwil,uncommon,Cold,fishing
+overqwil,common,Cold,fishing
+sprigatito,ultra-rare,Floral-Magical,grounded
+floragato,ultra-rare,Floral-Magical,grounded
+meowscarada,ultra-rare,Floral-Magical,grounded
+fuecoco,ultra-rare,Badlands,grounded
+fuecoco,ultra-rare,Nether Wasteland,grounded
+crocalor,ultra-rare,Badlands,grounded
+crocalor,ultra-rare,Nether Wasteland,grounded
+skeledirge,ultra-rare,Badlands,grounded
+skeledirge,ultra-rare,Nether Wasteland,grounded
+quaxly,ultra-rare,Forest-Grassland-River,grounded
+quaxly,ultra-rare,Forest-Grassland-River,submerged
+quaxly,ultra-rare,Forest-Freshwater-Grassland-Jungle,fishing
+quaxwell,ultra-rare,Forest-Grassland-River,grounded
+quaxwell,ultra-rare,Forest-Grassland-River,submerged
+quaxwell,ultra-rare,Forest-Freshwater-Grassland-Jungle,fishing
+quaquaval,ultra-rare,Forest-Grassland-River,grounded
+quaquaval,ultra-rare,Forest-Grassland-River,submerged
+quaquaval,ultra-rare,Forest-Freshwater-Grassland-Jungle,fishing
+lechonk,common,Mushroom-Temperate,grounded
+lechonk,common,Swamp,grounded
+lechonk,common,Nether Crimson-Nether Fungus-Nether Overgrowth,grounded
+oinkologne,common,Mushroom-Temperate,grounded
+oinkologne,common,Swamp,grounded
+oinkologne,common,Nether Crimson-Nether Fungus-Nether Overgrowth,grounded
+tandemaus,common,Temperate,grounded
+tandemaus,common,Overworld,grounded
+tandemaus,common,Overworld,grounded
+tandemaus,common,Overworld,grounded
+tandemaus,common,Aether,grounded
+maushold,common,Temperate,grounded
+maushold,common,Overworld,grounded
+maushold,common,Overworld,grounded
+maushold,common,Overworld,grounded
+maushold,common,Aether,grounded
+fidough,common,Overworld,grounded
+fidough,common,Overworld,grounded
+dachsbun,common,Overworld,grounded
+dachsbun,common,Overworld,grounded
+squawkabilly,common,Jungle-Savanna-Tropical Island,grounded
+squawkabilly,common,Overworld,grounded
+squawkabilly,common,Overworld,grounded
+squawkabilly,common,Sky,grounded
+nacli,common,Badlands,grounded
+nacli,common,,grounded
+nacli,common,Nether Quartz,grounded
+naclstack,common,Badlands,grounded
+naclstack,common,,grounded
+naclstack,common,Nether Quartz,grounded
+garganacl,common,Badlands,grounded
+garganacl,common,,grounded
+garganacl,common,Nether Quartz,grounded
+charcadet,uncommon,Nether,grounded
+charcadet,uncommon,Overworld,grounded
+charcadet,uncommon,Aether,grounded
+armarouge,uncommon,Nether,grounded
+armarouge,uncommon,Overworld,grounded
+armarouge,uncommon,Aether,grounded
+ceruledge,uncommon,Nether,grounded
+ceruledge,uncommon,Overworld,grounded
+ceruledge,uncommon,Aether,grounded
+wattrel,common,Island-Ocean-Sky,grounded
+wattrel,common,Coast,grounded
+wattrel,uncommon,Coast-Island-Ocean-Sky,surface
+wattrel,uncommon,Ocean-Sky,fishing
+wattrel,common,Ocean-Sky,fishing
+kilowattrel,common,Island-Ocean-Sky,grounded
+kilowattrel,common,Coast,grounded
+kilowattrel,uncommon,Coast-Island-Ocean-Sky,surface
+kilowattrel,uncommon,Ocean-Sky,fishing
+kilowattrel,common,Ocean-Sky,fishing
+maschiff,common,Overworld,grounded
+maschiff,common,Overworld,grounded
+maschiff,common,Overworld,grounded
+maschiff,common,Overworld,grounded
+mabosstiff,common,Overworld,grounded
+mabosstiff,common,Overworld,grounded
+mabosstiff,common,Overworld,grounded
+mabosstiff,common,Overworld,grounded
+shroodle,common,Jungle-Tropical Island,grounded
+grafaiai,common,Jungle-Tropical Island,grounded
+klawf,uncommon,Badlands,grounded
+flittle,uncommon,Arid,grounded
+espathra,uncommon,Arid,grounded
+tinkatink,common,Overworld,grounded
+tinkatink,uncommon,Aether,grounded
+tinkatuff,common,Overworld,grounded
+tinkatuff,uncommon,Aether,grounded
+tinkaton,common,Overworld,grounded
+tinkaton,uncommon,Aether,grounded
+wiglett,common,Beach,grounded
+wiglett,common,Lukewarm Ocean-Warm Ocean,seafloor
+wugtrio,common,Beach,grounded
+wugtrio,common,Lukewarm Ocean-Warm Ocean,seafloor
+finizen,uncommon,Ocean,submerged
+finizen,uncommon,Ocean,fishing
+finizen,common,Ocean,fishing
+finizen,uncommon,Ocean,submerged
+finizen,uncommon,Ocean,fishing
+finizen,common,Ocean,fishing
+palafin,uncommon,Ocean,submerged
+palafin,uncommon,Ocean,fishing
+palafin,common,Ocean,fishing
+palafin,uncommon,Ocean,submerged
+palafin,uncommon,Ocean,fishing
+palafin,common,Ocean,fishing
+varoom,uncommon,Badlands,grounded
+varoom,uncommon,Overworld,grounded
+revavroom,uncommon,Badlands,grounded
+revavroom,uncommon,Overworld,grounded
+glimmet,common,Overworld,grounded
+glimmet,common,Nether Quartz,grounded
+glimmet,common,Crystal Canyon-Crystalline Chasm,grounded
+glimmora,common,Overworld,grounded
+glimmora,common,Nether Quartz,grounded
+glimmora,common,Crystal Canyon-Crystalline Chasm,grounded
+flamigo,common,Jungle-Savanna-Swamp-Tropical Island,grounded
+flamigo,uncommon,Jungle-Savanna-Swamp-Tropical Island,surface
+flamigo,uncommon,Aether,grounded
+cetoddle,uncommon,Frozen Ocean,grounded
+cetoddle,uncommon,Glacial-Tundra,grounded
+cetitan,uncommon,Frozen Ocean,grounded
+cetitan,uncommon,Glacial-Tundra,grounded
+veluza,uncommon,Ocean,submerged
+veluza,uncommon,Ocean,fishing
+veluza,common,Ocean,fishing
+veluza,uncommon,Ocean,submerged
+veluza,uncommon,Ocean,fishing
+veluza,common,Ocean,fishing
+veluza,uncommon,Overworld,submerged
+veluza,uncommon,Overworld,fishing
+veluza,common,Overworld,fishing
+dondozo,rare,Swamp,submerged
+dondozo,rare,Bamboo-Forest-Jungle-Swamp,fishing
+dondozo,rare,Swamp,submerged
+dondozo,rare,Bamboo-Forest-Jungle-Swamp,fishing
+tatsugiri,rare,Swamp,grounded
+tatsugiri,rare,Swamp,submerged
+tatsugiri,rare,Bamboo-Forest-Jungle-Swamp,fishing
+tatsugiri,rare,Swamp,submerged
+tatsugiri,rare,Bamboo-Forest-Jungle-Swamp,fishing
+annihilape,common,Hills-Jungle,grounded
+clodsire,common,Muddy,grounded
+clodsire,common,Muddy,submerged
+clodsire,uncommon,Savanna,submerged
+clodsire,uncommon,Savanna,grounded
+clodsire,common,Muddy,fishing
+clodsire,uncommon,Arid,fishing
+clodsire,common,Arid,fishing
+clodsire,common,Muddy,submerged
+clodsire,uncommon,Savanna,submerged
+clodsire,common,Muddy,fishing
+clodsire,uncommon,Arid,fishing
+clodsire,common,Arid,fishing
+farigiraf,common,Savanna,grounded
+gimmighoul-roaming,common,Overworld,grounded
+gimmighoul-roaming,common,Overworld,grounded
+gimmighoul-roaming,uncommon,Aether,grounded
+gimmighoul-chest,rare,Overworld,grounded
+gimmighoul-chest,rare,Overworld,grounded
+gimmighoul-chest,rare,Aether,grounded
