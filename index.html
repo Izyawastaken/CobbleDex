@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CobbleDex</title>
+  <title>Primodium</title>
   <style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
 
     :root {
@@ -656,16 +656,20 @@ body.dark select {
 
 <script>
   // this will be called by the sheet’s JSONP wrapper:
-function handleCobblemonData(response) {
-  // `response.table.rows` is an array of row objects
+  function handleCobblemonData(response) {
   response.table.rows.forEach(r => {
-    // columns by zero-based index:
-    const name   = r.c[1]?.v?.toLowerCase(); // “Pokémon”
-    const bucket = r.c[3]?.v;               // “Bucket”
-    const biomes = r.c[7]?.v;               // “Biomes”
-    if (name) cobblemonList[name] = { bucket, biomes };
+    const name   = r.c[1]?.v?.toLowerCase();
+    const bucket = r.c[3]?.v;
+    const biomes = r.c[7]?.v;
+    if (!name) return;
+
+    // ensure an array exists for this Pokémon
+    if (!cobblemonList[name]) cobblemonList[name] = [];
+    // push this spawn entry onto it
+    cobblemonList[name].push({ bucket, biomes });
   });
 }
+
 
   const twitchLinks = [
     "https://www.twitch.tv/astralaeyna",
@@ -1111,13 +1115,21 @@ function updateCobblemonStatus(pokemonName) {
     return;
   }
 
-  const key = pokemonName?.toLowerCase();
-  if (cobblemonList[key]) {
-    const { bucket, biomes } = cobblemonList[key];
-    statusElement.textContent = `✅ In Cobblemon — Found in ${biomes || 'unknown biome'}, ${bucket || 'unknown rarity'}`;
+  const key    = pokemonName?.toLowerCase();
+  const spawns = cobblemonList[key] || [];
+
+  if (spawns.length) {
+    // build one string per spawn, e.g. “ultra-rare in Jungle”
+    const parts = spawns.map(s => {
+      const rarity = s.bucket  || 'unknown rarity';
+      const zone   = s.biomes  || 'unknown biome';
+      return `${rarity} in ${zone}`;
+    });
+    statusElement.textContent = `✅ In Cobblemon — ` + parts.join('; ');
   } else {
     statusElement.textContent = `❌ Not in Cobblemon`;
   }
+
   statusElement.style.display = 'block';
 }
 
