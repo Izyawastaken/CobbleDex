@@ -601,12 +601,44 @@ body.dark #cobblemonStatus {
   max-height: 100%;
   transition: transform 0.25s ease-in-out;
 }
+footer p {
+  text-align: center;
+  color: inherit;
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+  }
+  50% {
+    text-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent);
+  }
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  transition: text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px var(--accent), 0 0 18px var(--accent);
+}
+
 
 
 
   </style>
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <div id="whimsyEasterEgg" style="display:none; position:fixed; top:30%; left:50%; transform:translateX(-50%); font-size:3rem; font-weight:bold; color:#ff69b4; text-shadow: 0 0 10px #ff69b4; z-index:9999;">
+    🐛 BUG CHAMPION WHIMSY
+  </div>
+  
   
   <h1 class="title">Primordium</h1>
   <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
@@ -707,17 +739,19 @@ body.dark #cobblemonStatus {
   Report issues here!
 </a>
 <input type="color" id="accentPicker" title="Pick your accent color" value="#e3350d" />
-
 <footer>
   <p>
-    Made with <span id="easterEgg" title="Click me!">❤️</span> by Izya 
-    (and a lot of redbulls, sleepless nights). 
-    Data from <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
+    Made with <span id="easterEgg" title="Click me!">❤️</span> by 
+    <a href="https://www.twitch.tv/izyalovesgothmommies" target="_blank" rel="noopener noreferrer">Izya</a> 
+    (after countless sleepless nights and way too many Red Bulls).<br>
+    Data from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a>.
   </p>
-</footer>  
+</footer>
+
 
 
 <script>
+
   let shinyMode = false;
   let lastPokemonData = null;
   document.getElementById("toggleShinyBtn").addEventListener("click", () => {
@@ -1262,6 +1296,51 @@ function updateCobblemonStatus(pokemonName) {
   // Start in dark mode if enabled
   if (dark) document.body.classList.add('dark');
 });
+let whimsyBuffer = '';
+document.addEventListener('keydown', (e) => {
+  // ignore typing in input/textarea
+  if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+
+  whimsyBuffer += e.key.toLowerCase();
+  if (whimsyBuffer.length > 10) whimsyBuffer = whimsyBuffer.slice(-10); // limit buffer size
+
+  if (whimsyBuffer.includes('whimsy')) {
+    // Clear buffer to prevent repeat
+    whimsyBuffer = '';
+    
+    // Show the bug champ div
+    const msg = document.getElementById('whimsyEasterEgg');
+    msg.style.display = 'block';
+
+    // Fire confetti for 2 seconds
+    const duration = 2 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      } else {
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 1000);
+      }
+    })();
+  }
+});
+
 
 </script>
 </body>
