@@ -586,6 +586,22 @@ body.dark #cobblemonStatus {
   font-size: 0.9em;
 }
 
+.pokemon-img-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.pokemon-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.25s ease-in-out;
+}
+
 
 
   </style>
@@ -617,9 +633,14 @@ body.dark #cobblemonStatus {
   <div class="pokedex" id="pokedex" style="display:none;">
     <audio id="cryAudio"></audio>
     <h2 id="pokemonName"></h2>
-    <img id="pokemonImg" src="" alt="Sprite" onclick="playCry()" title="Click to hear cry">
+    <div class="pokemon-img-container">
+      <img id="pokemonImg" src="" alt="Sprite" onclick="playCry()" title="Click to hear cry">
+    </div>
+        
+
 
     <div class="tab">
+      <button id="toggleShinyBtn">✨</button>
       <button onclick="showTab('info')">Info</button>
       <button onclick="showTab('moves')">Moves</button>
       <button onclick="showTab('damage')">Type Matchups</button>
@@ -697,6 +718,31 @@ body.dark #cobblemonStatus {
 
 
 <script>
+  let shinyMode = false;
+  let lastPokemonData = null;
+  document.getElementById("toggleShinyBtn").addEventListener("click", () => {
+  shinyMode = !shinyMode;
+  if (lastPokemonData) {
+    updateSprite(lastPokemonData);
+    document.getElementById("toggleShinyBtn").textContent = shinyMode ? "🌟 Normal" : "✨ Shiny";
+  }
+});
+function updateSprite(data) {
+  const img = document.getElementById('pokemonImg');
+  const shiny = data.sprites.other?.['official-artwork']?.front_shiny || data.sprites.front_shiny;
+  const normal = data.sprites.other?.['official-artwork']?.front_default || data.sprites.front_default;
+  img.src = shinyMode ? shiny : normal;
+
+  // Reset transform
+  img.style.transform = '';
+
+  // Apply offset if needed
+  const name = data.name.toLowerCase();
+  if (shinyMode && name === 'cetitan') {
+    img.style.transform = 'translate(-4px, 6px)'; // tweak if needed
+  }
+}
+
   const cobblemonCsvData = {};
   fetch('https://raw.githubusercontent.com/Izyawastaken/Primordium/main/cobblemon_pokemon.csv')  .then(r => r.text())
   .then(text => {
@@ -916,7 +962,12 @@ document.getElementById(id).classList.add('active');
 currentPokemonName = d.name; // 👈 This stores the current Pokémon
 updateCobblemonStatus(currentPokemonName); // 👈 This updates the Cobblemon status
 
-    document.getElementById('pokemonImg').src=d.sprites.other['official-artwork'].front_default||d.sprites.front_default;
+    shinyMode = false;
+lastPokemonData = d;
+updateSprite(d);
+document.getElementById("toggleShinyBtn").style.display = "inline-block";
+document.getElementById("toggleShinyBtn").textContent = "✨ Shiny";
+
    // ── inside your getPokemon(d) after fetching d ──
 const cryAudio = document.getElementById('cryAudio');
 const base = d.name.toLowerCase();
@@ -1180,10 +1231,6 @@ function updateCobblemonStatus(pokemonName) {
   }
   statusEl.style.display = 'block';
 }
-
-
-
-
   // init
   document.addEventListener('DOMContentLoaded', async ()=>{
    await fetchAllNames();
