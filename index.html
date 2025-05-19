@@ -1277,6 +1277,7 @@ function updateCobblemonStatus(pokemonName) {
   await fetchAllNames();
   setupAutocomplete();
   toggleDarkMode();
+  
 
   // Load Dark Mode
   const dark = localStorage.getItem('darkMode') === 'true';
@@ -1295,6 +1296,12 @@ function updateCobblemonStatus(pokemonName) {
 
   // Start in dark mode if enabled
   if (dark) document.body.classList.add('dark');
+  const params = new URLSearchParams(window.location.search);
+const pokemonFromURL = params.get('primodiumPokemon');
+if (pokemonFromURL) {
+  getPokemon(pokemonFromURL.toLowerCase());
+}
+
 });
 let whimsyBuffer = '';
 document.addEventListener('keydown', (e) => {
